@@ -260,7 +260,7 @@ function safe_escape_string($string) {
 
 // Function to check the validity of email address.
 function check_email($email) {
-	return (bool) preg_match('/^([a-z0-9_]|\-|\.)+@(([a-z0-9_]|\-)+\.)+[a-z]{2,4}$/i', $email);
+	return (bool) preg_match('/^([a-z0-9_]|\-|\.)+@(([a-z0-9_]|\-)+\.)+[a-z]{2,}$/i', $email);
 }
 
 // Function to check the required fields are filled in.
