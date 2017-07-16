@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:FA0D0C87-0554-4E2D-9A71-52C105A9AD5B</id>
+ <title>Page list Atom feed</title>
+ <updated>2012-02-07T19:58:14-05:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:001E53DD-7124-4658-A795-07C571E2DA7E</id>
+  <title>Home</title>
+  <title xmlns="urn:iweb:">Home</title>
+  <in-navbar xmlns="urn:iweb:">001E53DD-7124-4658-A795-07C571E2DA7E</in-navbar>
+  <link rel="alternate" href="Home.html"/>
+  <updated>2012-02-07T19:58:14.001-05:00</updated>
+  <content>Home</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:2C8B5E60-A7F6-492C-87A2-9BE80174241F</id>
+  <title>User manual</title>
+  <title xmlns="urn:iweb:">User manual</title>
+  <in-navbar xmlns="urn:iweb:">2C8B5E60-A7F6-492C-87A2-9BE80174241F</in-navbar>
+  <link rel="alternate" href="User_manual.html"/>
+  <updated>2012-02-07T19:58:14.002-05:00</updated>
+  <content>User manual</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:589E3710-51BE-425F-B447-55E461101E45</id>
+  <title>F.A.Q.</title>
+  <title xmlns="urn:iweb:">F.A.Q.</title>
+  <in-navbar xmlns="urn:iweb:">589E3710-51BE-425F-B447-55E461101E45</in-navbar>
+  <link rel="alternate" href="F.A.Q..html"/>
+  <updated>2012-02-07T19:58:14.003-05:00</updated>
+  <content>F.A.Q.</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:BB21D49D-DAEF-4992-BEB9-EBF38FCBD07B</id>
+  <title>Rating Converter</title>
+  <title xmlns="urn:iweb:">Rating Converter</title>
+  <in-navbar xmlns="urn:iweb:">BB21D49D-DAEF-4992-BEB9-EBF38FCBD07B</in-navbar>
+  <link rel="alternate" href="Rating_Converter.html"/>
+  <updated>2012-02-07T19:58:14.004-05:00</updated>
+  <content>Rating Converter</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:0169021A-17DE-44AB-AC3F-989ECCB3DE86</id>
+  <title>Contact</title>
+  <title xmlns="urn:iweb:">Contact</title>
+  <in-navbar xmlns="urn:iweb:">0169021A-17DE-44AB-AC3F-989ECCB3DE86</in-navbar>
+  <link rel="alternate" href="Contact.html"/>
+  <updated>2012-02-07T19:58:14.005-05:00</updated>
+  <content>Contact</content>
+ </entry>
+</feed>
