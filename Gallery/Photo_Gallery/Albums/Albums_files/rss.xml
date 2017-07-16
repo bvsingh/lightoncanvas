@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:iphoto="urn:iphoto:property" xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>Albums</title>
+    <link>http://www.lightoncanvas.com/Photo_Gallery/Albums/Albums.html</link>
+    <description>Albums</description>
+    <item>
+      <title>Warblers</title>
+      <link>http://www.lightoncanvas.com/Photo_Gallery/Albums/Pages/Warblers.html</link>
+      <guid isPermaLink="false">92bd631d-db96-42a3-9ac5-41e95e8629e0</guid>
+    </item>
+    <item>
+      <title>Algonquin Park</title>
+      <link>http://www.lightoncanvas.com/Photo_Gallery/Albums/Pages/Algonquin_Park.html</link>
+      <guid isPermaLink="false">ab65a7bc-efec-4f92-a43c-4da71b088713</guid>
+    </item>
+  </channel>
+</rss>

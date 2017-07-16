@@ -1,0 +1,21 @@
+@font-face {
+font-family: 'Open Sans';
+src: url('../font/OpenSans-Light.eot');
+src: url('../font/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+url('../font/OpenSans-Light.woff') format('woff'),
+url('../font/OpenSans-Light.ttf')  format('truetype'),
+url('../font/OpenSans-Light.svg#svg') format('svg');
+font-style:   normal;
+font-weight:  200;
+}
+body #main h1,
+body #main h2,
+body #main h3,
+body #main h4,
+body #main h5,
+body #main h6{letter-spacing: 0;}
+
+h1,h2,h3,h4,h5,h6,
+.album-title,.movie-page-title,
+#main aside.theme #aside-title{font-family: 'Open Sans', sans-serif;}
+.album-title,.movie-page-title{font-size: 1.7em;}

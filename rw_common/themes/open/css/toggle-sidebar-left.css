@@ -1,0 +1,27 @@
+#main section.theme {
+padding-left: 0;
+margin-right: -270px;
+float: right;
+}
+#main section.theme #push {
+padding-right: 270px;
+padding-left: 0;
+}
+#main aside.theme {
+float: left;
+width: 220px;
+}
+.ie9 #main, .ie8 #main{overflow-x: hidden}
+@media screen and (max-width:600px) {
+	#main section.theme {
+	margin-right:0;
+	float: none;
+	}
+	#main section.theme #push {
+	padding-right: 0;
+	}
+	#main aside.theme {
+	float: none;
+	width: 100%;
+	}
+}

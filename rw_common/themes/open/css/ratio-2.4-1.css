@@ -1,0 +1,4 @@
+body header.theme:after {padding-top: 42.77%;}
+@media screen and (max-width: 600px) {
+	body header.theme:after {padding-top: 66.66%;}
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:admin="http://webns.net/mvcb/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+	<channel>
+<title>LightOnCanvas.com</title><link>http://lightoncanvas.com/index.html</link><description>News&#x21;</description><dc:language>en</dc:language><dc:creator>bvsingh@lightoncanvas.com</dc:creator><dc:rights>Copyright 2013 Bhupendra Yadav</dc:rights><dc:date>2015-06-18T10:48:00-04:00</dc:date><admin:generatorAgent rdf:resource="http://www.realmacsoftware.com/" />
+<admin:errorReportsTo rdf:resource="mailto:bvsingh@lightoncanvas.com" /><sy:updatePeriod>hourly</sy:updatePeriod>
+<sy:updateFrequency>1</sy:updateFrequency>
+<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+<lastBuildDate>Sun, 21 Jun 2015 22:09:10 -0400</lastBuildDate><item><title>Picker control with swift protocols</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>Generic programming</category><dc:date>2015-06-18T10:48:00-04:00</dc:date><link>http://lightoncanvas.com/page0_files/9b58430314b82eda00226e559b3dded0-52.html#unique-entry-id-52</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/9b58430314b82eda00226e559b3dded0-52.html#unique-entry-id-52</guid><content:encoded><![CDATA[https://github.com/bvsingh/GenericPicker]]></content:encoded></item><item><title>New MacPro arrives tomorrow</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>Apple news</category><dc:date>2013-12-18T08:43:44-05:00</dc:date><link>http://lightoncanvas.com/page0_files/bb815241a708c001b42079b8dd4021e6-51.html#unique-entry-id-51</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/bb815241a708c001b42079b8dd4021e6-51.html#unique-entry-id-51</guid><content:encoded><![CDATA[http://www.apple.com/ca/mac-pro/
+
+
+http://store.apple.com/ca/buy-mac/mac-pro
+]]></content:encoded></item><item><title>They still think they do not copy</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>Apple</category><category> Samsung</category><dc:date>2013-12-18T08:33:07-05:00</dc:date><link>http://lightoncanvas.com/page0_files/0d1d94ffa0d3941413aafa273cd3f72d-50.html#unique-entry-id-50</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/0d1d94ffa0d3941413aafa273cd3f72d-50.html#unique-entry-id-50</guid><content:encoded><![CDATA[https://www.theinformation.com/Samsung-Taps-Apple-Veterans-for-Retail-Push]]></content:encoded></item><item><title>MacPro (Product Red)</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>Apple news</category><dc:date>2013-10-25T16:17:52-04:00</dc:date><link>http://lightoncanvas.com/page0_files/2253d63bf30edf2a20b39d35d2ee0cb7-49.html#unique-entry-id-49</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/2253d63bf30edf2a20b39d35d2ee0cb7-49.html#unique-entry-id-49</guid><content:encoded><![CDATA[(null)]]></content:encoded></item><item><title>Only Apple would do this</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>Apple news</category><dc:date>2013-10-22T20:36:47-04:00</dc:date><link>http://lightoncanvas.com/page0_files/8de8834dd9d6517f22b1109c404de4e8-48.html#unique-entry-id-48</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/8de8834dd9d6517f22b1109c404de4e8-48.html#unique-entry-id-48</guid><content:encoded><![CDATA[Apple announced iPad Air and iPad mini with retina display today and they did that without crippling iPad mini retina in any way.   Other companies are known to cripple their cheaper products to drive customers to more expensive products.   And to top it all, productivity apps are free.]]></content:encoded></item><item><title>Another iPhone</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>iPhone</category><dc:date>2013-09-10T18:42:24-04:00</dc:date><link>http://lightoncanvas.com/page0_files/f3e187d52893439225adf1ee0e8cc660-47.html#unique-entry-id-47</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/f3e187d52893439225adf1ee0e8cc660-47.html#unique-entry-id-47</guid><content:encoded><![CDATA[Will be difficult for competitors to copy.]]></content:encoded></item><item><title>iPhones</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>iPhone</category><dc:date>2013-09-10T16:40:17-04:00</dc:date><link>http://lightoncanvas.com/page0_files/a1b09087ceea73d508697891d705f3ec-46.html#unique-entry-id-46</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/a1b09087ceea73d508697891d705f3ec-46.html#unique-entry-id-46</guid><content:encoded><![CDATA[iPhone 5C = iPhone 5 in plastic + colours.]]></content:encoded></item><item><title>WWDC 2013</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>WWDC</category><dc:date>2013-06-12T08:37:57-04:00</dc:date><link>http://lightoncanvas.com/page0_files/WWDC%202013.html#unique-entry-id-45</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/WWDC%202013.html#unique-entry-id-45</guid><content:encoded><![CDATA[Biggest surprise, MacPro.   Mavericks will launch at the same time as MacPro.]]></content:encoded></item><item><title>New Camera v1.1.1</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>iOS Application</category><dc:date>2012-08-11T13:29:22-04:00</dc:date><link>http://lightoncanvas.com/page0_files/e4b3371be4d20d5ad3f85740897c0656-44.html#unique-entry-id-44</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/e4b3371be4d20d5ad3f85740897c0656-44.html#unique-entry-id-44</guid><content:encoded><![CDATA[New Camera version 1.1.1 is in review with Apple
+
+
+It contains fix for an issue where images do not appear when updated from version 1.0 to 1.1.   Images are not lost, they are there but album is not able to read them.   This issue has been resolved and will be available as an update (version 1.1.1) and is a must for all users.]]></content:encoded></item><item><title>New Camera with Facebook support</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>iOS Application</category><dc:date>2012-08-08T13:26:58-04:00</dc:date><link>http://lightoncanvas.com/page0_files/f17aa5cc65a80f89e212822a1425c640-43.html#unique-entry-id-43</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/f17aa5cc65a80f89e212822a1425c640-43.html#unique-entry-id-43</guid><content:encoded><![CDATA[New Camera v1.1 is now available on the AppStore.
+
+
+✔ Adds support for Dropbox.   Pictures can be added to Dropbox 
+
+
+✔ Adds support for uploading image to Facebook 
+
+
+✔ Images are are saved as JPEGs to device album 
+
+
+...✔ Camera controls rotate as per device orientation]]></content:encoded></item><item><title>Back From WWDC</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>WWDC</category><dc:date>2012-06-22T12:38:24-04:00</dc:date><link>http://lightoncanvas.com/page0_files/552eaa361f68a0b800cc11fe4aadc0b7-42.html#unique-entry-id-42</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/552eaa361f68a0b800cc11fe4aadc0b7-42.html#unique-entry-id-42</guid><content:encoded><![CDATA[Unfortunately, most of it is under NDA.
+
+
+There are lot of changes coming in Mountain Lion which are important for developers and users alike.   Most of the applications on Mac AppStore will require good amount of work for Sandboxing.   Mountain Lion also brings few bugs which cannot be discussed but will need a work around.   All the apps will be released to AppStore when Mountain Lion released in July.   At the same time they will also be made compatible with Retina display.]]></content:encoded></item><item><title>New Camera App released on the AppStore</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>iOS Application</category><dc:date>2012-04-26T10:35:57-04:00</dc:date><link>http://lightoncanvas.com/page0_files/e78980bb8809284a44c390183a23635b-41.html#unique-entry-id-41</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/e78980bb8809284a44c390183a23635b-41.html#unique-entry-id-41</guid><content:encoded><![CDATA[Includes many advanced features and an intuitive, easy-to-use interface. 
+
+
+	✓	✔ Continuous (burst) shooting mode (low, medium or high speed)
+
+
+	✓	✔ Self-timer camera mode (with variable delay and a blinking indicator)
+
+
+...	✓	✔ An attractive vertical grid layout to view your photos
+
+
+	✓	✔ An option to password-protect your photo album for added privacy
+
+
+	✓	✔ An option to add photos to the standard device photo library
+]]></content:encoded></item><item><title>Canon 5D Mark III</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>Photography</category><dc:date>2012-03-02T16:12:06-05:00</dc:date><link>http://lightoncanvas.com/page0_files/3ab94335fd499870eceda8116b9a8d05-40.html#unique-entry-id-40</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/3ab94335fd499870eceda8116b9a8d05-40.html#unique-entry-id-40</guid><content:encoded><![CDATA[Finally Canon has released (will release) something that can considered to be in same class as EOS 3.   Hopefully its autofocus will perform as good.
+
+
+...http://www.dpreview.com/news/2012/03/02/Canon-EOS-5D-Mark-III-preview
+
+
+http://www.dpreview.com/news/2012/03/02/Canon-5D-Mark-III
+
+
+...http://www.usa.canon.com/cusa/consumer/products/cameras/slr_cameras/eos_5d_mark_iii
+
+
+...http://web.canon.jp/imaging/eosd/samples/eos5dmk3/]]></content:encoded></item><item><title>School bus application design video</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>iOS Application</category><dc:date>2012-02-13T15:47:47-05:00</dc:date><link>http://lightoncanvas.com/page0_files/e86282f6edafca0c4493cf78dfed13b6-39.html#unique-entry-id-39</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/e86282f6edafca0c4493cf78dfed13b6-39.html#unique-entry-id-39</guid><content:encoded><![CDATA[Video showing design details of School Bus application is now available on website.
+]]></content:encoded></item><item><title>Special Grammy award for Steve Jobs</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>Steve Jobs</category><dc:date>2012-02-12T19:31:40-05:00</dc:date><link>http://lightoncanvas.com/page0_files/ef113147bb5ce03592caf14dc4a5a6a0-38.html#unique-entry-id-38</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/ef113147bb5ce03592caf14dc4a5a6a0-38.html#unique-entry-id-38</guid><content:encoded><![CDATA[Steve Jobs honoured with "Trustees Award".   Apple&rsquo;s senior vice president of Internet Software and Services, Eddy Cue accepts the award on his behalf.
+
+
+grammy.com
+
+
+MacRumours.com
+]]></content:encoded></item><item><title>School bus status application released</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><category>iOS Application</category><dc:date>2012-02-09T23:47:23-05:00</dc:date><link>http://lightoncanvas.com/page0_files/df608db45e96db3847d6f80af554b8fa-37.html#unique-entry-id-37</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/df608db45e96db3847d6f80af554b8fa-37.html#unique-entry-id-37</guid><content:encoded><![CDATA[Ottawa-Carleton School Bus Status application for iOS devices is now available on the AppStore.   This application provides automatic school bus status notifications on iPhone, iPod touch or iPad devices.   Please visit the AppStore or the application&rsquo;s website for more details.]]></content:encoded></item><item><title>New website open</title><dc:creator>bvsingh@lightoncanvas.com</dc:creator><dc:subject>Home</dc:subject><dc:date>2012-02-08T13:13:12-05:00</dc:date><link>http://lightoncanvas.com/page0_files/7cecbd0063a24392a630bd181d1e62a9-0.html#unique-entry-id-0</link><guid isPermaLink="true">http://lightoncanvas.com/page0_files/7cecbd0063a24392a630bd181d1e62a9-0.html#unique-entry-id-0</guid><content:encoded><![CDATA[Welcome to our completely re-designed LightOnCanvas.com website!   Please use the tabs on the top to read about our products and services.]]></content:encoded></item></channel>
+</rss>

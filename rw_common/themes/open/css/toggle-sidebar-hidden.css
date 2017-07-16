@@ -1,0 +1,12 @@
+#main section.theme {
+padding-left: 0;
+margin-right: 0;
+float: right;
+}
+#main section.theme #push {
+padding-right: 0;
+padding-left: 0;
+}
+#main aside.theme {
+display: none
+}

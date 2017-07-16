@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Arvo';
+  src: url('../font/Arvo-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../font/Arvo-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/Arvo-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../font/Arvo-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../font/Arvo-Regular.svg#svg') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+h1,h2,h3,h4,h5,h6,
+.album-title,
+.movie-page-title{
+font-family: 'Arvo', sans-serif;
+}
+
+body #main h1,
+body #main h2,
+body #main h3,
+body #main h4,
+body #main h5,
+body #main h6{letter-spacing: 0;}
+
+h1,h2,h3,h4,h5,h6,
+.album-title,.movie-page-title,
+#main aside.theme #aside-title{font-family: 'Arvo', sans-serif;}
+.album-title,.movie-page-title{font-size: 1.5em;}
