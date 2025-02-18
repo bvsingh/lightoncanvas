@@ -6,511 +6,427 @@
 	<dict>
 		<key>Resources/AppIcon.icns</key>
 		<data>
-		JlwRjTxIkGekE0momcE6opYcxl8=
+		0KyuBcafVpIB2pVhABTQbmbYyjM=
 		</data>
-		<key>Resources/BrowserOnly-Selected.tiff</key>
+		<key>Resources/Assets.car</key>
 		<data>
-		bp6y7icRTYZToTR44p+/1CUyCMs=
-		</data>
-		<key>Resources/BrowserOnly.tiff</key>
-		<data>
-		B0qW8tYYTUolKXF0KyWu6UbmC6g=
-		</data>
-		<key>Resources/BrowserViewer-Selected.tiff</key>
-		<data>
-		y7mP8p0wmZuHyfB1Nyl0kmJ9Zu4=
-		</data>
-		<key>Resources/BrowserViewer.tiff</key>
-		<data>
-		ouwT2rGfl/jw9EvRUhVF8HFCFEk=
+		67flsq5wkQ9MuG4MmgVMn36WYY8=
 		</data>
 		<key>Resources/Credits.rtf</key>
 		<data>
-		lGa4Jg5YSJ+aVRkrh3d8+DxI7nE=
+		7WhhXh72qd9/sRe5cV226qVTnY0=
 		</data>
-		<key>Resources/English.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MiLKDDnrUKr4EmuvhS5VQwxHGK8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Resources/English.lproj/MainMenu.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			nNgye1I9uVZYpRmZi7fknknf+9s=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Resources/FPExportFile.nib</key>
+		<key>Resources/DownloadSettingsViewController.nib</key>
 		<data>
-		+Z91RFV2Sm94UGxlSohhk4TgWWg=
+		IBSzl3Pr9djf5zFUY3cGWw6kXoI=
 		</data>
-		<key>Resources/FPImageDownloadWindow.nib</key>
+		<key>Resources/GeneralSettingsViewController.nib</key>
 		<data>
-		WXaCEVouoXzO474Msdsm2lWC6Ks=
+		n0laigarhowWWO9Zbjk+G9emN/8=
 		</data>
-		<key>Resources/FPImageInfoController.nib</key>
+		<key>Resources/Images.bundle/037733_20190311_D5B_5542.jpg</key>
 		<data>
-		qnbbDk/5/hdQKR9qXRcIIKiaBpY=
+		q8fOY9Wj3OjU5VP5s4Qv9RoyiPc=
 		</data>
-		<key>Resources/FPPreferencesControllerWindow.nib</key>
+		<key>Resources/Images.bundle/038575_20190311_D5B_6384-DeNoiseAI-severe-noise.jpg</key>
 		<data>
-		f2E6Uu/jg7Xqj7YUnWz49scp7CE=
+		u7XEvSf2XtlYnfwP+modRCDbJuk=
 		</data>
-		<key>Resources/FirstPass.entitlements</key>
+		<key>Resources/Images.bundle/038575_20190311_D5B_6384.jpg</key>
 		<data>
-		Zpt7wz4g1VrazSNbhiUC0tBMrqE=
+		RiRFnrefFEyzooj5cQCezn1jPh4=
 		</data>
-		<key>Resources/FirstPass.icns</key>
+		<key>Resources/Images.bundle/038892_20190311_D5B_6701.jpg</key>
 		<data>
-		rfXpvkgMpcWazJ4f1m+FtRXOX/E=
+		PmduLakB3JkJSykeCh5ewck2F/A=
 		</data>
-		<key>Resources/ImageCapture.icns</key>
+		<key>Resources/Images.bundle/044100_20190315_D5B_0634.jpg</key>
 		<data>
-		Y+W1YnQFBZpTBXHYNBlOEOaK5OQ=
+		NE6xlEZpy+yzGk7XfLYdXPgtyX0=
 		</data>
-		<key>Resources/ImageZoomWindow.nib</key>
+		<key>Resources/Images.bundle/20120504_IMG_0376.jpg</key>
 		<data>
-		xvUfElcr5+eozLrrVzSwqvfe/i0=
+		UwlhwGZLYOCverNwSxZYrpo8whk=
 		</data>
-		<key>Resources/Movie.tiff</key>
+		<key>Resources/Images.bundle/20120504_IMG_0382.jpg</key>
 		<data>
-		F/BRau30dJMAzolnEwzpjsUVmgg=
+		qNIe258nh6TSBKqKfTHJB/w0mkU=
 		</data>
-		<key>Resources/NSTexturedFullScreenBackgroundColor.png</key>
+		<key>Resources/Images.bundle/IMG_8922.jpg</key>
 		<data>
-		q379lPWl8Fp7NOxzwMcWjdG3BrA=
+		I9WBCgJJfVZYqFWfjJLiwewVyHQ=
 		</data>
-		<key>Resources/PlayOff.tif</key>
+		<key>Resources/Images.bundle/Nashville Warbler s52-11-276_V.jpg</key>
 		<data>
-		xWhAXMFH0hEKVQavY24paBTHyXg=
+		CLD6JJPeawLZTsn7Gj+vV4Qn788=
 		</data>
-		<key>Resources/Poloroid.tiff</key>
+		<key>Resources/Images.bundle/Oriole_Audubons_b57-5-014_V.jpg</key>
 		<data>
-		LueHwMAIsuJB+pb4Id+ib0q8yUo=
+		6LwYWPZoWKvTpTebYJ1pKPbMHLU=
 		</data>
-		<key>Resources/Rating_Star.tiff</key>
+		<key>Resources/Images.bundle/Warbler_Bay_breasted_b57-13-027_V.jpg</key>
 		<data>
-		CGKvLgJl18AdosMs8C5fW/RGo+A=
+		9eo5gc/UYRMh8BBlfgHlon2KlbI=
 		</data>
-		<key>Resources/Rating_Star_G.tiff</key>
+		<key>Resources/Images.bundle/Warbler_Blackburnian_jamie_harrelson.jpg</key>
 		<data>
-		5l7QFDL+/B/VGgOm4tKBN69UygE=
+		nJcEH+KOxRk1u1PvLDBKCCRlxsU=
 		</data>
-		<key>Resources/Rating_Star_W.tiff</key>
+		<key>Resources/Images.bundle/Woodpecker_Hairy_09-15-2014-198.jpg</key>
 		<data>
-		ZePidqdwPO1Zo27/PrZGMJSp0DQ=
+		hTRo8oy/Om/qKtNZvLGXTmLry9E=
 		</data>
-		<key>Resources/actual.pdf</key>
+		<key>Resources/Images.bundle/_a1_2223_10_california-quail_rick_derevan_kk.jpg</key>
 		<data>
-		ErKDbfLYZWv1r+D5jyMvddGuilI=
+		TlZPDrLzNAUzJSxgN2iEOaHWR2o=
 		</data>
-		<key>Resources/actual.png</key>
+		<key>Resources/Images.bundle/_apa_2013_28408_227010_taratanaka_northern_parula_kk.jpg</key>
 		<data>
-		PAlp/FDd7mqhjWHftoTTS3fDaxA=
+		mTvdYEtXY7Ir3cj+1cbjWHkIlk4=
 		</data>
-		<key>Resources/browserBackground.png</key>
+		<key>Resources/Images.bundle/apa_2015_ericnie_276391_baltimore_oriole_kk.jpg</key>
 		<data>
-		Ru1IyMDSZF5kgcEQFKmE+EJVjRQ=
+		M1u1WdNFyme1dcLaMnfZ4398Hlk=
 		</data>
-		<key>Resources/camera.pdf</key>
+		<key>Resources/Images.bundle/guide_a1_3701_6_lazuli-bunting_melissa_james_kk.jpg</key>
 		<data>
-		VTykyGU9eW+H2pjN2zz6l3gxTGs=
+		cH3daXT4ZHa0C+b9EQgCMLGRxfQ=
 		</data>
-		<key>Resources/camera.png</key>
+		<key>Resources/Images.bundle/tree-swallow_kennkaufman.jpg</key>
 		<data>
-		MRJDi4MbGi6S86U9u4J8q/QzZXU=
+		Kw4S2PBX1QXOJLu037EpeaeE2KE=
 		</data>
-		<key>Resources/cursorZoom.tiff</key>
+		<key>Resources/Images.bundle/web_a1_2627_5_green-jay_bruno_struck_kk.jpg</key>
 		<data>
-		VcfhGrrxBxO1bau2UcEGsdK4CzY=
+		WGvtcElnDDDNRjm7UUP0hT5YSTo=
 		</data>
-		<key>Resources/download.pdf</key>
+		<key>Resources/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
-		ZCBrEW8YIfPYuKajpOhH/dg2/f8=
+		AD5VxuCNcmLfo7IR+R21qSYmZdI=
 		</data>
-		<key>Resources/download.png</key>
+		<key>Resources/LaunchScreen.storyboardc/NSViewController-bU7-R8-ocO.nib</key>
 		<data>
-		fTyjVwe8FJNEa2RkWHQb1fwp98Q=
+		jVrGQuH3s3CZsz988vWSKUXuhfM=
 		</data>
-		<key>Resources/fitinwindow.pdf</key>
+		<key>Resources/LaunchScreen.storyboardc/bU7-R8-ocO-view-tOy-S4-hL0.nib</key>
 		<data>
-		596V8F4UhqknDTdK1xUXXPCMIiI=
+		1kfcaj3mdP9fR8hZ+tmWxRuZVNA=
 		</data>
-		<key>Resources/fitinwindow.png</key>
+		<key>Resources/PhotoItem.nib</key>
 		<data>
-		YljTgkFLqrF+rMLQ7EVb75QFdvc=
-		</data>
-		<key>Resources/folderImage.tiff</key>
-		<data>
-		YGrqYm7DfhaO2YLXO9ygwo5Wjr8=
-		</data>
-		<key>Resources/full_zoom_larger.tiff</key>
-		<data>
-		3vHnV4a7Vn68ARxTMhCUXZZB86Y=
-		</data>
-		<key>Resources/full_zoom_smaller.tiff</key>
-		<data>
-		dhvFzgdgG+0U6PzXIxyquV59d1A=
-		</data>
-		<key>Resources/leafImage.tiff</key>
-		<data>
-		3cNTZjN8S+9KJeEuyNHyLCTLSug=
-		</data>
-		<key>Resources/metal_background.tif</key>
-		<data>
-		F1eKWakVDyUk694qm+07Vr/pN1M=
-		</data>
-		<key>Resources/metal_background_black.tif</key>
-		<data>
-		Y+Vj1ePl4+B1nkPD3rMI+gFqWBo=
-		</data>
-		<key>Resources/metal_background_lighter.tif</key>
-		<data>
-		UDUYpaCOB9/6U0HJSzYhW1NxEtI=
-		</data>
-		<key>Resources/next.pdf</key>
-		<data>
-		00oHFJ7wzxRvZRTUyhpdCKJfVE0=
-		</data>
-		<key>Resources/next.png</key>
-		<data>
-		sABBfHgWJgfbTlr/MjXdAhOrsZc=
-		</data>
-		<key>Resources/prefs.pdf</key>
-		<data>
-		LOzmhPxQSw3Q4KKmG8qTx6vCQEU=
-		</data>
-		<key>Resources/prefs.png</key>
-		<data>
-		wPf2tJaFznpyJvQ0qsuFZ/m9eZc=
-		</data>
-		<key>Resources/previous.pdf</key>
-		<data>
-		FlgtBfDITXuWaQ4Zv98H7GuPlWg=
-		</data>
-		<key>Resources/previous.png</key>
-		<data>
-		7xQnqAUQCZqcPgDU+W6CTrt6HJ8=
-		</data>
-		<key>Resources/rename.pdf</key>
-		<data>
-		P+j0LkVp+z3cOQw/P7zf2gqHmMI=
-		</data>
-		<key>Resources/rename.png</key>
-		<data>
-		QINckCtNwyuYHpg0+TXbYSKnbJY=
-		</data>
-		<key>Resources/rotate.pdf</key>
-		<data>
-		cmAexcNHacgi8vq4GLXKqe59yEw=
-		</data>
-		<key>Resources/rotate.png</key>
-		<data>
-		BeV2mEQ7BpPqCKmlAlDr60JgLXg=
-		</data>
-		<key>Resources/rotate_clockwise.png</key>
-		<data>
-		vc6+3Ol73TGsubXiq7r4U/Slrvo=
-		</data>
-		<key>Resources/slideshow.pdf</key>
-		<data>
-		kbx2yI+tVbhwtWDyOO8s4Wl3Xdo=
-		</data>
-		<key>Resources/slideshow.png</key>
-		<data>
-		L/c/omcotcaVVZQ7+dn90flGx60=
-		</data>
-		<key>Resources/sync.pdf</key>
-		<data>
-		Zyblyms0KjBeZ8J/Dfab74eDWYk=
-		</data>
-		<key>Resources/sync.png</key>
-		<data>
-		u1IA6bLU3Zck3T1Lyqw2nJLiQWQ=
-		</data>
-		<key>Resources/title_background.png</key>
-		<data>
-		Z3Bqm8tohSagKDbLcCwp0sSBRQE=
-		</data>
-		<key>Resources/zoomin.pdf</key>
-		<data>
-		xQpTr21yjnGABFxpFagAMhH/S+E=
-		</data>
-		<key>Resources/zoomin.png</key>
-		<data>
-		LCCauOwxBGZpBaGPYABLGDQTrRg=
-		</data>
-		<key>Resources/zoomout.pdf</key>
-		<data>
-		l+YtZhTNMhDD6blHu9DkNp10s9M=
-		</data>
-		<key>Resources/zoomout.png</key>
-		<data>
-		tsL4IFyddeOlwZB/hi199/jJtbw=
+		RljAwGhLYUgT8BvpzcStvjX6zNY=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Resources/AppIcon.icns</key>
-		<data>
-		JlwRjTxIkGekE0momcE6opYcxl8=
-		</data>
-		<key>Resources/BrowserOnly-Selected.tiff</key>
-		<data>
-		bp6y7icRTYZToTR44p+/1CUyCMs=
-		</data>
-		<key>Resources/BrowserOnly.tiff</key>
-		<data>
-		B0qW8tYYTUolKXF0KyWu6UbmC6g=
-		</data>
-		<key>Resources/BrowserViewer-Selected.tiff</key>
-		<data>
-		y7mP8p0wmZuHyfB1Nyl0kmJ9Zu4=
-		</data>
-		<key>Resources/BrowserViewer.tiff</key>
-		<data>
-		ouwT2rGfl/jw9EvRUhVF8HFCFEk=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			0KyuBcafVpIB2pVhABTQbmbYyjM=
+			</data>
+			<key>hash2</key>
+			<data>
+			B+mc8vNGVb359EssUtcMI8n1TKO1a+0U+bjHGKNvqms=
+			</data>
+		</dict>
+		<key>Resources/Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			67flsq5wkQ9MuG4MmgVMn36WYY8=
+			</data>
+			<key>hash2</key>
+			<data>
+			W9JHY4xPcWYob8jDFgsroil/ycTWyinKC/yt/Ew0I/w=
+			</data>
+		</dict>
 		<key>Resources/Credits.rtf</key>
-		<data>
-		lGa4Jg5YSJ+aVRkrh3d8+DxI7nE=
-		</data>
-		<key>Resources/English.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MiLKDDnrUKr4EmuvhS5VQwxHGK8=
+			7WhhXh72qd9/sRe5cV226qVTnY0=
 			</data>
-			<key>optional</key>
-			<true/>
+			<key>hash2</key>
+			<data>
+			CaShZ+34ph4eaaA8ODgtxhO1hq1lwYD8T3AlNOFu5gU=
+			</data>
 		</dict>
-		<key>Resources/English.lproj/MainMenu.nib</key>
+		<key>Resources/DownloadSettingsViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nNgye1I9uVZYpRmZi7fknknf+9s=
+			IBSzl3Pr9djf5zFUY3cGWw6kXoI=
 			</data>
-			<key>optional</key>
-			<true/>
+			<key>hash2</key>
+			<data>
+			ttXpsmTSRbXZ3LZewUnwUE+vZfY9Y9HAxkvX2/IxpV8=
+			</data>
 		</dict>
-		<key>Resources/FPExportFile.nib</key>
-		<data>
-		+Z91RFV2Sm94UGxlSohhk4TgWWg=
-		</data>
-		<key>Resources/FPImageDownloadWindow.nib</key>
-		<data>
-		WXaCEVouoXzO474Msdsm2lWC6Ks=
-		</data>
-		<key>Resources/FPImageInfoController.nib</key>
-		<data>
-		qnbbDk/5/hdQKR9qXRcIIKiaBpY=
-		</data>
-		<key>Resources/FPPreferencesControllerWindow.nib</key>
-		<data>
-		f2E6Uu/jg7Xqj7YUnWz49scp7CE=
-		</data>
-		<key>Resources/FirstPass.entitlements</key>
-		<data>
-		Zpt7wz4g1VrazSNbhiUC0tBMrqE=
-		</data>
-		<key>Resources/FirstPass.icns</key>
-		<data>
-		rfXpvkgMpcWazJ4f1m+FtRXOX/E=
-		</data>
-		<key>Resources/ImageCapture.icns</key>
-		<data>
-		Y+W1YnQFBZpTBXHYNBlOEOaK5OQ=
-		</data>
-		<key>Resources/ImageZoomWindow.nib</key>
-		<data>
-		xvUfElcr5+eozLrrVzSwqvfe/i0=
-		</data>
-		<key>Resources/Movie.tiff</key>
-		<data>
-		F/BRau30dJMAzolnEwzpjsUVmgg=
-		</data>
-		<key>Resources/NSTexturedFullScreenBackgroundColor.png</key>
-		<data>
-		q379lPWl8Fp7NOxzwMcWjdG3BrA=
-		</data>
-		<key>Resources/PlayOff.tif</key>
-		<data>
-		xWhAXMFH0hEKVQavY24paBTHyXg=
-		</data>
-		<key>Resources/Poloroid.tiff</key>
-		<data>
-		LueHwMAIsuJB+pb4Id+ib0q8yUo=
-		</data>
-		<key>Resources/Rating_Star.tiff</key>
-		<data>
-		CGKvLgJl18AdosMs8C5fW/RGo+A=
-		</data>
-		<key>Resources/Rating_Star_G.tiff</key>
-		<data>
-		5l7QFDL+/B/VGgOm4tKBN69UygE=
-		</data>
-		<key>Resources/Rating_Star_W.tiff</key>
-		<data>
-		ZePidqdwPO1Zo27/PrZGMJSp0DQ=
-		</data>
-		<key>Resources/actual.pdf</key>
-		<data>
-		ErKDbfLYZWv1r+D5jyMvddGuilI=
-		</data>
-		<key>Resources/actual.png</key>
-		<data>
-		PAlp/FDd7mqhjWHftoTTS3fDaxA=
-		</data>
-		<key>Resources/browserBackground.png</key>
-		<data>
-		Ru1IyMDSZF5kgcEQFKmE+EJVjRQ=
-		</data>
-		<key>Resources/camera.pdf</key>
-		<data>
-		VTykyGU9eW+H2pjN2zz6l3gxTGs=
-		</data>
-		<key>Resources/camera.png</key>
-		<data>
-		MRJDi4MbGi6S86U9u4J8q/QzZXU=
-		</data>
-		<key>Resources/cursorZoom.tiff</key>
-		<data>
-		VcfhGrrxBxO1bau2UcEGsdK4CzY=
-		</data>
-		<key>Resources/download.pdf</key>
-		<data>
-		ZCBrEW8YIfPYuKajpOhH/dg2/f8=
-		</data>
-		<key>Resources/download.png</key>
-		<data>
-		fTyjVwe8FJNEa2RkWHQb1fwp98Q=
-		</data>
-		<key>Resources/fitinwindow.pdf</key>
-		<data>
-		596V8F4UhqknDTdK1xUXXPCMIiI=
-		</data>
-		<key>Resources/fitinwindow.png</key>
-		<data>
-		YljTgkFLqrF+rMLQ7EVb75QFdvc=
-		</data>
-		<key>Resources/folderImage.tiff</key>
-		<data>
-		YGrqYm7DfhaO2YLXO9ygwo5Wjr8=
-		</data>
-		<key>Resources/full_zoom_larger.tiff</key>
-		<data>
-		3vHnV4a7Vn68ARxTMhCUXZZB86Y=
-		</data>
-		<key>Resources/full_zoom_smaller.tiff</key>
-		<data>
-		dhvFzgdgG+0U6PzXIxyquV59d1A=
-		</data>
-		<key>Resources/leafImage.tiff</key>
-		<data>
-		3cNTZjN8S+9KJeEuyNHyLCTLSug=
-		</data>
-		<key>Resources/metal_background.tif</key>
-		<data>
-		F1eKWakVDyUk694qm+07Vr/pN1M=
-		</data>
-		<key>Resources/metal_background_black.tif</key>
-		<data>
-		Y+Vj1ePl4+B1nkPD3rMI+gFqWBo=
-		</data>
-		<key>Resources/metal_background_lighter.tif</key>
-		<data>
-		UDUYpaCOB9/6U0HJSzYhW1NxEtI=
-		</data>
-		<key>Resources/next.pdf</key>
-		<data>
-		00oHFJ7wzxRvZRTUyhpdCKJfVE0=
-		</data>
-		<key>Resources/next.png</key>
-		<data>
-		sABBfHgWJgfbTlr/MjXdAhOrsZc=
-		</data>
-		<key>Resources/prefs.pdf</key>
-		<data>
-		LOzmhPxQSw3Q4KKmG8qTx6vCQEU=
-		</data>
-		<key>Resources/prefs.png</key>
-		<data>
-		wPf2tJaFznpyJvQ0qsuFZ/m9eZc=
-		</data>
-		<key>Resources/previous.pdf</key>
-		<data>
-		FlgtBfDITXuWaQ4Zv98H7GuPlWg=
-		</data>
-		<key>Resources/previous.png</key>
-		<data>
-		7xQnqAUQCZqcPgDU+W6CTrt6HJ8=
-		</data>
-		<key>Resources/rename.pdf</key>
-		<data>
-		P+j0LkVp+z3cOQw/P7zf2gqHmMI=
-		</data>
-		<key>Resources/rename.png</key>
-		<data>
-		QINckCtNwyuYHpg0+TXbYSKnbJY=
-		</data>
-		<key>Resources/rotate.pdf</key>
-		<data>
-		cmAexcNHacgi8vq4GLXKqe59yEw=
-		</data>
-		<key>Resources/rotate.png</key>
-		<data>
-		BeV2mEQ7BpPqCKmlAlDr60JgLXg=
-		</data>
-		<key>Resources/rotate_clockwise.png</key>
-		<data>
-		vc6+3Ol73TGsubXiq7r4U/Slrvo=
-		</data>
-		<key>Resources/slideshow.pdf</key>
-		<data>
-		kbx2yI+tVbhwtWDyOO8s4Wl3Xdo=
-		</data>
-		<key>Resources/slideshow.png</key>
-		<data>
-		L/c/omcotcaVVZQ7+dn90flGx60=
-		</data>
-		<key>Resources/sync.pdf</key>
-		<data>
-		Zyblyms0KjBeZ8J/Dfab74eDWYk=
-		</data>
-		<key>Resources/sync.png</key>
-		<data>
-		u1IA6bLU3Zck3T1Lyqw2nJLiQWQ=
-		</data>
-		<key>Resources/title_background.png</key>
-		<data>
-		Z3Bqm8tohSagKDbLcCwp0sSBRQE=
-		</data>
-		<key>Resources/zoomin.pdf</key>
-		<data>
-		xQpTr21yjnGABFxpFagAMhH/S+E=
-		</data>
-		<key>Resources/zoomin.png</key>
-		<data>
-		LCCauOwxBGZpBaGPYABLGDQTrRg=
-		</data>
-		<key>Resources/zoomout.pdf</key>
-		<data>
-		l+YtZhTNMhDD6blHu9DkNp10s9M=
-		</data>
-		<key>Resources/zoomout.png</key>
-		<data>
-		tsL4IFyddeOlwZB/hi199/jJtbw=
-		</data>
-		<key>embedded.provisionprofile</key>
-		<data>
-		qTO+3uyrxZPKDfia9y+9QlesUVg=
-		</data>
+		<key>Resources/GeneralSettingsViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			n0laigarhowWWO9Zbjk+G9emN/8=
+			</data>
+			<key>hash2</key>
+			<data>
+			EA6n1fXwoaDNKyqpN9P4ORjJUkSigG/tVZIjL8siOsA=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/037733_20190311_D5B_5542.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			q8fOY9Wj3OjU5VP5s4Qv9RoyiPc=
+			</data>
+			<key>hash2</key>
+			<data>
+			4zx2ueuHqOofiFaB6M8IAJTmNq51IfTr20a0z+tGtEU=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/038575_20190311_D5B_6384-DeNoiseAI-severe-noise.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			u7XEvSf2XtlYnfwP+modRCDbJuk=
+			</data>
+			<key>hash2</key>
+			<data>
+			0nmMcxYp+1N0YIffVINRQtS7ERKBnFJsP6rWrX8ZZp4=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/038575_20190311_D5B_6384.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RiRFnrefFEyzooj5cQCezn1jPh4=
+			</data>
+			<key>hash2</key>
+			<data>
+			AG2qUDsxtW4+TX7J2zz4TOfsNx+umcuMUXl/7cgf9Vo=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/038892_20190311_D5B_6701.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PmduLakB3JkJSykeCh5ewck2F/A=
+			</data>
+			<key>hash2</key>
+			<data>
+			6cy+JS1Zt4gSR2or44soICH23BvnTK4vECh/Mo0MDrA=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/044100_20190315_D5B_0634.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NE6xlEZpy+yzGk7XfLYdXPgtyX0=
+			</data>
+			<key>hash2</key>
+			<data>
+			5+Lx7Kp7VfXxwigbxft0fYk3RSS3boUvgGNDjZT7Hx4=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/20120504_IMG_0376.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UwlhwGZLYOCverNwSxZYrpo8whk=
+			</data>
+			<key>hash2</key>
+			<data>
+			yRW7LTtYCRDCq112JUIBdAsQlLKCyOVqP6inxzI+38E=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/20120504_IMG_0382.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qNIe258nh6TSBKqKfTHJB/w0mkU=
+			</data>
+			<key>hash2</key>
+			<data>
+			mKo0WSGMlslxNnXEFyIjWK8VZrsVQJLNWV6Sx91JyU8=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/IMG_8922.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			I9WBCgJJfVZYqFWfjJLiwewVyHQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			sRz3/HiQn5u4AKc0MlBAVk8VSq6xShIaWS/6F18S3BM=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/Nashville Warbler s52-11-276_V.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CLD6JJPeawLZTsn7Gj+vV4Qn788=
+			</data>
+			<key>hash2</key>
+			<data>
+			QdSjkDZMeys5gw3/DgvijpHRl49SmuOsnpNEO/MRGo0=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/Oriole_Audubons_b57-5-014_V.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6LwYWPZoWKvTpTebYJ1pKPbMHLU=
+			</data>
+			<key>hash2</key>
+			<data>
+			eoAl1cZRRh9YpMftvwyswlHnwRKd5DIlDA4AuJAwvCU=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/Warbler_Bay_breasted_b57-13-027_V.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9eo5gc/UYRMh8BBlfgHlon2KlbI=
+			</data>
+			<key>hash2</key>
+			<data>
+			59UJzmfIIN8a5PShPHMKru5Io4ZKTXDsB6M2pIBXtPQ=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/Warbler_Blackburnian_jamie_harrelson.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nJcEH+KOxRk1u1PvLDBKCCRlxsU=
+			</data>
+			<key>hash2</key>
+			<data>
+			OjPBQ+GWnSwl6RGrFdUJABp0RXW9NxAsftXXd/ftl3c=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/Woodpecker_Hairy_09-15-2014-198.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hTRo8oy/Om/qKtNZvLGXTmLry9E=
+			</data>
+			<key>hash2</key>
+			<data>
+			pgjKWYMWFyvPZYQlpiVD+SbjgNDMOpVSXUJetcnluCc=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/_a1_2223_10_california-quail_rick_derevan_kk.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TlZPDrLzNAUzJSxgN2iEOaHWR2o=
+			</data>
+			<key>hash2</key>
+			<data>
+			f06mT8e1fYJncHXOJDJqCENvlODsQJPYcsqcTtPeBaY=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/_apa_2013_28408_227010_taratanaka_northern_parula_kk.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mTvdYEtXY7Ir3cj+1cbjWHkIlk4=
+			</data>
+			<key>hash2</key>
+			<data>
+			v4C1llV7g9v/KZVt0MLWPCfCo5lHOtQKsuheS90SW5w=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/apa_2015_ericnie_276391_baltimore_oriole_kk.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			M1u1WdNFyme1dcLaMnfZ4398Hlk=
+			</data>
+			<key>hash2</key>
+			<data>
+			sFgx1WgYiKh21nB3+QklOa5J4xa2SWtyGUbskrFMaBI=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/guide_a1_3701_6_lazuli-bunting_melissa_james_kk.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cH3daXT4ZHa0C+b9EQgCMLGRxfQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			jR47zbEqi2sMAj1Vh+MHe2bqIka/UW+c7Z58B7ZyBX4=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/tree-swallow_kennkaufman.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Kw4S2PBX1QXOJLu037EpeaeE2KE=
+			</data>
+			<key>hash2</key>
+			<data>
+			CNf97FYpmcdwgPPSYdiaBtCRUsNNwtCqK6nuaBCoWn0=
+			</data>
+		</dict>
+		<key>Resources/Images.bundle/web_a1_2627_5_green-jay_bruno_struck_kk.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WGvtcElnDDDNRjm7UUP0hT5YSTo=
+			</data>
+			<key>hash2</key>
+			<data>
+			9av5kmYlxJ9Rp5+FVkYeF8VJ/kGmVJE52j75MAy/zOU=
+			</data>
+		</dict>
+		<key>Resources/LaunchScreen.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AD5VxuCNcmLfo7IR+R21qSYmZdI=
+			</data>
+			<key>hash2</key>
+			<data>
+			uBNsIDYqmAut8NCr982ILKIoNpUQuCgIVx5XVyUD+zQ=
+			</data>
+		</dict>
+		<key>Resources/LaunchScreen.storyboardc/NSViewController-bU7-R8-ocO.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jVrGQuH3s3CZsz988vWSKUXuhfM=
+			</data>
+			<key>hash2</key>
+			<data>
+			av10qIuTipMgvRSG5qDgmqtQFSxE1m+9XvNGYDsNAd0=
+			</data>
+		</dict>
+		<key>Resources/LaunchScreen.storyboardc/bU7-R8-ocO-view-tOy-S4-hL0.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1kfcaj3mdP9fR8hZ+tmWxRuZVNA=
+			</data>
+			<key>hash2</key>
+			<data>
+			sLEI5VdStbV31jAB160Np/UjlMH3KuczIxq9p6lLS0s=
+			</data>
+		</dict>
+		<key>Resources/PhotoItem.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RljAwGhLYUgT8BvpzcStvjX6zNY=
+			</data>
+			<key>hash2</key>
+			<data>
+			1+Es+UcpyW/AAHBL3qIFbQO8cqFMV5F9Y6CRQ03tIjU=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
@@ -529,6 +445,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^version.plist$</key>
 		<true/>
@@ -588,6 +509,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^[^/]+$</key>
 		<dict>
