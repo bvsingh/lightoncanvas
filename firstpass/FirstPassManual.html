@@ -1,0 +1,144 @@
+<html>
+    <head>
+    <style>
+
+.p2 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.pageWidth {
+  width: 816px;
+  margin: auto;
+}
+
+.container {
+    display:table;
+    width:100%;
+    height:auto;
+    margin:10px 0px;
+}
+.container .text {
+    display:table-cell;
+    height:100%;
+    vertical-align:middle;
+}
+.container img {
+    display:block;
+    float:right;
+}
+.container .clear {
+    clear:both;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.horizontalLine {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+    
+
+    </style>
+
+        
+    </head>
+
+    <body class="p2 pageWidth">
+        <div class="container">
+        <div class="text"><h1> FirstPass User Manual </h1></div>
+        <div class"img"><img src="FirstPassManualImages/FirstPass256x256.png" width="128" float="right"></div>
+        </div>
+
+        <h2>Objective </h2>
+        <p>Downloading thousands of photographs from multiple memory cards can be a considerable challenge, particularly as each card must be downloaded individually, even when using several card readers. Furthermore, the initial editing process - rating, deleting, and detailed viewing - demands substantial time and effort. This software is specifically designed to assist photographers in reducing this workload by significantly expediting both the downloading process and the first pass edit, all within a single application. </p>
+
+        <p>This version of FirstPass has been re-imagined using SwiftUI and Swift. </p>
+
+        <h2>Unique features of FirstPass </h2>
+
+        <ol>
+            <li>The first MacApp store application on Mac to enable image download from multiple sources to multiple destinations. </li>
+            <li>Works with shared devices to enable download over a network. </li>
+            <li>Provides a fast and clean interface to do a “first pass” editing of images. </li>
+            <li>Frees up the user’s time by handling multiple downloads at the same time without requiring the user to swap the cards in and out of a card reader or starting the download manually for each card. </li>
+            <li>Can be configured to automatically start downloading when a device (or multiple devices) are plugged in. </li>
+        </ol>
+        
+        <h2>Quick start guide</h2>
+        <p>FirstPass has a single window type. User can create multiple windows and can browse different folders or download different cards. Same window can also be used to download multiple cards, each download triggered sequentially. </p>
+        <img src="FirstPassManualImages/InterfaceLayout.png" width="800">
+
+
+        <h2>Settings Window</h2>
+        <p>In addition, user can use Settings window to configure download and color settings. It is highly recommended to configure download settings before downloading anything.</p>
+
+        <h2>Parts of Main Window</h2>
+        <h3>Sidebar</h3>
+        <img src="FirstPassManualImages/Sidebar.png" width="800">
+        <p>User can hide the sidebar using Hide Sidebar menu option or the Sidebar toggle button in the tool bar.</p>
+        
+        <h3>Image Gallery</h3>
+
+        <img src="FirstPassManualImages/ImageGallery.png" width="800">
+
+
+        <h3>Context Menu</h3>
+        <p>Right clicking on an image provides a context menu. Using this context menu users can change rating, show/hide image image information inspector, view the image in finder, delete image, rename the image and open with external editor. External editor can be set in settings.</p>
+        
+        <h3>Sorting</h3>
+        <p>Images in the gallery can be sorted in ascending or descending order using creation date, name or rating as the key. This can be done via Browser menu option.</p>
+
+        <h3>Image Information</h3>
+        <p>Image information is shown in an inspector. Can be enabled using the context menu on the image or by selecting and image and clicking on the toolbar item 􀅴</p>
+
+        <h3>Ratings Filter</h3>
+        <p>Rating filer is on the bottom left of the gallery. There are six buttons unrated and rating from 1 to 5. Clicking on any button filters out that rating.</p>
+
+        <h3>Camera Window</h3>
+        
+        <img src="FirstPassManualImages/CameraWindow.png" width="800">
+        <p>When a camera is selected in the sidebar its images are shown in the main browser window. On the bottom left there are two button to download selected or download all images.</p>
+
+        <h3>Settings</h3>
+        <p>Settings window uses three tabs to organize settings. They are General, Download and Colors.</p>
+
+        <b>GENERAL</b>
+        <img src="FirstPassManualImages/GeneralSettings.png" width="800">
+
+        <p>General pane is used for setting external editor.</p>
+        
+        <b>Download</b>
+        <img src="FirstPassManualImages/DownloadSettings.png" width="800">
+
+        <p>Download pane is used to set download destinations and image renaming tokens. Here user can set multiple download destinations. User can set primary and secondary destinations. User can also set the tokens for creating folders for primary and secondary downloads. Tokens can also be set for file renaming. Along with provided tokens user can add their own e.g. space, “_” etc.</p>
+
+        <b>Colours</b>
+        <img src="FirstPassManualImages/ColourSettings.png" width="800">
+
+        <p>All elements in sidebar has coloured icons associated with them. There is a default set of colours, shown above. Users can use this pane to change the colours.</p>
+
+        <h3>File Renaming</h3>
+        <p>Along with renaming files while they are being downloaded from a camera or a card, they can also be renamed while viewing them in gallery. This does not move the files to different folder, just renames them in place. User can use all the same tokens as used for files while downloading from a camera or a card.
+
+In the image gallery user can select few images and right click to bring up renaming panel. User can provide tokens, specify which date to use if the date tokens are used and provide starting sequence number if renamed files result in name conflicts.</p>
+        <img src="FirstPassManualImages/RenamingWindow.png" width="800">
+
+        <p><b>Note:</b> <em>After entering each word user must press enter to tokenize it. All known tokens should be dragged from collection to the renaming field.</em></p>
+    
+        <hr class="horizontalLine/">
+        <div class="centerText">
+            <p>
+                <em>For further questions, clarification or feedback please 
+                    <a href="mailto:firstpass@lightoncanvas.com?subject=Mail from manual link">email us</a>. 
+                </em>
+            </p>
+        </div>
+
+    </body>
+</html>
