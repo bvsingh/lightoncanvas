@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-light-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="User manual for FirstPass Image Downloader and Browser." />
+    <meta name="author" content="LightOnCanvas" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>FirstPass User Manual – LightOnCanvas</title>
+    <link href="../../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../../css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://www.lightoncanvas.com/applications/firstpass/manual" rel="canonical" />
+    <link type="application/rss+xml" title="RSS Feed" href="../../../feed.rss" rel="alternate" />
+    <meta property="og:site_name" content="LightOnCanvas" />
+    <meta property="og:title" content="FirstPass User Manual" />
+    <meta name="twitter:title" content="FirstPass User Manual" />
+    <meta property="og:description" content="User manual for FirstPass Image Downloader and Browser." />
+    <meta name="twitter:description" content="User manual for FirstPass Image Downloader and Browser." />
+    <meta property="og:url" content="https://www.lightoncanvas.com/applications/firstpass/manual" />
+    <meta name="twitter:domain" content="lightoncanvas.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <meta name="color-scheme" content="light dark" />
+    <link href="../../../css/site.css" rel="stylesheet" />
+    <script src="../../../js/site.js"></script>
+  </head>
+  <body>
+    <header class="loc-header">
+      <div class="loc-header-inner">
+        <a href="../../../" class="loc-logo-link"><img src="../../../images/FirstPass-14k.png" alt="LightOnCanvas logo" /></a>
+        <a href="../../../" class="loc-site-title-link">LightOnCanvas.com</a>
+      </div>
+    </header>
+    <div class="loc-wrap">
+      <div class="loc-columns">
+        <section class="loc-main-content">
+          <div class="ig-main-content">
+            <div class="loc-manual-header">
+              <img src="../../../images/manual/FirstPass256x256.png" alt="FirstPass icon" class="loc-manual-icon" style="width: 128px" />
+              <h1>FirstPass User Manual</h1>
+            </div>
+            <h2>Objective</h2>
+            <p>Downloading thousands of photographs from multiple memory cards can be a considerable challenge, particularly as each card must be downloaded individually, even when using several card readers. Furthermore, the initial editing process — rating, deleting, and detailed viewing — demands substantial time and effort. This software is specifically designed to assist photographers in reducing this workload by significantly expediting both the downloading process and the first pass edit, all within a single application.</p>
+            <p>This version of FirstPass has been re-imagined using SwiftUI and Swift.</p>
+            <h2>Unique features of FirstPass</h2>
+            <ol class="loc-manual-list">
+              <li><p class="m-0">The first MacApp store application on Mac to enable image download from multiple sources to multiple destinations.</p></li>
+              <li><p class="m-0">Works with shared devices to enable download over a network.</p></li>
+              <li><p class="m-0">Provides a fast and clean interface to do a “first pass” editing of images.</p></li>
+              <li><p class="m-0">Frees up the user’s time by handling multiple downloads at the same time without requiring the user to swap the cards in and out of a card reader or starting the download manually for each card.</p></li>
+              <li><p class="m-0">Can be configured to automatically start downloading when a device (or multiple devices) are plugged in.</p></li>
+            </ol>
+            <h2>Quick start guide</h2>
+            <p>FirstPass has a single window type. User can create multiple windows and can browse different folders or download different cards. Same window can also be used to download multiple cards, each download triggered sequentially.</p>
+            <img src="../../../images/manual/InterfaceLayout.png" alt="FirstPass interface layout" class="loc-manual-img" />
+            <h2>Settings Window</h2>
+            <p>In addition, user can use Settings window to configure download and color settings. It is highly recommended to configure download settings before downloading anything.</p>
+            <h2>Parts of Main Window</h2>
+            <h3>Sidebar</h3>
+            <img src="../../../images/manual/Sidebar.png" alt="FirstPass sidebar" class="loc-manual-img" />
+            <p>User can hide the sidebar using Hide Sidebar menu option or the Sidebar toggle button in the tool bar.</p>
+            <h3>Image Gallery</h3>
+            <img src="../../../images/manual/ImageGallery.png" alt="FirstPass image gallery" class="loc-manual-img" />
+            <h3>Context Menu</h3>
+            <p>Right clicking on an image provides a context menu. Using this context menu users can change rating, show/hide image information inspector, view the image in finder, delete image, rename the image and open with external editor. External editor can be set in settings.</p>
+            <h3>Sorting</h3>
+            <p>Images in the gallery can be sorted in ascending or descending order using creation date, name or rating as the key. This can be done via Browser menu option.</p>
+            <h3>Image Information</h3>
+            <p>Image information is shown in an inspector. Can be enabled using the context menu on the image or by selecting an image and clicking on the toolbar item.</p>
+            <h3>Ratings Filter</h3>
+            <p>Rating filter is on the bottom left of the gallery. There are six buttons — unrated and rating from 1 to 5. Clicking on any button filters out that rating.</p>
+            <h3>Camera Window</h3>
+            <img src="../../../images/manual/CameraWindow.png" alt="FirstPass camera window" class="loc-manual-img" />
+            <p>When a camera is selected in the sidebar its images are shown in the main browser window. On the bottom left there are two buttons to download selected or download all images.</p>
+            <h3>Settings</h3>
+            <p>Settings window uses three tabs to organize settings. They are General, Download and Colors.</p>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">GENERAL</p>
+            <img src="../../../images/manual/GeneralSettings.png" alt="General settings" class="loc-manual-img" />
+            <p>General pane is used for setting external editor.</p>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Download</p>
+            <img src="../../../images/manual/DownloadSettings.png" alt="Download settings" class="loc-manual-img" />
+            <p>Download pane is used to set download destinations and image renaming tokens. Here user can set multiple download destinations. User can set primary and secondary destinations. User can also set the tokens for creating folders for primary and secondary downloads. Tokens can also be set for file renaming. Along with provided tokens user can add their own e.g. space, “_” etc.</p>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Colours</p>
+            <img src="../../../images/manual/ColourSettings.png" alt="Colour settings" class="loc-manual-img" />
+            <p>All elements in sidebar have coloured icons associated with them. There is a default set of colours, shown above. Users can use this pane to change the colours.</p>
+            <h3>File Renaming</h3>
+            <p>Along with renaming files while they are being downloaded from a camera or a card, they can also be renamed while viewing them in gallery. This does not move the files to a different folder, just renames them in place. User can use all the same tokens as used for files while downloading from a camera or a card.</p>
+            <p>In the image gallery user can select a few images and right click to bring up the renaming panel. User can provide tokens, specify which date to use if the date tokens are used and provide a starting sequence number if renamed files result in name conflicts.</p>
+            <img src="../../../images/manual/RenamingWindow.png" alt="File renaming window" class="loc-manual-img" />
+            <p class="loc-manual-note"><strong>Note:</strong> <em>After entering each word user must press enter to tokenize it. All known tokens should be dragged from collection to the renaming field.</em></p>
+            <hr class="loc-manual-hr" />
+            <div class="loc-manual-footer">
+              <p><em><span>For further questions, clarification or feedback please </span><a href="mailto:firstpass@lightoncanvas.com?subject=Mail%20from%20manual%20link">email us</a><span>.</span></em></p>
+            </div>
+            <div class="loc-fp-back">
+              <a href="../../../applications/firstpass/">← Back to FirstPass</a>
+            </div>
+          </div>
+        </section>
+        <aside class="loc-sidebar">
+          <nav class="loc-sidebar-nav">
+            <ul class="loc-nav-list">
+              <li><a href="../../../">Home</a></li>
+              <li><a href="../../../">Products</a></li>
+              <li><a href="../../../about/">About</a></li>
+              <li><a href="../../../galleries/">Photo Gallery</a></li>
+              <li><a href="../../../contact/">Contact</a></li>
+              <li><a href="../../../privacy/">Privacy Policy</a></li>
+            </ul>
+          </nav>
+          <div class="loc-sidebar-hero">
+            <img src="../../../images/Website-header.jpg" alt="LightOnCanvas header" class="loc-sidebar-img" />
+          </div>
+        </aside>
+      </div>
+    </div>
+    <footer class="loc-footer">
+      <hr />
+      <p class="loc-footer-text"><span>© Bhupendra Yadav </span><a href="mailto:bvsingh@lightoncanvas.com">Contact Me</a></p>
+    </footer>
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../../js/ignite-core.js"></script>
+  </body>
+</html>

@@ -1,0 +1,651 @@
+/* ============================================================
+   LightOnCanvas – site.css
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   CSS Custom Properties — light mode defaults
+   ---------------------------------------------------------- */
+:root {
+    --color-bg:            #ffffff;
+    --color-bg-raised:     #f5f5f7;
+    --color-text:          #727272;
+    --color-text-strong:   #6a6a6a;
+    --color-heading:       #6a6a6a;
+    --color-link:          #888888;
+    --color-link-hover:    #20BAFB;
+    --color-accent:        #20BAFB;
+    --color-accent-alt:    #9CBB69;
+    --color-border:        #e6e6e6;
+    --color-border-subtle: #f0f0f0;
+    --color-header-bg:     #4a4a4a;
+    --color-header-text:   #ffffff;
+    --color-muted:         #9a9a9a;
+}
+
+/* ----------------------------------------------------------
+   Dark mode overrides — all other rules just use variables
+   ---------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg:            #1c1c1e;
+        --color-bg-raised:     #2c2c2e;
+        --color-text:          #adadad;
+        --color-text-strong:   #d0d0d0;
+        --color-heading:       #d0d0d0;
+        --color-link:          #a0a0a0;
+        --color-link-hover:    #20BAFB;
+        --color-border:        #3a3a3c;
+        --color-border-subtle: #2c2c2e;
+        --color-header-bg:     #242426;
+        --color-muted:         #7a7a80;
+    }
+}
+
+/* ----------------------------------------------------------
+   Reset / Base
+   ---------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+html, body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Bootstrap body class override */
+body.container { max-width: none; padding: 0; }
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+a:hover { color: var(--color-link-hover); }
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+    font-weight: 400;
+    margin-top: 0;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+    opacity: 1;
+    margin: 1rem 0;
+}
+
+/* ----------------------------------------------------------
+   Header
+   ---------------------------------------------------------- */
+.loc-header {
+    background-color: var(--color-header-bg);
+    width: 100%;
+    text-align: center;
+    padding: 24px 20px;
+    border-bottom: 3px solid var(--color-border);
+}
+
+.loc-header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.loc-logo-link { display: block; }
+
+.loc-logo-link img {
+    width: 64px;
+    height: 64px;
+    border: 0;
+    margin: 0 auto;
+}
+
+.loc-site-title-link {
+    color: var(--color-header-text) !important;
+    font-size: 2.2rem;
+    font-weight: 200;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    display: block;
+}
+.loc-site-title-link:hover { color: rgba(255,255,255,0.8) !important; }
+
+/* ----------------------------------------------------------
+   Page wrapper + two-column layout
+   ---------------------------------------------------------- */
+.loc-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.loc-columns {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.loc-main-content {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 20px 28px 20px 0;
+}
+
+.loc-sidebar {
+    flex: 0 0 220px;
+    width: 220px;
+    padding: 20px 0 20px 20px;
+    border-left: 1px solid var(--color-border);
+}
+
+/* ----------------------------------------------------------
+   Sidebar navigation
+   ---------------------------------------------------------- */
+.loc-sidebar-nav { margin-bottom: 20px; }
+
+.loc-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.loc-nav-list li { border-bottom: 1px solid var(--color-border); }
+
+.loc-nav-list li a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 6px 4px;
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.loc-nav-list li a:hover,
+.loc-nav-list li.current a { color: var(--color-link-hover); }
+
+/* ----------------------------------------------------------
+   Sidebar hero image + microsites
+   ---------------------------------------------------------- */
+.loc-sidebar-hero { margin-bottom: 16px; }
+
+.loc-sidebar-img { width: 100%; height: auto; }
+
+.loc-microsites-heading {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--color-text-strong);
+    margin-bottom: 8px;
+}
+
+.loc-microsite-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.loc-microsite-links a {
+    color: var(--color-link);
+    font-size: 13px;
+    font-family: Monaco, monospace;
+}
+.loc-microsite-links a:hover { color: var(--color-link-hover); }
+
+/* ----------------------------------------------------------
+   Category sections + app entries
+   ---------------------------------------------------------- */
+.loc-category-section { margin-bottom: 30px; }
+
+.loc-section-heading {
+    color: var(--color-heading);
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+}
+
+.loc-app-entry {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--color-border-subtle);
+    overflow: hidden;
+}
+.loc-app-entry:last-child { border-bottom: none; }
+
+.loc-app-header { margin-bottom: 8px; overflow: hidden; }
+
+.loc-app-icon {
+    float: left;
+    width: 100px;
+    height: auto;
+    margin-right: 16px;
+    margin-bottom: 8px;
+    border: 0;
+}
+
+.loc-app-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-heading);
+    display: block;
+    padding-top: 22px;
+    margin: 0;
+}
+
+.loc-app-summary {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-text-strong);
+    margin-bottom: 8px;
+    clear: left;
+}
+
+.loc-feature-list {
+    margin: 8px 0 12px;
+    padding-left: 24px;
+    clear: left;
+}
+.loc-feature-list li {
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+.loc-app-cta {
+    clear: left;
+    margin-top: 8px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.loc-muted-text { font-size: 13px; color: var(--color-muted); margin-bottom: 20px; }
+
+.loc-detail-link { font-size: 14px; color: var(--color-accent); }
+.loc-detail-link:hover { color: var(--color-accent-alt); text-decoration: underline; }
+
+/* ----------------------------------------------------------
+   Footer
+   ---------------------------------------------------------- */
+.loc-footer {
+    max-width: 980px;
+    margin: 20px auto 0;
+    padding: 0 16px 24px;
+}
+
+.loc-footer hr { margin: 0 0 10px; }
+
+.loc-footer-text { font-size: 13px; color: var(--color-text); margin: 0; }
+.loc-footer-text a { color: var(--color-link); }
+.loc-footer-text a:hover { color: var(--color-link-hover); }
+
+/* ----------------------------------------------------------
+   FirstPass detail page
+   ---------------------------------------------------------- */
+.loc-fp-header {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.loc-fp-section { margin-bottom: 28px; }
+
+.loc-fp-section h2 {
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+}
+
+.loc-review-block {
+    border-left: 3px solid var(--color-border);
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    color: var(--color-text);
+    font-style: italic;
+}
+.loc-review-block p:last-child {
+    font-size: 13px;
+    font-style: normal;
+    color: var(--color-muted);
+    margin: 4px 0 0;
+}
+
+.loc-release-entry {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+.loc-release-entry:last-child { border-bottom: none; }
+
+.loc-fp-back {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+}
+
+/* ----------------------------------------------------------
+   FirstPass User Manual
+   ---------------------------------------------------------- */
+.loc-manual-header { overflow: hidden; margin-bottom: 1.5rem; }
+
+.loc-manual-icon {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 128px;
+    height: auto;
+    border: 0;
+}
+
+.loc-manual-header h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-heading);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.loc-manual-img {
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+    margin: 12px 0 16px;
+    border: 1px solid var(--color-border);
+}
+
+.loc-manual-list { padding-left: 24px; margin-bottom: 1rem; }
+.loc-manual-list li { font-size: 15px; line-height: 1.7; color: var(--color-text); margin-bottom: 4px; }
+
+.loc-manual-tab-heading {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-text-strong);
+    margin: 16px 0 4px;
+}
+
+.loc-manual-note {
+    font-size: 14px;
+    color: var(--color-text);
+    border-left: 3px solid var(--color-border);
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+.loc-manual-hr { border-top: 1px solid var(--color-border); margin: 1.5rem 0 1rem; }
+
+.loc-manual-footer { text-align: center; font-size: 14px; color: var(--color-text); }
+.loc-manual-footer a { color: var(--color-link); }
+.loc-manual-footer a:hover { color: var(--color-link-hover); }
+
+/* ----------------------------------------------------------
+   Gallery index cards
+   ---------------------------------------------------------- */
+.loc-gallery-index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.loc-gallery-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.loc-gallery-card-link:hover .loc-gallery-card { border-color: var(--color-accent); }
+.loc-gallery-card-link:hover .loc-gallery-card-title { color: var(--color-accent); }
+
+.loc-gallery-card {
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--color-bg-raised);
+    transition: border-color 0.15s;
+}
+
+.loc-gallery-cover-img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+
+.loc-gallery-card-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-text-strong);
+    padding: 8px 10px 2px;
+    margin: 0;
+    display: block;
+}
+
+.loc-gallery-card-count {
+    font-size: 12px;
+    color: var(--color-muted);
+    padding: 0 10px 8px;
+    margin: 0;
+    display: block;
+}
+
+/* ----------------------------------------------------------
+   Gallery thumbnail grid
+   ---------------------------------------------------------- */
+.loc-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.loc-gallery-thumb {
+    display: block;
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+    aspect-ratio: 1;
+    cursor: pointer;
+    background: var(--color-bg-raised);
+}
+.loc-gallery-thumb:hover .loc-gallery-thumb-img { opacity: 0.78; }
+
+.loc-gallery-thumb-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.15s;
+}
+
+/* ----------------------------------------------------------
+   Lightbox overlay (always dark — no variable needed)
+   ---------------------------------------------------------- */
+.loc-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1055;
+    background: rgba(0,0,0,0.93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+.loc-lightbox[hidden] { display: none !important; }
+
+.loc-lightbox-img-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 92vw;
+    max-height: 88vh;
+}
+
+.loc-lightbox-img {
+    display: block;
+    max-width: 92vw;
+    max-height: 88vh;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.loc-lightbox-zone {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+}
+.loc-lightbox-zone-left  { left: 0;  cursor: w-resize; }
+.loc-lightbox-zone-right { right: 0; cursor: e-resize; }
+
+.loc-lightbox-close {
+    position: fixed;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.75);
+    font-size: 2.4rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 3;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+}
+.loc-lightbox-close:hover { color: #fff; }
+
+/* Bottom info bar — gradient fade over the image edge */
+.loc-lightbox-info {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 70px 14px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.65));
+    text-align: center;
+    pointer-events: none;
+}
+
+.loc-lightbox-caption {
+    color: rgba(255,255,255,0.92);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.loc-lightbox-counter {
+    color: rgba(255,255,255,0.45);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+/* ----------------------------------------------------------
+   Responsive — Tablet  ≤ 860px
+   ---------------------------------------------------------- */
+@media (max-width: 860px) {
+    .loc-sidebar {
+        flex: 0 0 190px;
+        width: 190px;
+    }
+    .loc-main-content { padding-right: 20px; }
+    .loc-app-icon { width: 84px; }
+    .loc-app-title { font-size: 16px; padding-top: 18px; }
+}
+
+/* ----------------------------------------------------------
+   Responsive — Mobile  ≤ 680px
+   ---------------------------------------------------------- */
+@media (max-width: 680px) {
+    /* Stack columns; sidebar nav moves to top */
+    .loc-columns { flex-direction: column; }
+    .loc-main-content { order: 2; padding: 16px 0; }
+
+    .loc-sidebar {
+        order: 1;
+        flex: none;
+        width: 100%;
+        border-left: none;
+        border-bottom: 1px solid var(--color-border);
+        padding: 8px 0;
+    }
+
+    /* Horizontal pill nav */
+    .loc-nav-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .loc-nav-list li {
+        border-bottom: none;
+        border-right: 1px solid var(--color-border);
+    }
+    .loc-nav-list li:last-child { border-right: none; }
+    .loc-nav-list li a {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    /* Hide decorative sidebar elements — keep only nav */
+    .loc-sidebar-hero,
+    .loc-microsites { display: none; }
+
+    /* Header */
+    .loc-site-title-link { font-size: 1.6rem; }
+    .loc-logo-link img { width: 48px; height: 48px; }
+
+    /* App entries */
+    .loc-app-icon { width: 68px; }
+    .loc-app-title { font-size: 15px; padding-top: 12px; }
+
+    /* Galleries */
+    .loc-gallery-index-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 10px;
+    }
+    .loc-gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 6px;
+    }
+
+    /* Lightbox — larger tap targets */
+    .loc-lightbox-close {
+        font-size: 2rem;
+        top: 6px;
+        right: 6px;
+    }
+    .loc-lightbox-img { max-width: 100vw; max-height: 80vh; }
+    .loc-lightbox-img-wrap { max-width: 100vw; max-height: 80vh; }
+}
+
+/* ----------------------------------------------------------
+   Accessibility / focus / motion
+   ---------------------------------------------------------- */
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+    html { scroll-behavior: auto; }
+}
