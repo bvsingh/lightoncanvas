@@ -43,6 +43,7 @@
             <h2>Objective</h2>
             <p>Downloading thousands of photographs from multiple memory cards can be a considerable challenge, particularly as each card must be downloaded individually, even when using several card readers. Furthermore, the initial editing process — rating, deleting, and detailed viewing — demands substantial time and effort. This software is specifically designed to assist photographers in reducing this workload by significantly expediting both the downloading process and the first pass edit, all within a single application.</p>
             <p>This version of FirstPass has been re-imagined using SwiftUI and Swift.</p>
+            <p class="loc-manual-note"><strong>Requirements:</strong> <em>The current release is version 1.7.1, available on the Mac App Store and requiring macOS 14.6 or later. This release adds the Compare Similar Images workflow described below.</em></p>
             <h2>Unique features of FirstPass</h2>
             <ol class="loc-manual-list">
               <li><p class="m-0">The first MacApp store application on Mac to enable image download from multiple sources to multiple destinations.</p></li>
@@ -63,13 +64,33 @@
             <h3>Image Gallery</h3>
             <img src="../../../images/manual/ImageGallery.png" alt="FirstPass image gallery" class="loc-manual-img" />
             <h3>Context Menu</h3>
-            <p>Right clicking on an image provides a context menu. Using this context menu users can change rating, show/hide image information inspector, view the image in finder, delete image, rename the image and open with external editor. External editor can be set in settings.</p>
+            <p>Right clicking on an image provides a context menu. Using this context menu users can change rating, set a colour flag, compare a selection of similar images, show/hide the image information inspector, view the image in Finder, delete the image, rename the image and open with an external editor. External editor can be set in settings.</p>
+            <img src="../../../images/manual/ContextMenu.png" alt="FirstPass right-click context menu" class="loc-manual-img" />
             <h3>Sorting</h3>
             <p>Images in the gallery can be sorted in ascending or descending order using creation date, name or rating as the key. This can be done via Browser menu option.</p>
             <h3>Image Information</h3>
             <p>Image information is shown in an inspector. Can be enabled using the context menu on the image or by selecting an image and clicking on the toolbar item.</p>
             <h3>Ratings Filter</h3>
             <p>Rating filter is on the bottom left of the gallery. There are six buttons — unrated and rating from 1 to 5. Clicking on any button filters out that rating.</p>
+            <h3>Colour Flags</h3>
+            <p>In addition to 0–5 star ratings, each image can be marked with one of nine colour flags. Set a flag from the right-click context menu, or press ⌘1 through ⌘9; ⌘0 clears it. The nine flag colours can be customised in the Colours tab of Settings, and the flag is shown on the image in the gallery.</p>
+            <img src="../../../images/manual/ColourFlags.png" alt="Gallery images marked with colour flags" class="loc-manual-img" />
+            <h3>Selecting Multiple Images</h3>
+            <p>Several images can be selected at once for rating, flagging, renaming or comparison. Use ⌘-click to add or remove individual images, Shift-click to select a range, and Shift with the arrow keys to extend the selection from the keyboard.</p>
+            <h3>Compare Similar Images</h3>
+            <p class="loc-manual-note"><em>New in version 1.7.1.</em></p>
+            <p>When several frames are near-identical — for example a burst, or several attempts at the same shot — it helps to view them together to keep only the best. Select between two and six images and choose Compare Images (⌘U) from the View menu, or from the right-click context menu. The selected images are tiled side-by-side and zoom and pan in unison, so you are always looking at the same part of every frame at the same time — ideal for judging critical focus and sharpness.</p>
+            <img src="../../../images/manual/Compare.png" alt="Comparing similar images side-by-side with synchronised zoom" class="loc-manual-img" />
+            <p>While comparing, you can rate an image, set a colour flag, or remove a frame from the comparison, all without leaving the view. Press Escape or Done to return to the gallery.</p>
+            <h3>Browsing Sub-folders</h3>
+            <p>By default a folder shows only the images it directly contains. Turn on Include Sub-folders in the Browser menu to browse a folder together with all of the images inside its sub-folders in a single gallery.</p>
+            <h3>Slideshow</h3>
+            <p>A full-screen slideshow of the current selection is available from the View menu, for reviewing images on a larger canvas.</p>
+            <h3>Compact Image Browser</h3>
+            <p>Compact image browser, enabled in the General tab of Settings, hides the filenames and rating stars and tightens the spacing so the photos themselves use more of the window — useful for a fast visual pass. The thumbnail size is still controlled by the gallery slider.</p>
+            <img src="../../../images/manual/CompactMode.png" alt="Compact image browser" class="loc-manual-img" />
+            <p>Turn on Show all images in landscape as well and portrait photos are rotated to landscape, so every cell in the grid shares the same orientation for a tidy, uniform layout.</p>
+            <img src="../../../images/manual/CompactLandscape.png" alt="Compact image browser with all images in landscape" class="loc-manual-img" />
             <h3>Camera Window</h3>
             <img src="../../../images/manual/CameraWindow.png" alt="FirstPass camera window" class="loc-manual-img" />
             <p>When a camera is selected in the sidebar its images are shown in the main browser window. On the bottom left there are two buttons to download selected or download all images.</p>
@@ -77,13 +98,13 @@
             <p>Settings window uses three tabs to organize settings. They are General, Download and Colors.</p>
             <p class="loc-manual-tab-heading" style="font-weight: 700">GENERAL</p>
             <img src="../../../images/manual/GeneralSettings.png" alt="General settings" class="loc-manual-img" />
-            <p>General pane is used for setting external editor.</p>
+            <p>The General pane sets the external editor and the viewing options: the compact image browser (and the Show all images in landscape option beneath it), Always Decode RAW for a sharper viewer image, and the slideshow transition and timing.</p>
             <p class="loc-manual-tab-heading" style="font-weight: 700">Download</p>
             <img src="../../../images/manual/DownloadSettings.png" alt="Download settings" class="loc-manual-img" />
             <p>Download pane is used to set download destinations and image renaming tokens. Here user can set multiple download destinations. User can set primary and secondary destinations. User can also set the tokens for creating folders for primary and secondary downloads. Tokens can also be set for file renaming. Along with provided tokens user can add their own e.g. space, “_” etc.</p>
             <p class="loc-manual-tab-heading" style="font-weight: 700">Colours</p>
             <img src="../../../images/manual/ColourSettings.png" alt="Colour settings" class="loc-manual-img" />
-            <p>All elements in sidebar have coloured icons associated with them. There is a default set of colours, shown above. Users can use this pane to change the colours.</p>
+            <p>All elements in the sidebar have coloured icons associated with them. There is a default set of colours, shown above, which users can change here. The same pane also sets the nine colour flags (⌘1–⌘9) used to mark images in the gallery; press Reset to Defaults to restore the standard palette.</p>
             <h3>File Renaming</h3>
             <p>Along with renaming files while they are being downloaded from a camera or a card, they can also be renamed while viewing them in gallery. This does not move the files to a different folder, just renames them in place. User can use all the same tokens as used for files while downloading from a camera or a card.</p>
             <p>In the image gallery user can select a few images and right click to bring up the renaming panel. User can provide tokens, specify which date to use if the date tokens are used and provide a starting sequence number if renamed files result in name conflicts.</p>
