@@ -43,10 +43,17 @@
             <h2>Objective</h2>
             <p>Downloading thousands of photographs from multiple memory cards can be a considerable challenge, particularly as each card must be downloaded individually, even when using several card readers. Furthermore, the initial editing process — rating, deleting, and detailed viewing — demands substantial time and effort. This software is specifically designed to assist photographers in reducing this workload by significantly expediting both the downloading process and the first pass edit, all within a single application.</p>
             <p>This version of FirstPass has been re-imagined using SwiftUI and Swift.</p>
-            <p class="loc-manual-note"><strong>Requirements:</strong> <em>The current release is version 1.7.1, available on the Mac App Store and requiring macOS 14.6 or later. This release adds the Compare Similar Images workflow described below.</em></p>
+            <p class="loc-manual-note"><strong>Requirements:</strong> <em>The current release is version 1.7.1, available on the Mac App Store and requiring macOS 14.6 or later. This release adds checksum-verified copying, transfer reports and Fast card ingest, all described below.</em></p>
+            <div class="loc-app-cta">
+              <a href="https://apps.apple.com/app/firstpass/id439156805?mt=12" class="loc-store-link">Download on the Mac App Store →</a>
+            </div>
             <h2>Unique features of FirstPass</h2>
             <ol class="loc-manual-list">
-              <li><p class="m-0">The first MacApp store application on Mac to enable image download from multiple sources to multiple destinations.</p></li>
+              <li><p class="m-0">Every copy is verified before the card is released — by size, or by a full content checksum.</p></li>
+              <li><p class="m-0">Writes a transfer report for the job: a CSV manifest, a PDF summary, or an ASC MHL sidecar.</p></li>
+              <li><p class="m-0">Two download paths: Fast reads a mounted card directly, and Automatic drives any camera over PTP.</p></li>
+              <li><p class="m-0">Files are filed by their own capture date, camera make and model — read from each file, not from the clock.</p></li>
+              <li><p class="m-0">The first Mac App Store application to enable image download from multiple sources to multiple destinations.</p></li>
               <li><p class="m-0">Works with shared devices to enable download over a network.</p></li>
               <li><p class="m-0">Provides a fast and clean interface to do a “first pass” editing of images.</p></li>
               <li><p class="m-0">Frees up the user’s time by handling multiple downloads at the same time without requiring the user to swap the cards in and out of a card reader or starting the download manually for each card.</p></li>
@@ -56,7 +63,7 @@
             <p>FirstPass has a single window type. User can create multiple windows and can browse different folders or download different cards. Same window can also be used to download multiple cards, each download triggered sequentially.</p>
             <img src="../../../images/manual/InterfaceLayout.png" alt="FirstPass interface layout" class="loc-manual-img" />
             <h2>Settings Window</h2>
-            <p>In addition, user can use Settings window to configure download and color settings. It is highly recommended to configure download settings before downloading anything.</p>
+            <p>The Settings window (⌘,) configures how images are downloaded, how each copy is verified, and how the app looks. It is worth setting up the Download and Verification tabs before your first import — they decide where your files land and how thoroughly each copy is checked. Every tab is described in full under Settings below.</p>
             <h2>Parts of Main Window</h2>
             <h3>Sidebar</h3>
             <img src="../../../images/manual/Sidebar.png" alt="FirstPass sidebar" class="loc-manual-img" />
@@ -95,27 +102,90 @@
             <img src="../../../images/manual/CameraWindow.png" alt="FirstPass camera window" class="loc-manual-img" />
             <p>When a camera is selected in the sidebar its images are shown in the main browser window. On the bottom left there are two buttons to download selected or download all images.</p>
             <h3>Settings</h3>
-            <p>Settings window uses three tabs to organize settings. They are General, Download and Colors.</p>
-            <p class="loc-manual-tab-heading" style="font-weight: 700">GENERAL</p>
-            <img src="../../../images/manual/GeneralSettings.png" alt="General settings" class="loc-manual-img" />
-            <p>The General pane sets the external editor and the viewing options: the compact image browser (and the Show all images in landscape option beneath it), Always Decode RAW for a sharper viewer image, and the slideshow transition and timing.</p>
+            <p>Settings are organised into four tabs — General, Download, Verification and Colors. It is worth configuring Download and Verification before your first import, because they decide where your files land and how thoroughly each copy is checked.</p>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">General</p>
+            <img src="../../../images/manual/SettingsGeneral.png" alt="The General settings tab" class="loc-manual-img" />
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>External editor</strong> — the application opened by “Open with external editor”. Use Browse to pick any app; Preview is a sensible default.</p></li>
+              <li><p class="m-0"><strong>Compact image browser</strong> — hides filenames and rating stars and tightens the spacing so images use more of the window. Thumbnail size is still controlled by the slider in the gallery.</p></li>
+              <li><p class="m-0"><strong>Show all images in landscape</strong> — available while compact mode is on. Rotates portrait photos so every cell in the grid has the same orientation and the rows pack tightly.</p></li>
+              <li><p class="m-0"><strong>Always Decode RAW</strong> — decodes RAW files fully in the background so the viewer shows a sharper image instead of the camera’s quick embedded preview. Double-clicking an image always decodes it. Uses more CPU and memory.</p></li>
+              <li><p class="m-0"><strong>Slideshow → Transition</strong> — None, Crossfade or Slide between images.</p></li>
+              <li><p class="m-0"><strong>Slideshow → Time on each slide</strong> — how long each image is shown while the slideshow auto-advances, from 0.5 to 60 seconds.</p></li>
+            </ul>
             <p class="loc-manual-tab-heading" style="font-weight: 700">Download</p>
-            <img src="../../../images/manual/DownloadSettings.png" alt="Download settings" class="loc-manual-img" />
-            <p>Download pane is used to set download destinations and image renaming tokens. Here user can set multiple download destinations. User can set primary and secondary destinations. User can also set the tokens for creating folders for primary and secondary downloads. Tokens can also be set for file renaming. Along with provided tokens user can add their own e.g. space, “_” etc.</p>
-            <p class="loc-manual-tab-heading" style="font-weight: 700">Colours</p>
-            <img src="../../../images/manual/ColourSettings.png" alt="Colour settings" class="loc-manual-img" />
-            <p>All elements in the sidebar have coloured icons associated with them. There is a default set of colours, shown above, which users can change here. The same pane also sets the nine colour flags (⌘1–⌘9) used to mark images in the gallery; press Reset to Defaults to restore the standard palette.</p>
+            <img src="../../../images/manual/SettingsDownload.png" alt="The Download settings tab" class="loc-manual-img" />
+            <p>This tab decides how files come off the card and where they go. The Sample line under each destination shows the exact folder your next import would use, so you can check a token pattern before committing to it.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Mode → Automatic</strong> — drives the camera over PTP. Works with any camera, whether connected directly or through a card reader, and never asks for permission. Slower on a large card.</p></li>
+              <li><p class="m-0"><strong>Mode → Fast (card readers)</strong> — copies straight off a mounted card’s filesystem, which is considerably quicker. The first time you insert each card, macOS asks you to grant access to it once; after that the card is remembered. Direct-USB cameras fall back to Automatic on their own.</p></li>
+              <li><p class="m-0"><strong>Primary Destination → Tokens</strong> — the folder structure built for each import. Drag tokens (year, month, day, camera make, camera model) into the row and add your own literal text such as an underscore.</p></li>
+              <li><p class="m-0"><strong>Primary Destination → Use Exif date information for date tokens</strong> — resolves date tokens from each photo’s own capture time rather than the date of the import. Leave this on: a card imported a week after the shoot then still files under the day it was shot.</p></li>
+              <li><p class="m-0"><strong>Primary Destination → Destination</strong> — the folder your images are copied into. Use Browse to choose it.</p></li>
+              <li><p class="m-0"><strong>Secondary Destination → Use secondary destination</strong> — writes a second copy of every image in the same pass, so a backup exists before the card leaves the reader. It has its own tokens and location, and shares the primary’s filenames.</p></li>
+              <li><p class="m-0"><strong>Filename</strong> — the token pattern used to rename images as they are copied. Sequence, date, camera and original-name tokens can be combined with literal text.</p></li>
+              <li><p class="m-0"><strong>Sequence Number</strong> — the running number used by the sequence token. It advances one per image, persists between sessions, and can be reset here.</p></li>
+              <li><p class="m-0"><strong>Available Tokens</strong> — the palette of tokens to drag into the rows above.</p></li>
+            </ul>
+            <p class="loc-manual-note"><strong>Note:</strong> <em>Destination tokens build folders; the sequence-number token belongs in the filename, not in a folder name.</em></p>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Verification</p>
+            <img src="../../../images/manual/SettingsVerification.png" alt="The Verification settings tab" class="loc-manual-img" />
+            <p>A plain file copy assumes it worked. This tab decides how thoroughly FirstPass checks each copy before releasing the card, what record it leaves behind, and what happens the moment a card is connected.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Verify copies by → Size</strong> — a fast sanity check that the bytes written match the bytes the camera reported.</p></li>
+              <li><p class="m-0"><strong>Verify copies by → Checksum</strong> — compares a content hash of the source against every copy written. Far stronger, and slower. The two modes are mutually exclusive.</p></li>
+              <li><p class="m-0"><strong>Generate transfer report</strong> — writes a record of the job to the destination disk when the copy finishes.</p></li>
+              <li><p class="m-0"><strong>CSV manifest</strong> — one row per copy, with source, destination, size and verification result.</p></li>
+              <li><p class="m-0"><strong>PDF report</strong> — the same information as a readable summary for a production or a client.</p></li>
+              <li><p class="m-0"><strong>ASC MHL (Media Hash List)</strong> — the industry-standard hash manifest. It records a content hash, so it is only available in Checksum mode.</p></li>
+              <li><p class="m-0"><strong>On Card Connect → Start downloading automatically</strong> — begins the import the moment a card is connected, with no further action from you.</p></li>
+              <li><p class="m-0"><strong>On Card Connect → Eject card after download completes</strong> — unmounts the card once the import has finished and verified.</p></li>
+            </ul>
+            <p class="loc-manual-note"><strong>Note:</strong> <em>Starting automatically is unavailable in Fast mode, and the setting is shown greyed out with an explanation. A card’s one-time access grant cannot be given while nobody is watching. Your preference is remembered and applies again as soon as you return to Automatic mode.</em></p>
+            <p class="loc-manual-note"><strong>Note:</strong> <em>Whatever you choose here, a file that fails verification is copied again automatically, and anything that still fails is reported rather than counted as a success.</em></p>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Colors</p>
+            <img src="../../../images/manual/SettingsColors.png" alt="The Colors settings tab" class="loc-manual-img" />
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Sidebar Colors</strong> — the icon colour for each kind of sidebar row: Camera, Pinned, Downloads and Folder. Tick Use system to follow the system accent instead of a fixed colour.</p></li>
+              <li><p class="m-0"><strong>Flag Colors</strong> — the nine colour flags assigned with ⌘1–⌘9 and removed with ⌘0. Click a swatch to change it. A flag is stored as a number alongside the star rating, so recolouring the palette re-colours every image already flagged with that slot.</p></li>
+              <li><p class="m-0"><strong>Reset to Defaults</strong> — restores the shipped palette.</p></li>
+            </ul>
             <h3>File Renaming</h3>
             <p>Along with renaming files while they are being downloaded from a camera or a card, they can also be renamed while viewing them in gallery. This does not move the files to a different folder, just renames them in place. User can use all the same tokens as used for files while downloading from a camera or a card.</p>
             <p>In the image gallery user can select a few images and right click to bring up the renaming panel. User can provide tokens, specify which date to use if the date tokens are used and provide a starting sequence number if renamed files result in name conflicts.</p>
             <img src="../../../images/manual/RenamingWindow.png" alt="File renaming window" class="loc-manual-img" />
             <p class="loc-manual-note"><strong>Note:</strong> <em>After entering each word user must press enter to tokenize it. All known tokens should be dragged from collection to the renaming field.</em></p>
+            <h2>Verifying copies</h2>
+            <p>A plain file copy assumes it worked. FirstPass checks. Every file written is verified before the card is released, and anything that fails is re-copied automatically; whatever still fails is reported rather than quietly counted as a success.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0">Size — a fast sanity check that the bytes written match the bytes the camera reported.</p></li>
+              <li><p class="m-0">Checksum — a content hash of the source compared against every copy written. Slower, and far stronger.</p></li>
+              <li><p class="m-0">The two are mutually exclusive; choose one under Settings → Verification.</p></li>
+            </ul>
+            <h2>Transfer reports</h2>
+            <p>For work that needs a paper trail, FirstPass writes a report of the job to the destination disk when the copy finishes. Enable the formats you need under Settings → Verification.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0">CSV manifest — one row per copy, with source, destination, size and verification result.</p></li>
+              <li><p class="m-0">PDF report — the same information as a readable summary for a production or client.</p></li>
+              <li><p class="m-0">ASC MHL — the industry-standard media hash list sidecar. It records a content hash, so it needs Checksum verification.</p></li>
+            </ul>
+            <h2>Fast and Automatic downloads</h2>
+            <p>FirstPass can take files off a card two ways, chosen under Settings → Download.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0">Automatic — drives the camera over PTP. Works with any camera, whether connected directly or through a card reader, and never asks for permission. Slower on a large card.</p></li>
+              <li><p class="m-0">Fast — copies straight off a mounted card’s filesystem, which is far quicker. The first time you insert each card, macOS asks you to grant access to it once; after that the card is remembered.</p></li>
+            </ul>
+            <p class="loc-manual-note"><strong>Note:</strong> <em>Because a card’s one-time access grant cannot be given while nobody is watching, Fast mode and “start downloading automatically” cannot both be on. Your automatic-start preference is remembered and applies again in Automatic mode.</em></p>
+            <p class="loc-manual-note"><strong>Note:</strong> <em>Cards and cameras are browsed read-only: FirstPass never writes ratings or any other file back to a card, so nothing on the card is modified before it is copied.</em></p>
+            <h2>Where your files land</h2>
+            <p>Destination folders and filenames are built from tokens, and the date tokens resolve from each file’s own capture time — not from the day you happen to be importing. A card ingested a week after the shoot still files under the day it was shot. Where a file carries no capture date at all, the date the camera wrote the file is used instead.</p>
             <hr class="loc-manual-hr" />
             <div class="loc-manual-footer">
               <p><em><span>For further questions, clarification or feedback please </span><a href="mailto:firstpass@lightoncanvas.com?subject=Mail%20from%20manual%20link">email us</a><span>.</span></em></p>
             </div>
             <div class="loc-fp-back">
               <a href="../../../applications/firstpass/">← Back to FirstPass</a>
+              <a href="https://apps.apple.com/app/firstpass/id439156805?mt=12" class="loc-store-link">Download on the Mac App Store →</a>
             </div>
           </div>
         </section>
