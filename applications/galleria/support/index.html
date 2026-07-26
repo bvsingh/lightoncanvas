@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" data-light-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Help with Galleria: common questions, troubleshooting, and how to get in touch." />
+    <meta name="author" content="LightOnCanvas" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>Galleria Support – LightOnCanvas</title>
+    <link href="../../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../../css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://www.lightoncanvas.com/applications/galleria/support" rel="canonical" />
+    <link type="application/rss+xml" title="RSS Feed" href="../../../feed.rss" rel="alternate" />
+    <meta property="og:site_name" content="LightOnCanvas" />
+    <meta property="og:title" content="Galleria Support" />
+    <meta name="twitter:title" content="Galleria Support" />
+    <meta property="og:description" content="Help with Galleria: common questions, troubleshooting, and how to get in touch." />
+    <meta name="twitter:description" content="Help with Galleria: common questions, troubleshooting, and how to get in touch." />
+    <meta property="og:url" content="https://www.lightoncanvas.com/applications/galleria/support" />
+    <meta name="twitter:domain" content="lightoncanvas.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <meta name="color-scheme" content="light dark" />
+    <link href="../../../css/site.css" rel="stylesheet" />
+    <script src="../../../js/site.js"></script>
+  </head>
+  <body>
+    <header class="loc-header">
+      <div class="loc-header-inner">
+        <a href="../../../" class="loc-logo-link"><img src="../../../images/FirstPass-14k.png" alt="LightOnCanvas logo" /></a>
+        <a href="../../../" class="loc-site-title-link">LightOnCanvas.com</a>
+      </div>
+    </header>
+    <div class="loc-wrap">
+      <div class="loc-columns">
+        <section class="loc-main-content">
+          <div class="ig-main-content">
+            <div class="loc-fp-header">
+              <img src="../../../images/galleria-256.png" alt="Galleria icon" class="loc-manual-icon" style="width: 96px" />
+              <h1>Galleria Support</h1>
+              <p><span>Email </span><a href="mailto:galleria@lightoncanvas.com">galleria@lightoncanvas.com</a><span> and a person will reply. Galleria is made by one developer, so it may not be </span><span>instant — but it will be someone who knows the answer.</span></p>
+            </div>
+            <div class="loc-fp-section">
+              <h4>Before you write</h4>
+              <p><span>The </span><a href="../../../applications/galleria/manual/">user manual</a><span> covers the whole app, and the </span><a href="../../../applications/galleria/features/">features and quick start</a><span> page has a two-minute walkthrough. If it is one of the below, the answer is here.</span></p>
+            </div>
+            <h2 class="loc-section-heading">Common questions</h2>
+            <div class="loc-faq">
+              <p class="loc-faq-question">My publish says “Galleria can’t write to /var/www/…”</p>
+              <p class="loc-faq-answer">The folder belongs to another user on the server. Either publish somewhere your SSH user owns, or ask your host to change the folder’s ownership. Test Connection in the server settings will tell you before you upload anything.</p>
+            </div>
+            <div class="loc-faq">
+              <p class="loc-faq-question">The images uploaded but the website shows broken images</p>
+              <p class="loc-faq-answer">Almost always file permissions on the server. Galleria sets published files to be world-readable, but some hosts override that. Check that the web server user can read the folder you published into.</p>
+            </div>
+            <div class="loc-faq">
+              <p class="loc-faq-question">Galleria says my server’s identity has changed</p>
+              <p class="loc-faq-answer">That means the server’s SSH host key is different from the one Galleria remembered. Usually the server was rebuilt or migrated — but it can also mean you are connecting to something that is not your server, which is why Galleria stops rather than asking you to click past it. If you know why it changed, open the destination menu, choose Manage Destinations… and use Forget this server’s identity.</p>
+            </div>
+            <div class="loc-faq">
+              <p class="loc-faq-question">Some of my photographs show as Missing</p>
+              <p class="loc-faq-answer">Galleria references your originals where they live rather than copying them, so a Missing photograph means the file moved, was deleted, or is on a drive that is not connected. Reconnect the drive, or use the relink option. To make a gallery self-contained in future, use File ▸ Consolidate Originals…</p>
+            </div>
+            <div class="loc-faq">
+              <p class="loc-faq-question">I paid but Galleria still asks me to</p>
+              <p class="loc-faq-answer">Open Galleria ▸ Settings and press Restore Purchase. If that does not do it, check you are signed in to the App Store with the Apple Account you bought it with. If it still does not, write to me — that is a bug and I want to know.</p>
+            </div>
+            <div class="loc-faq">
+              <p class="loc-faq-question">Should I subscribe or buy it outright?</p>
+              <p class="loc-faq-answer">Purely arithmetic: $29.99 once is about three years of the $9.99 subscription. If you expect to keep using Galleria for longer than that, buy it outright. They unlock exactly the same things.</p>
+            </div>
+            <div class="loc-faq">
+              <p class="loc-faq-question">What happens to my galleries if I stop paying?</p>
+              <p class="loc-faq-answer">They keep opening, and stay editable. What stops is producing new exports and publishes. Consolidate Originals is never restricted, so you can always copy every photograph back out at full resolution, and anything already published stays on your server untouched.</p>
+            </div>
+            <div class="loc-faq">
+              <p class="loc-faq-question">Can I use it without a server?</p>
+              <p class="loc-faq-answer">Yes. Export to a folder instead. The result opens straight from disk — double-click index.html — and you can upload it anywhere, including hosts that only take a drag-and-drop.</p>
+            </div>
+            <div class="loc-faq">
+              <p class="loc-faq-question">Does it work with my raw files?</p>
+              <p class="loc-faq-answer">If macOS can read the format, Galleria can. It reads the embedded preview or renders the raw, and publishes JPEG or AVIF copies at the sizes you choose. Your raw files are never modified.</p>
+            </div>
+            <h2 class="loc-section-heading">Reporting a problem</h2>
+            <div class="loc-fp-section">
+              <p>Include these and it will be fixed much faster:</p>
+              <ul class="loc-feature-list">
+                <li><p class="m-0">What you did, what happened, and what you expected instead</p></li>
+                <li><p class="m-0">Your macOS version and your Galleria version (Galleria ▸ About Galleria)</p></li>
+                <li><p class="m-0">Whether it was an export to a folder or a publish to a server</p></li>
+                <li><p class="m-0">The exact wording of any message — a screenshot is ideal</p></li>
+              </ul>
+              <p><span>Send it to </span><a href="mailto:galleria@lightoncanvas.com?subject=Galleria%20problem%20report">galleria@lightoncanvas.com</a><span>.</span></p>
+            </div>
+            <div class="loc-fp-section">
+              <h4>Refunds</h4>
+              <p>Purchases go through Apple, so refunds do too — request one at reportaproblem.apple.com. I cannot issue one directly, but if something is wrong with the app I would rather hear about it and fix it.</p>
+            </div>
+            <hr class="loc-manual-hr" />
+            <div class="loc-app-cta">
+              <a href="../../../applications/galleria/manual/" class="loc-detail-link">User Manual →</a>
+              <a href="../../../applications/galleria/privacy/" class="loc-detail-link">Privacy Policy →</a>
+              <a href="../../../applications/galleria/terms/" class="loc-detail-link">Terms of Use →</a>
+            </div>
+            <div class="loc-fp-back">
+              <a href="../../../applications/galleria/">← Back to Galleria</a>
+            </div>
+          </div>
+        </section>
+        <aside class="loc-sidebar">
+          <nav class="loc-sidebar-nav">
+            <ul class="loc-nav-list">
+              <li><a href="../../../">Home</a></li>
+              <li><a href="../../../">Products</a></li>
+              <li><a href="../../../about/">About</a></li>
+              <li><a href="../../../galleries/">Photo Gallery</a></li>
+              <li><a href="../../../contact/">Contact</a></li>
+              <li><a href="../../../privacy/">Privacy Policy</a></li>
+            </ul>
+          </nav>
+          <div class="loc-sidebar-hero">
+            <img src="../../../images/Website-header.jpg" alt="LightOnCanvas header" class="loc-sidebar-img" />
+          </div>
+        </aside>
+      </div>
+    </div>
+    <footer class="loc-footer">
+      <hr />
+      <p class="loc-footer-text"><span>© Bhupendra Yadav </span><a href="mailto:info@lightoncanvas.com">Contact Me</a></p>
+    </footer>
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../../js/ignite-core.js"></script>
+  </body>
+</html>

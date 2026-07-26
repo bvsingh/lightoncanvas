@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" data-light-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="User manual for Galleria: building, arranging and publishing photo galleries from your Mac." />
+    <meta name="author" content="LightOnCanvas" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>Galleria User Manual – LightOnCanvas</title>
+    <link href="../../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../../css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://www.lightoncanvas.com/applications/galleria/manual" rel="canonical" />
+    <link type="application/rss+xml" title="RSS Feed" href="../../../feed.rss" rel="alternate" />
+    <meta property="og:site_name" content="LightOnCanvas" />
+    <meta property="og:title" content="Galleria User Manual" />
+    <meta name="twitter:title" content="Galleria User Manual" />
+    <meta property="og:description" content="User manual for Galleria: building, arranging and publishing photo galleries from your Mac." />
+    <meta name="twitter:description" content="User manual for Galleria: building, arranging and publishing photo galleries from your Mac." />
+    <meta property="og:url" content="https://www.lightoncanvas.com/applications/galleria/manual" />
+    <meta name="twitter:domain" content="lightoncanvas.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <meta name="color-scheme" content="light dark" />
+    <link href="../../../css/site.css" rel="stylesheet" />
+    <script src="../../../js/site.js"></script>
+  </head>
+  <body>
+    <header class="loc-header">
+      <div class="loc-header-inner">
+        <a href="../../../" class="loc-logo-link"><img src="../../../images/FirstPass-14k.png" alt="LightOnCanvas logo" /></a>
+        <a href="../../../" class="loc-site-title-link">LightOnCanvas.com</a>
+      </div>
+    </header>
+    <div class="loc-wrap">
+      <div class="loc-columns">
+        <section class="loc-main-content">
+          <div class="ig-main-content">
+            <div class="loc-manual-header">
+              <img src="../../../images/galleria-256.png" alt="Galleria icon" class="loc-manual-icon" style="width: 128px" />
+              <h1>Galleria User Manual</h1>
+            </div>
+            <p class="loc-manual-note"><strong>Requirements:</strong> <em>Version 1.0, requiring macOS 14 or later. Free for 30 days; after that $9.99 a year or $29.99 once.</em></p>
+            <a href="../../../applications/galleria/coming-soon/" class="loc-store-link">Coming to the Mac App Store →</a>
+            <h2>What Galleria is for</h2>
+            <p>Galleria builds an ordinary static website out of your photographs — HTML, CSS, and resized copies of your images — and puts it wherever you tell it to. There is no account to make and no platform to move into. The site it produces is a folder of files that will work on any web host, from a Raspberry Pi to a university server, and that keeps working whether or not you ever open Galleria again.</p>
+            <p>It is built around the way a photographer actually works: shoot, cull elsewhere, then put a chosen set online. Galleria does not try to be a library, a raw editor, or a place to store your work. It takes photographs you have already chosen and turns them into a website.</p>
+            <h2>Galleries and where they live</h2>
+            <p>A gallery is a document — a `.galleria` file you save wherever you keep your work. It holds the running order, the captions, the settings and a reference to each original photograph. It does not, by default, hold the photographs themselves: your originals stay where they are and are never modified.</p>
+            <p>That reference is the one thing to understand. Move or rename an original in the Finder and Galleria will usually follow it; delete it, or take away the drive it was on, and the photograph shows as <strong>Missing</strong>. Missing photographs are flagged before a publish rather than quietly dropped, and can be relinked.</p>
+            <p><strong>File ▸ Consolidate Originals…</strong> copies every referenced photograph into the gallery file itself. After that the gallery travels between Macs on its own. It is a one-way trip — Galleria cannot un-consolidate, because it cannot invent the file references it never had — and the confirmation tells you how much space it will take first.</p>
+            <h2>Building a gallery</h2>
+            <img src="../../../images/galleria/grid.png" alt="A gallery open in Galleria: sidebar, grid, and inspector" class="loc-galleria-shot" />
+            <p><strong>Adding photographs.</strong> ⇧⌘A, or drag files or a folder onto the window. Dropping a folder adds the files in it; sub-folders are left alone unless you say otherwise. Galleria reads capture date, camera, lens and exposure from each file as it goes.</p>
+            <p><strong>Ordering.</strong> Drag thumbnails to rearrange. ⌥⌘← and ⌥⌘→ nudge whatever is selected one place. The Sort menu orders the whole gallery by capture date, filename or title — useful as a starting point before you hand-tune the sequence.</p>
+            <p><strong>Hiding.</strong> Right-click a photograph and choose <strong>Hide from Gallery</strong>. It stays in the document and stays out of the website. This is for the frame you might want back, rather than the one you want gone.</p>
+            <p><strong>Captions and alt text.</strong> Select a photograph and use the inspector on the right. The <em>caption</em> is what visitors read. The <em>alt text</em> is what a screen reader says, and what shows if an image fails to load — it is a different sentence, describing what is in the photograph rather than commenting on it. Galleria counts how many are still empty and tells you before you publish, but will not invent them for you.</p>
+            <h2>Making it look right</h2>
+            <p>Settings live in their own window, per gallery. The ones worth knowing about:</p>
+            <ul class="loc-feature-list">
+              <li><p class="m-0"><strong>Layout</strong> — justified rows, or a single column. Justified suits mixed orientations; a single column suits a sequence meant to be read in order.</p></li>
+              <li><p class="m-0"><strong>Columns</strong> — set separately for phone, tablet, desktop and wide screens, so a gallery that looks right on your monitor is not four tiny columns on a phone.</p></li>
+              <li><p class="m-0"><strong>Captions</strong> — always visible, on hover, in the lightbox only, or never.</p></li>
+              <li><p class="m-0"><strong>Lightbox</strong> — on by default. It loads the current image and its immediate neighbours only, which is why a large gallery stays quick.</p></li>
+              <li><p class="m-0"><strong>Pagination</strong> — above a threshold you set, the gallery splits into pages. A thousand photographs on one page is several hundred kilobytes of HTML before a single pixel loads.</p></li>
+              <li><p class="m-0"><strong>Image sizes and format</strong> — the sizes generated per photograph, and JPEG or AVIF. AVIF files are smaller and slower to encode.</p></li>
+              <li><p class="m-0"><strong>Colour</strong> — sRGB or Display P3. Either way the conversion is done properly rather than by re-tagging, and the profile is embedded.</p></li>
+              <li><p class="m-0"><strong>Metadata</strong> — see the next section.</p></li>
+              <li><p class="m-0"><strong>Footer</strong> — copyright, a contact address, and a link back to your own site.</p></li>
+            </ul>
+            <h2>What ends up in the published files</h2>
+            <p>Galleria never publishes your originals. It writes resized copies, and what metadata survives is your choice:</p>
+            <ul class="loc-feature-list">
+              <li><p class="m-0"><strong>Copyright only</strong> (the default) — your copyright and IPTC byline are kept; GPS and everything else goes. This is the setting most photographers want: publishing the exact coordinates of a nest, a den or your own house is a real harm, and stripping your own byline is not privacy.</p></li>
+              <li><p class="m-0"><strong>Strip all</strong> — everything goes except the colour profile, which is always embedded. Without it a browser cannot know what your colours mean.</p></li>
+              <li><p class="m-0"><strong>Keep all</strong> — everything survives, GPS included. Choose it deliberately.</p></li>
+            </ul>
+            <p>Whatever you choose, orientation is baked into the pixels and the orientation tag is reset, so no browser rotates an already-rotated image a second time.</p>
+            <h2>Publishing</h2>
+            <img src="../../../images/galleria/export.png" alt="The export sheet with the destination menu open" class="loc-galleria-shot" />
+            <p>⇧⌘E opens the export sheet. <strong>Destination</strong> is one control with two kinds of answer.</p>
+            <p><strong>A folder.</strong> Choose one and Galleria writes the site into it. Double-click <code>index.html</code> and it opens straight from disk — no server needed to check your work. Upload it however you like.</p>
+            <p><strong>A server.</strong> Choose <strong>Add Server…</strong> and fill in six fields.</p>
+            <img src="../../../images/galleria/server-setup.png" alt="Setting up an SFTP server: name, host, user name, authentication, folder and web address" class="loc-galleria-shot" />
+            <ul class="loc-feature-list">
+              <li><p class="m-0"><strong>Name</strong> — what you will see in the menu.</p></li>
+              <li><p class="m-0"><strong>Server</strong> — the hostname. You can paste <code>user@host:/path</code> or an <code>sftp://</code> URL and it will split itself across the fields.</p></li>
+              <li><p class="m-0"><strong>User name</strong> — your SSH user.</p></li>
+              <li><p class="m-0"><strong>Authenticate with</strong> — a password, or an SSH private key. Keys are read once and kept in the macOS keychain; because Galleria is sandboxed it cannot use <code>ssh-agent</code>, so it needs the key itself.</p></li>
+              <li><p class="m-0"><strong>Folder on server</strong> — where the site goes, e.g. <code>/var/www/galleries</code>.</p></li>
+              <li><p class="m-0"><strong>Web address</strong> — where that folder is reachable, so Galleria can offer you an <strong>Open Site</strong> button afterwards.</p></li>
+            </ul>
+            <p>Then press <strong>Test Connection</strong>. It does the whole real thing — connects, checks the server’s identity, signs in, writes a file into the folder, reads it back and deletes it — and reports how fast it went. Doing that now is much better than discovering a permissions problem half-way through a four-gigabyte upload.</p>
+            <p><strong>The first time you connect to a server</strong>, Galleria shows you its identity fingerprint and asks whether it is really your server. Nothing has been sent at that point — not your password, not your images. Check the fingerprint against what your host published, or run <code>ssh-keyscan yourhost | ssh-keygen -lf -</code> on a machine you trust. Galleria remembers it, and if it ever changes it stops and tells you rather than carrying on.</p>
+            <p><strong>Publishing again.</strong> ⇧⌘P publishes to the same place with no dialog at all. Only what actually changed is uploaded — fix a caption on a four-hundred-image gallery and it sends a few pages and no photographs. If you rename a gallery, files already on the server are moved rather than uploaded again.</p>
+            <p><strong>If something goes wrong.</strong> A publish can be cancelled or dropped at any point without breaking the live site: images are uploaded before the pages that reference them, so visitors never see a page pointing at something that is not there yet. An interrupted publish resumes where it stopped rather than starting over.</p>
+            <h2>Collections</h2>
+            <p>A collection publishes several galleries as one website, with an index page of cards linking to each. Make one with ⌃⌘N, add galleries to it, and export the collection rather than the individual galleries.</p>
+            <ul class="loc-feature-list">
+              <li><p class="m-0">Each member gets a card title and an address, independent of the gallery’s own title.</p></li>
+              <li><p class="m-0">Once published, addresses are frozen — so links people already have keep working, and Galleria warns you if an edit would change one.</p></li>
+              <li><p class="m-0">A member can be hidden: kept in the collection, left out of the site.</p></li>
+              <li><p class="m-0">Each gallery keeps its own layout and captions; image sizes, format and quality come from the collection, because mixed encoding across one site is a bug rather than a feature.</p></li>
+            </ul>
+            <h2>The 30 days, and what happens after</h2>
+            <p>Galleria is free and completely functional for 30 days from first launch. Not a trimmed version — every feature, no watermark, no limit on how much you publish.</p>
+            <p>After that, <em>exporting and publishing</em> need either a subscription ($9.99 a year) or a one-time unlock ($29.99). Everything else keeps working, and this is deliberate:</p>
+            <ul class="loc-feature-list">
+              <li><p class="m-0">Your galleries stay open, editable and organisable.</p></li>
+              <li><p class="m-0"><strong>Consolidate Originals is never gated</strong>, so you can always copy every photograph back out at full resolution.</p></li>
+              <li><p class="m-0">Everything you have already published stays published — those are files on your server, and Galleria could not remove them if it wanted to.</p></li>
+            </ul>
+            <p>The subscription and the one-time unlock buy exactly the same thing. Which is better depends only on how long you expect to use it: about three years is the break-even.</p>
+            <h2>Privacy</h2>
+            <p>Galleria has no account, no telemetry, no analytics and no tracking of any kind. It makes exactly two sorts of network connection, both of which you cause: an SFTP upload to a server you configured, and the App Store’s own purchase traffic. There is no server of mine anywhere in the picture — I could not collect your data if I wanted to, because there is nowhere for it to go.</p>
+            <p><span>The full policy is on the </span><a href="../../../applications/galleria/privacy/">Galleria privacy page</a><span>.</span></p>
+            <h2>Keyboard shortcuts</h2>
+            <div class="loc-shortcut-table">
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘N</p>
+                <p class="loc-shortcut-action">New gallery</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌃⌘N</p>
+                <p class="loc-shortcut-action">New collection</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘O</p>
+                <p class="loc-shortcut-action">Open</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘S / ⇧⌘S</p>
+                <p class="loc-shortcut-action">Save / Save As</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘W</p>
+                <p class="loc-shortcut-action">Close window</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⇧⌘A</p>
+                <p class="loc-shortcut-action">Add images</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌥⌘← / ⌥⌘→</p>
+                <p class="loc-shortcut-action">Move selection left / right</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘= / ⌘-</p>
+                <p class="loc-shortcut-action">Larger / smaller thumbnails</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌥⌘I</p>
+                <p class="loc-shortcut-action">Show inspector</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⇧⌘E</p>
+                <p class="loc-shortcut-action">Export gallery</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⇧⌘P</p>
+                <p class="loc-shortcut-action">Publish to the last destination</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘Z / ⇧⌘Z</p>
+                <p class="loc-shortcut-action">Undo / redo</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘,</p>
+                <p class="loc-shortcut-action">Settings</p>
+              </div>
+            </div>
+            <hr class="loc-manual-hr" />
+            <div class="loc-app-cta">
+              <a href="../../../applications/galleria/features/" class="loc-detail-link">Features &amp; quick start →</a>
+              <a href="../../../applications/galleria/coming-soon/" class="loc-store-link">Coming to the Mac App Store →</a>
+            </div>
+            <div class="loc-muted-text">
+              <a href="../../../applications/galleria/support/">Support</a>
+              <span> · </span>
+              <a href="../../../applications/galleria/privacy/">Privacy Policy</a>
+              <span> · </span>
+              <a href="../../../applications/galleria/terms/">Terms of Use</a>
+            </div>
+            <div class="loc-fp-back">
+              <a href="../../../applications/galleria/">← Back to Galleria</a>
+            </div>
+          </div>
+        </section>
+        <aside class="loc-sidebar">
+          <nav class="loc-sidebar-nav">
+            <ul class="loc-nav-list">
+              <li><a href="../../../">Home</a></li>
+              <li><a href="../../../">Products</a></li>
+              <li><a href="../../../about/">About</a></li>
+              <li><a href="../../../galleries/">Photo Gallery</a></li>
+              <li><a href="../../../contact/">Contact</a></li>
+              <li><a href="../../../privacy/">Privacy Policy</a></li>
+            </ul>
+          </nav>
+          <div class="loc-sidebar-hero">
+            <img src="../../../images/Website-header.jpg" alt="LightOnCanvas header" class="loc-sidebar-img" />
+          </div>
+        </aside>
+      </div>
+    </div>
+    <footer class="loc-footer">
+      <hr />
+      <p class="loc-footer-text"><span>© Bhupendra Yadav </span><a href="mailto:info@lightoncanvas.com">Contact Me</a></p>
+    </footer>
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../../js/ignite-core.js"></script>
+  </body>
+</html>
