@@ -336,18 +336,23 @@ hr {
     margin-bottom: 12px;
 }
 
-.loc-review-block {
-    border-left: 3px solid var(--color-border);
-    padding: 8px 12px;
-    margin-bottom: 12px;
-    color: var(--color-text);
-    font-style: italic;
+/* Price, shown beside the store button rather than left for the reader to go and find. */
+.loc-price-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 14px;
 }
-.loc-review-block p:last-child {
+.loc-price {
+    font-size: 15px;
+    color: var(--color-text-strong);
+    margin: 0;
+}
+.loc-price-note {
     font-size: 13px;
-    font-style: normal;
     color: var(--color-muted);
-    margin: 4px 0 0;
+    flex-basis: 100%;
 }
 
 .loc-release-entry {
