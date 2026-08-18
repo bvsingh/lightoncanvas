@@ -41,11 +41,12 @@
             <div class="loc-fp-header">
               <h1>FirstPass</h1>
               <p class="lead">RAW Ingest &amp; Cull</p>
-              <p>Get your shoot off the card, verified, and cut down to the keepers — written by a photographer for photographers. Buy once, works entirely offline, native on Apple silicon.</p>
+              <p>Get your shoot off the card, verified, and cut down to the keepers — written by a photographer for photographers. Buy once, works offline, native on Apple silicon.</p>
               <div class="loc-price-row">
                 <a href="https://apps.apple.com/app/firstpass/id439156805?mt=12" class="loc-store-link">Download on the Mac App Store →</a>
-                <p class="loc-price">$27.99 once. No subscription.</p>
+                <p class="loc-price">$39.99 once. No subscription.</p>
                 <a href="../../applications/firstpass/manual/" class="loc-detail-link">Read the manual →</a>
+                <a href="../../applications/firstpass/compared/" class="loc-detail-link">How it compares →</a>
               </div>
             </div>
             <div class="loc-fp-section">
@@ -56,15 +57,16 @@
               <ul>
                 <li><p class="m-0">Checksum-verified copying — every file confirmed against the card before it is released</p></li>
                 <li><p class="m-0">Transfer reports as CSV, PDF and ASC MHL manifests — the film industry’s standard proof that every frame arrived intact</p></li>
-                <li><p class="m-0">Ratings and colour flags written as XMP, so Lightroom, Bridge and Photo Mechanic read them</p></li>
+                <li><p class="m-0">Export re-encoded and everything comes with it — EXIF, capture date, camera and GPS, plus the star rating as XMP for Lightroom, Bridge and Photo Mechanic</p></li>
                 <li><p class="m-0">Fast card ingest that copies straight off a mounted card, with PTP for any camera</p></li>
                 <li><p class="m-0">Download from several cards or cameras to multiple destinations at once</p></li>
                 <li><p class="m-0">Files sorted into folders by capture date, camera make and model</p></li>
                 <li><p class="m-0">Fast, uncluttered “first pass” culling — rate, colour-flag and delete</p></li>
                 <li><p class="m-0">Compare similar frames with synchronised zoom and pan</p></li>
-                <li><p class="m-0">0–5 star ratings, nine colour flags and instant rating filters</p></li>
+                <li><p class="m-0">0–5 star ratings, nine colour flags and instant rating filters — shown in every open window at once</p></li>
                 <li><p class="m-0">Bulk renaming with date and auto-sequence tokens</p></li>
-                <li><p class="m-0">Native Apple silicon, works entirely offline, one-time purchase</p></li>
+                <li><p class="m-0">Asks before moving or deleting a large number of photographs — you set the number</p></li>
+                <li><p class="m-0">Native Apple silicon, one-time purchase, and your photographs never leave your Mac</p></li>
               </ul>
             </section>
             <section class="loc-fp-section">
@@ -98,6 +100,17 @@
               <img src="../../images/manual/ColourFlags.png" alt="Gallery images rated and marked with colour flags" class="loc-fp-shot" />
             </section>
             <section class="loc-fp-section">
+              <h2>Several cards at once</h2>
+              <p>A shoot rarely comes back on one card. FirstPass copies from as many as you can attach, at the same time, and you do not have to sit and feed the reader.</p>
+              <ul>
+                <li><p class="m-0"><strong>Each card has its own progress and its own Cancel.</strong> Starting a second card never describes or stops the first, and stopping one leaves the others running.</p></li>
+                <li><p class="m-0"><strong>Copying does not hold the window.</strong> Browse, rate and compare while the cards are still coming in — including in the folder the images are landing in.</p></li>
+                <li><p class="m-0"><strong>Progress stays in the sidebar</strong> under Downloads, so it is visible from wherever you have browsed to.</p></li>
+                <li><p class="m-0"><strong>Every copy is still verified</strong>, on every card, and each job leaves its own transfer report.</p></li>
+              </ul>
+              <img src="../../images/manual/ConcurrentDownloads.png" alt="Three cards copying at once, each with its own progress bar in the sidebar, while a folder is browsed" class="loc-fp-shot" />
+            </section>
+            <section class="loc-fp-section">
               <h2>For production and DIT work</h2>
               <p>If you are handing footage or stills on to someone else, the question is not whether the copy finished — it is whether you can prove it. FirstPass verifies every file against the card before the card is released, and writes the record to go with it.</p>
               <ul>
@@ -110,8 +123,20 @@
               <img src="../../images/manual/SettingsVerification.png" alt="Verification settings: size check or full content checksum, with automatic re-copying" class="loc-fp-shot" />
             </section>
             <section class="loc-fp-section">
+              <h2>Your photographs, wherever they live</h2>
+              <p>FirstPass browses where your work actually is, rather than expecting it in one place. That is mostly a 1.7.2 change.</p>
+              <ul>
+                <li><p class="m-0"><strong>External disks</strong> have their own section in the sidebar. Expand a drive to its folders and work straight from it — rate, flag, compare, export — with an Eject button on the row. A disk being written to cannot be ejected out from under a copy.</p></li>
+                <li><p class="m-0"><strong>Choose where the tree is rooted.</strong> Pictures is the default, not a requirement. Point FirstPass at any folder, including one on an external disk, and the sidebar is rooted there and named after it. The permission survives a relaunch, and a root that has gone missing falls back to Pictures with a reason shown rather than silently.</p></li>
+                <li><p class="m-0"><strong>Pin the folders you keep returning to.</strong> One click each, in whatever order you drag them into, and a pin on an external disk comes back when the disk does. A pinned folder and the same folder in the tree stay independent, so opening one does not disturb the other.</p></li>
+                <li><p class="m-0"><strong>Collapse the sections you are not using</strong> — cards, downloads, disks, pins — so the sidebar shows what you are actually working with.</p></li>
+              </ul>
+              <img src="../../images/manual/Sidebar.png" alt="The FirstPass sidebar: cards and cameras, downloads in progress, external disks, pinned folders and the folder tree" class="loc-fp-shot" style="width: 275px" />
+            </section>
+            <section class="loc-fp-section">
               <h2>Release history</h2>
               <ul>
+                <li><p class="m-0"><strong>1.7.2</strong> (2026) — large RAW folders open without stalling and thumbnails no longer stop part-way; the thumbnail cache is sized to your Mac’s memory; failed downloads are reported rather than passing in silence; each card copies on its own and keeps going while you browse; compare up to 16 frames; ratings appear in every open window; and moving or deleting a lot of photographs asks first</p></li>
                 <li><p class="m-0"><strong>1.7.1</strong> (2026) — verified copying with size or full-checksum comparison, CSV, PDF and ASC MHL transfer reports, Fast card ingest, and files sorted by their own capture date, camera make and model</p></li>
                 <li><p class="m-0"><strong>1.7</strong> (2026) — compare similar frames with synchronised zoom and pan, uniform landscape gallery grid, faster RAW loading through embedded previews</p></li>
                 <li><p class="m-0"><strong>1.6.1</strong> (2024) — image zoom and scrolling, gallery stability</p></li>
@@ -122,19 +147,37 @@
             <section class="loc-fp-section">
               <h2>Requirements &amp; Availability</h2>
               <ul>
-                <li><p class="m-0">Current release: version 1.7.1 on the Mac App Store</p></li>
-                <li><p class="m-0">Latest update: checksum-verified copying, transfer reports and Fast card ingest</p></li>
+                <li><p class="m-0">Current release: version 1.7.2 on the Mac App Store</p></li>
+                <li><p class="m-0">Latest update: external disks and pinned folders in the sidebar, a browse folder of your choosing, large-folder performance, downloads that report their failures, and a confirmation before large moves and deletes</p></li>
                 <li><p class="m-0">Requires macOS 14.6 or later</p></li>
                 <li><p class="m-0">Universal on Apple silicon and Intel Macs</p></li>
                 <li><p class="m-0">One-time purchase — no subscription</p></li>
-                <li><p class="m-0">Works entirely offline; your images are never uploaded and are never used to train anything</p></li>
+                <li><p class="m-0">Works offline — your images are never uploaded and are never used to train anything</p></li>
               </ul>
             </section>
+            <div class="loc-fp-newsletter">
+              <h3>Know when FirstPass updates</h3>
+              <p class="loc-fp-newsletter-blurb">A few notes a year, when there is a new release. Unsubscribe in one click.</p>
+              <!-- FirstPass release-notes signup. Hand-written; see FirstPassPage.swift for why. --> 
+              <form class="embeddable-buttondown-form row g-3" method="post" target="_blank" action="https://buttondown.com/api/emails/embed-subscribe/bhupendra" onsubmit="return this.elements['fp-hp-site'].value === '';"> 
+                <div class="col"> 
+                  <input id="bd-email" class="form-control col" name="email" type="email" placeholder="Email address" aria-label="Email address" autocomplete="email" required /> 
+                </div> 
+                <div class="col-auto d-flex align-items-end"> 
+                  <button type="submit" class="col-auto w-100 btn btn-primary">Keep me posted</button> 
+                </div> 
+                <input type="hidden" name="embed" value="1" /> 
+                <div aria-hidden="true" style="position: absolute; left: -5000px;"> 
+                  <label for="fp-hp-site">Leave this field empty</label> 
+                  <input id="fp-hp-site" name="fp-hp-site" type="text" tabindex="-1" autocomplete="off" value="" /> 
+                </div> 
+              </form> 
+            </div>
             <div class="loc-app-cta">
               <a href="../../applications/firstpass/manual/" class="loc-detail-link">User Manual →</a>
               <a href="../../applications/firstpass/compared/" class="loc-detail-link">How it compares →</a>
               <a href="https://apps.apple.com/app/firstpass/id439156805?mt=12" class="loc-store-link">Download on the Mac App Store →</a>
-              <p class="loc-price loc-price-note">$27.99 once — US pricing; Apple sets the price in other regions.</p>
+              <p class="loc-price loc-price-note">$39.99 once — US pricing; Apple sets the price in other regions.</p>
             </div>
             <div class="loc-app-legal">
               <a href="../../applications/firstpass/privacy/" class="loc-legal-link">Privacy Policy</a>

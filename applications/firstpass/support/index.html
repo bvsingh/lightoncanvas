@@ -58,11 +58,19 @@
             </div>
             <div class="loc-faq">
               <p class="loc-faq-question">My ratings do not show up in Lightroom</p>
-              <p class="loc-faq-answer">FirstPass writes ratings and colour flags as XMP sidecars. Lightroom reads them on import, but not always for files already in a catalogue — use Metadata ▸ Read Metadata from File.</p>
+              <p class="loc-faq-answer">Ratings are not written into your original files — FirstPass keeps them in its own metadata store, so your originals are never rewritten. To carry a rating across, use Export and choose a format other than “Original (copy)” with “Embed star rating in metadata” switched on: the re-encoded JPEG, HEIC, TIFF or PNG carries the original EXIF, capture date, camera and GPS with it, and the rating as XMP that Lightroom reads. Exporting the original file copies the bytes and nothing else. Writing XMP sidecars beside originals, so RAW ratings travel too, is planned.</p>
             </div>
             <div class="loc-faq">
               <p class="loc-faq-question">Can I download from several cards at once?</p>
-              <p class="loc-faq-answer">Yes, and to more than one destination at the same time. That is what FirstPass was built for: plug in every reader you own and let it work through them without swapping cards.</p>
+              <p class="loc-faq-answer">Yes, and to more than one destination at the same time. That is what FirstPass was built for: plug in every reader you own and let it work through them without swapping cards. Each card gets its own progress and its own Cancel, so stopping one leaves the rest running, and you can browse and rate while they come in.</p>
+            </div>
+            <div class="loc-faq">
+              <p class="loc-faq-question">Why is FirstPass asking permission for my card?</p>
+              <p class="loc-faq-answer">Fast mode reads the card’s filesystem directly, which is considerably quicker than driving the camera, and macOS requires your consent before any application may do that. It is asked once per card and then remembered. This is also why “Start downloading automatically” is unavailable in Fast mode: a grant cannot be given while nobody is watching. Switch Download Mode to Automatic if you want cards to start on their own.</p>
+            </div>
+            <div class="loc-faq">
+              <p class="loc-faq-question">Can I work from an external drive?</p>
+              <p class="loc-faq-answer">Yes. External disks have their own section in the sidebar — expand one to its folders and rate, flag, compare and export straight from it. You can also start the browse tree there instead of in Pictures, under Settings ▸ General ▸ Browse folder, and pin folders on it that come back when the disk does. A disk being written to cannot be ejected out from under a copy.</p>
             </div>
             <div class="loc-faq">
               <p class="loc-faq-question">Where did my transfer report go?</p>

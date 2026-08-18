@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="FirstPass collects nothing and makes no network connections at all. Your images never leave your Mac." />
+    <meta name="description" content="FirstPass collects nothing and connects to nothing, apart from the release-notes signup you can choose to use. Your images never leave your Mac." />
     <meta name="author" content="LightOnCanvas" />
     <meta name="generator" content="Ignite v0.6.0" />
     <title>FirstPass Privacy Policy – LightOnCanvas</title>
@@ -17,8 +17,8 @@
     <meta name="twitter:image" content="https://www.lightoncanvas.com/images/social/firstpass.png" />
     <meta property="og:title" content="FirstPass Privacy Policy" />
     <meta name="twitter:title" content="FirstPass Privacy Policy" />
-    <meta property="og:description" content="FirstPass collects nothing and makes no network connections at all. Your images never leave your Mac." />
-    <meta name="twitter:description" content="FirstPass collects nothing and makes no network connections at all. Your images never leave your Mac." />
+    <meta property="og:description" content="FirstPass collects nothing and connects to nothing, apart from the release-notes signup you can choose to use. Your images never leave your Mac." />
+    <meta name="twitter:description" content="FirstPass collects nothing and connects to nothing, apart from the release-notes signup you can choose to use. Your images never leave your Mac." />
     <meta property="og:url" content="https://www.lightoncanvas.com/applications/firstpass/privacy/" />
     <meta name="twitter:domain" content="lightoncanvas.com" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -39,9 +39,12 @@
         <section class="loc-main-content">
           <div class="ig-main-content">
             <h2 class="loc-section-heading">FirstPass — Privacy Policy</h2>
-            <p class="loc-muted-text">Effective date: 26 July 2026</p>
+            <p class="loc-muted-text">Effective date: 8 August 2026</p>
             <div class="loc-fp-section">
-              <p><strong>The short version: FirstPass collects nothing, and makes no network connections at all.</strong> Not for analytics, not for updates, not for licence checks. It works with the Wi-Fi turned off, and it works the same way whether it is connected or not.</p>
+              <div>
+                <p><strong>The short version: FirstPass collects nothing, and makes no network connection unless you ask it to.</strong> Not for analytics, not for updates, not for licence checks. It works with the Wi-Fi turned off, and it works the same way whether it is connected or not.</p>
+                <p>The single exception is the optional <strong>release-notes signup</strong>, in the About window and under Help. It sends nothing unless you type an email address and press the button. Your photographs are never involved, under any circumstances.</p>
+              </div>
             </div>
             <div class="loc-fp-section">
               <h4>What we do not collect</h4>
@@ -53,17 +56,31 @@
                 <li><p class="m-0">No photographs, thumbnails, previews or anything derived from them</p></li>
                 <li><p class="m-0">No file names, folder paths, camera serial numbers or card contents</p></li>
                 <li><p class="m-0">No payment information — purchases go through Apple, and we never see them</p></li>
+                <li><p class="m-0">No email address — unless you type one into the release-notes signup yourself</p></li>
               </ul>
               <p>FirstPass contains no advertising, no third-party SDKs, and no tracking framework. It will never ask permission to track you, because there is nothing to track with.</p>
             </div>
             <div class="loc-fp-section">
+              <h4>The one thing you can choose to send</h4>
+              <p>FirstPass 1.7.2 added an optional signup for release notes by email, reachable from the About window and the Help menu. It is the only part of the app that makes a network connection, and it makes none until you type an address and press the button.</p>
+              <p>The same list can be joined from the FirstPass page on this website, without the app involved at all. Both routes reach the same list and collect the same single thing.</p>
+              <ul class="loc-feature-list">
+                <li><p class="m-0">Your email address goes to Buttondown, the service that sends the notes. Nothing else goes with it — no name, no device, nothing about your photographs or your Mac</p></li>
+                <li><p class="m-0">You confirm the subscription by email before anything is ever sent to you</p></li>
+                <li><p class="m-0">Every message carries an unsubscribe link, and unsubscribing removes the address</p></li>
+                <li><p class="m-0">The address is used for release notes and nothing else — never sold, never rented, never used for advertising</p></li>
+                <li><p class="m-0">Ignore the signup and FirstPass never opens a connection at all</p></li>
+              </ul>
+            </div>
+            <div class="loc-fp-section">
               <h4>Your photographs</h4>
               <p>FirstPass copies files from your cards and cameras to folders you choose on your own disks. Nothing is uploaded anywhere. Your images are never used to train anything, never inspected by us, and never leave your Mac unless you move them yourself.</p>
-              <p>Ratings and colour flags are written as XMP alongside your files, so other applications can read them. Transfer reports — CSV manifests, PDF summaries and ASC MHL sidecars — are written to the folder you nominate and to nowhere else.</p>
+              <p>Ratings and colour flags are kept in FirstPass's own metadata store, so your originals are never rewritten. Exporting with re-encoding carries the original metadata into the new file — EXIF, capture date, camera make and model, GPS — and adds the star rating as XMP, which other applications read. Transfer reports — CSV manifests, PDF summaries and ASC MHL sidecars — are written to the folder you nominate and to nowhere else.</p>
             </div>
             <div class="loc-fp-section">
               <h4>Permissions FirstPass asks for</h4>
-              <p>macOS will ask your permission before FirstPass can read removable volumes or folders such as Pictures, Downloads or Desktop. That permission lets FirstPass read the files you point it at. It grants us nothing: we have no way to see what you granted, or what was in it.</p>
+              <p>Pictures is the one folder FirstPass can open without asking, because it ships with the entitlement for it. Everywhere else — another folder on your Mac, an external disk, or a memory card in Fast mode — macOS asks you once, and your answer is remembered so it does not ask again for that card or that disk.</p>
+              <p>That permission lets FirstPass read the files you point it at. It grants us nothing: we have no way to see what you granted, or what was in it.</p>
             </div>
             <div class="loc-fp-section">
               <h4>The App Store</h4>

@@ -45,7 +45,17 @@
             <h2>Objective</h2>
             <p>Downloading thousands of photographs from multiple memory cards can be a considerable challenge, particularly as each card must be downloaded individually, even when using several card readers. Furthermore, the initial editing process — rating, deleting, and detailed viewing — demands substantial time and effort. This software is specifically designed to assist photographers in reducing this workload by significantly expediting both the downloading process and the first pass edit, all within a single application.</p>
             <p>This version of FirstPass has been re-imagined using SwiftUI and Swift.</p>
-            <p class="loc-manual-note"><strong>Requirements:</strong> <em>The current release is version 1.7.1, available on the Mac App Store and requiring macOS 14.6 or later. This release adds checksum-verified copying, transfer reports and Fast card ingest, all described below.</em></p>
+            <p class="loc-manual-note"><strong>Requirements:</strong> <em>The current release is version 1.7.2, available on the Mac App Store and requiring macOS 14.6 or later.</em></p>
+            <h2>New in 1.7.2</h2>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Your disks and your folders are in the sidebar.</strong> External drives appear in their own section, each expandable and ejectable. Pin the folders you keep returning to — including folders on an external disk — and start the browse tree wherever your work actually lives, not only in Pictures.</p></li>
+              <li><p class="m-0"><strong>Several cards at once, each with its own progress and its own Cancel.</strong> Downloads run side by side and keep going while you browse elsewhere. One card’s Cancel has never described or stopped another’s.</p></li>
+              <li><p class="m-0"><strong>Fast mode.</strong> Copying straight off a mounted card’s filesystem is considerably quicker than driving the camera over PTP. Grant access to each card once and it is remembered.</p></li>
+              <li><p class="m-0"><strong>Large shoots stay comfortable.</strong> Thumbnail memory is sized to your Mac and is yours to change, folders of many thousands open without the window locking up, and a large import no longer grows in memory as it runs.</p></li>
+              <li><p class="m-0"><strong>Compare up to sixteen frames</strong> side by side with synchronised zoom, and see ratings update in every open window at once.</p></li>
+              <li><p class="m-0"><strong>A confirmation before moving or deleting a lot of photographs</strong>, with the threshold yours to set — or 0 to be asked every time.</p></li>
+            </ul>
+            <img src="../../../images/manual/ConcurrentDownloads.png" alt="Three cards downloading at once, with external drives and pinned folders in the sidebar" class="loc-manual-img" />
             <div class="loc-app-cta">
               <a href="https://apps.apple.com/app/firstpass/id439156805?mt=12" class="loc-store-link">Download on the Mac App Store →</a>
             </div>
@@ -62,14 +72,32 @@
               <li><p class="m-0">Can be configured to automatically start downloading when a device (or multiple devices) are plugged in.</p></li>
             </ol>
             <h2>Quick start guide</h2>
-            <p>FirstPass has a single window type. User can create multiple windows and can browse different folders or download different cards. Same window can also be used to download multiple cards, each download triggered sequentially.</p>
+            <p>FirstPass has a single window type. You can open several windows and browse a different folder or download a different card in each. One window can also copy from several cards at the same time — each with its own progress and its own Cancel — and you can carry on browsing while they run.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Point it at your photographs.</strong> Pictures is the default. If your work lives somewhere else — another folder, or an external disk — set that folder under Settings ▸ General ▸ Browse folder.</p></li>
+              <li><p class="m-0"><strong>Attach a card or camera.</strong> It appears at the top of the sidebar. Press Browse to look through it, or start a download straight away. In Fast mode macOS asks you to grant access the first time it sees each card, and remembers your answer afterwards.</p></li>
+              <li><p class="m-0"><strong>Check the Download and Verification settings</strong> before your first import. They decide where files land, how folders are named, and how thoroughly each copy is checked.</p></li>
+              <li><p class="m-0"><strong>Download</strong> the whole card or just your selection. The copy keeps running while you carry on browsing, and its progress stays in the sidebar under Downloads.</p></li>
+              <li><p class="m-0"><strong>Make your first pass.</strong> Rate 0–5, flag with ⌘1–⌘9, filter to what you kept, and compare the near-identical frames side by side.</p></li>
+              <li><p class="m-0"><strong>Pin the folders you keep coming back to</strong>, so they are one click away next time — including folders on an external disk.</p></li>
+            </ul>
             <img src="../../../images/manual/InterfaceLayout.png" alt="FirstPass interface layout" class="loc-manual-img" />
             <h2>Settings Window</h2>
             <p>The Settings window (⌘,) configures how images are downloaded, how each copy is verified, and how the app looks. It is worth setting up the Download and Verification tabs before your first import — they decide where your files land and how thoroughly each copy is checked. Every tab is described in full under Settings below.</p>
             <h2>Parts of Main Window</h2>
             <h3>Sidebar</h3>
-            <img src="../../../images/manual/Sidebar.png" alt="FirstPass sidebar" class="loc-manual-img" />
-            <p>User can hide the sidebar using Hide Sidebar menu option or the Sidebar toggle button in the tool bar.</p>
+            <img src="../../../images/manual/Sidebar.png" alt="FirstPass sidebar" class="loc-manual-img" style="width: 275px" />
+            <p>The sidebar is how you reach everything: the cards and cameras attached to your Mac, transfers in progress, your disks, the folders you have pinned, and the folder tree you browse from. It has five sections, always in this order:</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Cards and cameras</strong> — anything readable that is attached right now. Each row has a Browse button and its own Eject button, and a card FirstPass cannot read says so on the row rather than failing silently later.</p></li>
+              <li><p class="m-0"><strong>Downloads</strong> — transfers running or finished. A copy keeps going while you browse elsewhere, and each card has its own progress and its own Cancel, so a second card started later never describes or stops the first one.</p></li>
+              <li><p class="m-0"><strong>External</strong> — every mounted external disk, each expandable to its folders and each with an Eject button. Browsing a drive is the same as browsing anywhere else: rate, flag, compare and export straight from it. FirstPass refuses to eject a disk while a copy is still writing to it.</p></li>
+              <li><p class="m-0"><strong>Pinned</strong> — the folders you use most often, one click away. Pin any folder from its right-click menu, drag them into whatever order suits you, and unpin from the same menu. A pin can live on an external disk, and reconnecting the disk brings it back.</p></li>
+              <li><p class="m-0"><strong>Your browse root</strong> — the folder tree you work in, named after the folder itself. Pictures by default.</p></li>
+            </ul>
+            <p><strong>A pinned folder and the same folder in the tree are separate rows.</strong> Expanding or selecting one leaves the other alone, so a pin behaves like a shortcut rather than a second view of the same thing.</p>
+            <p><strong>Changing where you browse.</strong> Pictures is the default root and you are not tied to it. If your work lives on an external disk, or in a folder elsewhere on your Mac, set it as the root under <strong>Settings ▸ General ▸ Browse folder</strong>: the tree is rooted there instead and the section is renamed to match. macOS remembers the permission between launches. If that folder is ever unreachable — renamed, or on a disk that is unplugged — FirstPass falls back to Pictures and says why in the sidebar, rather than leaving you wondering where your library went.</p>
+            <p>Each section can be collapsed to get it out of the way, and the whole sidebar can be hidden with the Hide Sidebar menu option or the sidebar button in the toolbar.</p>
             <h3>Image Gallery</h3>
             <img src="../../../images/manual/ImageGallery.png" alt="FirstPass image gallery" class="loc-manual-img" />
             <h3>Context Menu</h3>
@@ -106,7 +134,8 @@
             <h3>Settings</h3>
             <p>Settings are organised into four tabs — General, Download, Verification and Colors. It is worth configuring Download and Verification before your first import, because they decide where your files land and how thoroughly each copy is checked.</p>
             <p class="loc-manual-tab-heading" style="font-weight: 700">General</p>
-            <img src="../../../images/manual/SettingsGeneral.png" alt="The General settings tab" class="loc-manual-img" />
+            <img src="../../../images/manual/SettingsGeneral.png" alt="The General settings tab, upper half" class="loc-manual-img" />
+            <img src="../../../images/manual/SettingsGeneralMore.png" alt="The General settings tab, lower half" class="loc-manual-img" />
             <ul class="loc-manual-list">
               <li><p class="m-0"><strong>External editor</strong> — the application opened by “Open with external editor”. Use Browse to pick any app; Preview is a sensible default.</p></li>
               <li><p class="m-0"><strong>Compact image browser</strong> — hides filenames and rating stars and tightens the spacing so images use more of the window. Thumbnail size is still controlled by the slider in the gallery.</p></li>
@@ -114,9 +143,16 @@
               <li><p class="m-0"><strong>Always Decode RAW</strong> — decodes RAW files fully in the background so the viewer shows a sharper image instead of the camera’s quick embedded preview. Double-clicking an image always decodes it. Uses more CPU and memory.</p></li>
               <li><p class="m-0"><strong>Slideshow → Transition</strong> — None, Crossfade or Slide between images.</p></li>
               <li><p class="m-0"><strong>Slideshow → Time on each slide</strong> — how long each image is shown while the slideshow auto-advances, from 0.5 to 60 seconds.</p></li>
+              <li><p class="m-0"><strong>Browse folder</strong> — where the sidebar’s folder tree starts. Pictures by default and needs no permission; anywhere else is asked for once and remembered, and the section is renamed after the folder. <strong>Use Pictures</strong> puts it back.</p></li>
+              <li><p class="m-0"><strong>Compare up to</strong> — how many frames may be compared at once, from 2 to 16, ten by default. How many are worth seeing side by side depends on the size of your display, which is why it is yours to set.</p></li>
+              <li><p class="m-0"><strong>Thumbnail memory</strong> — how much memory thumbnails may use, sized to your Mac by default. More memory means less re-reading from disk when you scroll back through a large shoot. Changes take effect immediately.</p></li>
+              <li><p class="m-0"><strong>Warn about large folders</strong> — the number of images above which FirstPass warns before opening a folder.</p></li>
+              <li><p class="m-0"><strong>Ask before moving or deleting</strong> — the number of photographs above which FirstPass asks first. One number covers both: moving takes originals out of where they were, and deleting sends them to the Trash. <strong>0 asks every time</strong>, and Cancel is the default answer. Copying is never interrupted, because nothing is removed.</p></li>
+              <li><p class="m-0"><strong>While dragging</strong> — hold ⌥ to copy, ⌘ to move, or ⌃ to rename by your download rules as the files land. With nothing held, photographs move within a disk and copy between disks, the same as the Finder.</p></li>
             </ul>
             <p class="loc-manual-tab-heading" style="font-weight: 700">Download</p>
-            <img src="../../../images/manual/SettingsDownload.png" alt="The Download settings tab" class="loc-manual-img" />
+            <img src="../../../images/manual/SettingsDownload.png" alt="The Download settings tab, upper half" class="loc-manual-img" />
+            <img src="../../../images/manual/SettingsDownloadMore.png" alt="The Download settings tab, lower half" class="loc-manual-img" />
             <p>This tab decides how files come off the card and where they go. The Sample line under each destination shows the exact folder your next import would use, so you can check a token pattern before committing to it.</p>
             <ul class="loc-manual-list">
               <li><p class="m-0"><strong>Mode → Automatic</strong> — drives the camera over PTP. Works with any camera, whether connected directly or through a card reader, and never asks for permission. Slower on a large card.</p></li>

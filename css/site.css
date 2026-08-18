@@ -204,20 +204,20 @@ hr {
 /* ----------------------------------------------------------
    Category sections + app entries
    ---------------------------------------------------------- */
-.loc-category-section { margin-bottom: 30px; }
+.loc-category-section { margin-bottom: 52px; }
 
 .loc-section-heading {
     color: var(--color-heading);
     font-size: 1.4rem;
     font-weight: 400;
     border-bottom: 1px solid var(--color-border);
-    padding-bottom: 6px;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 28px;
 }
 
 .loc-app-entry {
-    margin-bottom: 40px;
-    padding-bottom: 30px;
+    margin-bottom: 56px;
+    padding-bottom: 44px;
     border-bottom: 1px solid var(--color-border-subtle);
     overflow: hidden;
 }
@@ -264,7 +264,8 @@ hr {
 
 .loc-app-cta {
     clear: left;
-    margin-top: 8px;
+    margin-top: 20px;
+    margin-bottom: 28px;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -283,9 +284,9 @@ hr {
    plain detail links, on every page that describes an app. */
 .loc-store-link {
     display: inline-block;
-    margin: 6px 0;
+    margin: 10px 0;
     line-height: 1.2;
-    padding: 8px 16px;
+    padding: 10px 18px;
     border-radius: 8px;
     background: var(--color-accent);
     color: #fff;
@@ -322,18 +323,21 @@ hr {
    FirstPass detail page
    ---------------------------------------------------------- */
 .loc-fp-header {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
     border-bottom: 1px solid var(--color-border);
 }
 
-.loc-fp-section { margin-bottom: 28px; }
+.loc-fp-section { margin-bottom: 44px; }
 
 .loc-fp-section h2 {
     font-size: 1.2rem;
     border-bottom: 1px solid var(--color-border);
-    padding-bottom: 4px;
-    margin-bottom: 12px;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+    /* Space above a heading is what separates it from the section before it; without this the
+       rule under one heading sat almost against the last line of the previous section. */
+    margin-top: 8px;
 }
 
 /* Price, shown beside the store button rather than left for the reader to go and find. */
@@ -341,8 +345,9 @@ hr {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px 18px;
-    margin-top: 14px;
+    gap: 12px 22px;
+    margin-top: 24px;
+    margin-bottom: 22px;
 }
 .loc-price {
     font-size: 15px;
@@ -362,9 +367,52 @@ hr {
 }
 .loc-release-entry:last-child { border-bottom: none; }
 
+/* Newsletter signup.
+   This block had no styling at all: an h3, a paragraph and a form sitting flush against the
+   section above and the store button below, at full page width. The field stretching the whole
+   980px was most of the problem — a lone input that wide reads as a form with fields missing. */
+.loc-fp-newsletter {
+    margin: 48px 0 56px;
+    padding: 28px 28px 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface, rgba(127, 127, 127, 0.05));
+}
+
+.loc-fp-newsletter h3 {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+    /* No underline rule here: this is an aside, not another section of the page. */
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.loc-fp-newsletter-blurb {
+    font-size: 14px;
+    color: var(--color-muted);
+    margin: 0 0 20px;
+    max-width: 52ch;
+}
+
+/* Hold the field to a readable width instead of the full column. */
+.loc-fp-newsletter form {
+    max-width: 30rem;
+    gap: 12px;
+}
+
+.loc-fp-newsletter .form-control {
+    padding: 10px 14px;
+}
+
+.loc-fp-newsletter .btn {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
 .loc-fp-back {
-    margin-top: 20px;
-    padding-top: 16px;
+    margin-top: 40px;
+    margin-bottom: 28px;
+    padding-top: 24px;
     border-top: 1px solid var(--color-border);
     /* Same reason as .loc-app-cta: this row can hold a plain back link beside the store pill. */
     display: flex;
