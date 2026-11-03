@@ -45,17 +45,17 @@
             <h2>Objective</h2>
             <p>Downloading thousands of photographs from multiple memory cards can be a considerable challenge, particularly as each card must be downloaded individually, even when using several card readers. Furthermore, the initial editing process — rating, deleting, and detailed viewing — demands substantial time and effort. This software is specifically designed to assist photographers in reducing this workload by significantly expediting both the downloading process and the first pass edit, all within a single application.</p>
             <p>This version of FirstPass has been re-imagined using SwiftUI and Swift.</p>
-            <p class="loc-manual-note"><strong>Requirements:</strong> <em>The current release is version 1.7.2, available on the Mac App Store and requiring macOS 14.6 or later.</em></p>
-            <h2>New in 1.7.2</h2>
+            <p class="loc-manual-note"><strong>Requirements:</strong> <em>The current release is version 1.8, available on the Mac App Store and requiring macOS 14.6 or later.</em></p>
+            <h2>New in 1.8</h2>
             <ul class="loc-manual-list">
-              <li><p class="m-0"><strong>Your disks and your folders are in the sidebar.</strong> External drives appear in their own section, each expandable and ejectable. Pin the folders you keep returning to — including folders on an external disk — and start the browse tree wherever your work actually lives, not only in Pictures.</p></li>
-              <li><p class="m-0"><strong>Several cards at once, each with its own progress and its own Cancel.</strong> Downloads run side by side and keep going while you browse elsewhere. One card’s Cancel has never described or stopped another’s.</p></li>
-              <li><p class="m-0"><strong>Fast mode.</strong> Copying straight off a mounted card’s filesystem is considerably quicker than driving the camera over PTP. Grant access to each card once and it is remembered.</p></li>
-              <li><p class="m-0"><strong>Large shoots stay comfortable.</strong> Thumbnail memory is sized to your Mac and is yours to change, folders of many thousands open without the window locking up, and a large import no longer grows in memory as it runs.</p></li>
-              <li><p class="m-0"><strong>Compare up to sixteen frames</strong> side by side with synchronised zoom, and see ratings update in every open window at once.</p></li>
-              <li><p class="m-0"><strong>A confirmation before moving or deleting a lot of photographs</strong>, with the threshold yours to set — or 0 to be asked every time.</p></li>
+              <li><p class="m-0"><strong>Bursts, decided.</strong> Frames shot close together fold into a single stack, every frame is ranked, and a keeper is suggested. Compare a stack two frames at a time until one is left. See Bursts, below.</p></li>
+              <li><p class="m-0"><strong>Focus mode.</strong> Press ⌘L, or Space on a photograph, and everything but the picture goes. Rating, flag and arrow keys keep working.</p></li>
+              <li><p class="m-0"><strong>Cards you have seen before.</strong> Turn on download history and FirstPass remembers what it copied off each card; put the card back in and only the new photographs are offered.</p></li>
+              <li><p class="m-0"><strong>Thumbnails that stay.</strong> Thumbnails are kept on disk, so a folder you have browsed shows them straight away next time, even after quitting.</p></li>
+              <li><p class="m-0"><strong>Your work travels with the file.</strong> Exported originals can carry an XMP sidecar with their rating and colour label, and transfer reports name each copy’s file on the card and the folder it went to.</p></li>
+              <li><p class="m-0"><strong>Keep Zoom Between Images</strong> holds the magnification and position in the viewer as you move on, to check the same detail in every frame.</p></li>
             </ul>
-            <img src="../../../images/manual/ConcurrentDownloads.png" alt="Three cards downloading at once, with external drives and pinned folders in the sidebar" class="loc-manual-img" />
+            <img src="../../../images/manual/BurstStacks.png" alt="A folder folded into burst stacks, one stack open with its frames ranked and the pick marked" class="loc-manual-img" />
             <div class="loc-app-cta">
               <a href="https://apps.apple.com/app/firstpass/id439156805?mt=12" class="loc-store-link">Download on the Mac App Store →</a>
             </div>
@@ -66,7 +66,6 @@
               <li><p class="m-0">Two download paths: Fast reads a mounted card directly, and Automatic drives any camera over PTP.</p></li>
               <li><p class="m-0">Files are filed by their own capture date, camera make and model — read from each file, not from the clock.</p></li>
               <li><p class="m-0">The first Mac App Store application to enable image download from multiple sources to multiple destinations.</p></li>
-              <li><p class="m-0">Works with shared devices to enable download over a network.</p></li>
               <li><p class="m-0">Provides a fast and clean interface to do a “first pass” editing of images.</p></li>
               <li><p class="m-0">Frees up the user’s time by handling multiple downloads at the same time without requiring the user to swap the cards in and out of a card reader or starting the download manually for each card.</p></li>
               <li><p class="m-0">Can be configured to automatically start downloading when a device (or multiple devices) are plugged in.</p></li>
@@ -83,72 +82,184 @@
             </ul>
             <img src="../../../images/manual/InterfaceLayout.png" alt="FirstPass interface layout" class="loc-manual-img" />
             <h2>Settings Window</h2>
-            <p>The Settings window (⌘,) configures how images are downloaded, how each copy is verified, and how the app looks. It is worth setting up the Download and Verification tabs before your first import — they decide where your files land and how thoroughly each copy is checked. Every tab is described in full under Settings below.</p>
+            <p>The Settings window (⌘,, or the gear in the toolbar) configures how images are downloaded, how each copy is verified, how bursts are grouped and how the app looks. It is worth setting up the Download and Verification tabs before your first import — they decide where your files land and how thoroughly each copy is checked. Every tab is described in full under Settings below.</p>
             <h2>Parts of Main Window</h2>
+            <p>FirstPass has a single kind of window. Open as many as you like with ⌘N and browse a different folder or card in each; every window keeps its own selection, and a rating or flag set in one appears at once in every other window showing the same photographs. The window remembers its size and position between launches.</p>
             <h3>Sidebar</h3>
             <img src="../../../images/manual/Sidebar.png" alt="FirstPass sidebar" class="loc-manual-img" style="width: 275px" />
             <p>The sidebar is how you reach everything: the cards and cameras attached to your Mac, transfers in progress, your disks, the folders you have pinned, and the folder tree you browse from. It has five sections, always in this order:</p>
             <ul class="loc-manual-list">
-              <li><p class="m-0"><strong>Cards and cameras</strong> — anything readable that is attached right now. Each row has a Browse button and its own Eject button, and a card FirstPass cannot read says so on the row rather than failing silently later.</p></li>
-              <li><p class="m-0"><strong>Downloads</strong> — transfers running or finished. A copy keeps going while you browse elsewhere, and each card has its own progress and its own Cancel, so a second card started later never describes or stops the first one.</p></li>
+              <li><p class="m-0"><strong>Cards and cameras</strong> — anything readable that is attached right now. Each row has a Browse button and its own Eject button. The first time FirstPass opens a card in Fast mode, macOS asks you to grant access to it; a card or drive that could not be ejected shows a warning badge on its row.</p></li>
+              <li><p class="m-0"><strong>Downloads</strong> — transfers running or finished, each counting its copies as they are checked against the card (for example 63/121 checked). A copy keeps going while you browse elsewhere, and each card has its own progress and its own Cancel.</p></li>
               <li><p class="m-0"><strong>External</strong> — every mounted external disk, each expandable to its folders and each with an Eject button. Browsing a drive is the same as browsing anywhere else: rate, flag, compare and export straight from it. FirstPass refuses to eject a disk while a copy is still writing to it.</p></li>
               <li><p class="m-0"><strong>Pinned</strong> — the folders you use most often, one click away. Pin any folder from its right-click menu, drag them into whatever order suits you, and unpin from the same menu. A pin can live on an external disk, and reconnecting the disk brings it back.</p></li>
               <li><p class="m-0"><strong>Your browse root</strong> — the folder tree you work in, named after the folder itself. Pictures by default.</p></li>
             </ul>
             <p><strong>A pinned folder and the same folder in the tree are separate rows.</strong> Expanding or selecting one leaves the other alone, so a pin behaves like a shortcut rather than a second view of the same thing.</p>
             <p><strong>Changing where you browse.</strong> Pictures is the default root and you are not tied to it. If your work lives on an external disk, or in a folder elsewhere on your Mac, set it as the root under <strong>Settings ▸ General ▸ Browse folder</strong>: the tree is rooted there instead and the section is renamed to match. macOS remembers the permission between launches. If that folder is ever unreachable — renamed, or on a disk that is unplugged — FirstPass falls back to Pictures and says why in the sidebar, rather than leaving you wondering where your library went.</p>
-            <p>Each section can be collapsed to get it out of the way, and the whole sidebar can be hidden with the Hide Sidebar menu option or the sidebar button in the toolbar.</p>
+            <p><strong>Managing folders.</strong> Right-click a folder in the tree, in Pinned or on an external disk for:</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>New Folder…</strong> — creates a folder inside it. The browse root’s section title offers the same, at the top of the tree.</p></li>
+              <li><p class="m-0"><strong>Rename Folder…</strong></p></li>
+              <li><p class="m-0"><strong>Pin Folder</strong> or <strong>Unpin Folder</strong></p></li>
+              <li><p class="m-0"><strong>Delete Folder…</strong> — moves the folder and everything inside it to the Trash, after asking.</p></li>
+              <li><p class="m-0"><strong>Grant Access…</strong> — shown on a folder FirstPass is not yet allowed to read.</p></li>
+            </ul>
+            <p>Each section can be collapsed to get it out of the way, and the whole sidebar can be hidden with View ▸ Hide Sidebar or the sidebar button in the toolbar.</p>
             <h3>Image Gallery</h3>
             <img src="../../../images/manual/ImageGallery.png" alt="FirstPass image gallery" class="loc-manual-img" />
+            <p>The gallery shows the photographs in the selected folder. The window title gives the folder’s name and how many images it holds — and, with bursts grouped, how many bursts and how many frames have no capture time. File ▸ Open Folder… (⌘O) opens any folder, and you can also drop a folder or photographs onto the window to open them.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Thumbnail size</strong> — the slider in the bar at the bottom of the gallery. The size is remembered.</p></li>
+              <li><p class="m-0"><strong>Moving around</strong> — the arrow keys move the selection; with nothing selected, the first arrow selects the first photograph.</p></li>
+              <li><p class="m-0"><strong>Opening a photograph</strong> — double-click it to open the viewer, or press Space for focus mode.</p></li>
+              <li><p class="m-0"><strong>Large folders</strong> — above the number set in Settings ▸ General, a notice says the folder may be slow to open and scroll. Close it with its × button.</p></li>
+              <li><p class="m-0"><strong>Dragging out</strong> — drag photographs from the gallery to the Finder or another app to copy them there.</p></li>
+            </ul>
             <h3>Context Menu</h3>
-            <p>Right clicking on an image provides a context menu. Using this context menu users can change rating, set a colour flag, compare a selection of similar images, show/hide the image information inspector, view the image in Finder, delete the image, rename the image and open with an external editor. External editor can be set in settings.</p>
+            <p>Right-click a photograph, or a selection of them, for:</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Set Rating</strong> — Unrated or 1 to 5 stars.</p></li>
+              <li><p class="m-0"><strong>Set Color</strong> — a row of swatches: No Color and the nine flag colours. The colour the selection already has is ringed.</p></li>
+              <li><p class="m-0"><strong>Show Image Information</strong> — opens or closes the info pane.</p></li>
+              <li><p class="m-0"><strong>Show in Finder</strong></p></li>
+              <li><p class="m-0"><strong>Delete</strong> — moves the photographs to the Trash, asking first above the number set in Settings ▸ General.</p></li>
+              <li><p class="m-0"><strong>Rename Image / Rename Images</strong> — opens the rename window described under File Renaming.</p></li>
+              <li><p class="m-0"><strong>Export Image / Export Images</strong> — opens the export sheet described under Exporting.</p></li>
+              <li><p class="m-0"><strong>Open with External Editor</strong> — opens the original in the application set in Settings ▸ General.</p></li>
+              <li><p class="m-0"><strong>Compare Images</strong> — with two or more photographs selected.</p></li>
+              <li><p class="m-0"><strong>Make Pick</strong> — on a frame in a burst stack that is not already its pick.</p></li>
+            </ul>
             <img src="../../../images/manual/ContextMenu.png" alt="FirstPass right-click context menu" class="loc-manual-img" />
+            <p class="loc-manual-note"><strong>Note:</strong> <em>On a card or a camera the rating, colour and rename items are not offered: a card is browsed read-only.</em></p>
             <h3>Sorting</h3>
-            <p>Images in the gallery can be sorted in ascending or descending order using creation date, name or rating as the key. This can be done via Browser menu option.</p>
+            <p>The Browser menu sorts the gallery by Name, Rating or Exif Creation Date, ascending or descending. Name is the default, and it understands a camera’s file numbers rolling over. Turning on Group bursts switches the order to capture date, because a burst is a run of frames in the order they were shot.</p>
             <h3>Image Information</h3>
-            <p>Image information is shown in an inspector. Can be enabled using the context menu on the image or by selecting an image and clicking on the toolbar item.</p>
+            <p>The info pane shows a histogram and the details that matter for a decision: camera, lens, when it was taken, aperture, shutter speed, ISO, focal length, exposure, metering, white balance, program, flash and dimensions. Show raw EXIF at its foot lists everything else the file carries. Open it with View ▸ Show Info Pane (⌘I), the ⓘ button in the toolbar, or Show Image Information in the context menu; the window widens to make room if it needs to.</p>
             <h3>Ratings Filter</h3>
-            <p>Rating filter is on the bottom left of the gallery. There are six buttons — unrated and rating from 1 to 5. Clicking on any button filters out that rating.</p>
+            <p>The Ratings Filter at the bottom left of the gallery has six buttons: Unrated, and 1 to 5 stars. Turn one or more on and the gallery shows only photographs with those ratings; with none on, it shows everything.</p>
+            <h3>Ratings</h3>
+            <p>Press 1 to 5 to give the selected photographs that many stars, and 0 to clear the rating. The same is in Photo ▸ Set Rating and the context menu. Ratings are kept by FirstPass rather than written into your photographs, so originals are never rewritten; they travel with a photograph you move or copy within FirstPass, and survive a trip to the Trash and back. To take them to another application, export with an XMP sidecar or with the rating embedded.</p>
             <h3>Colour Flags</h3>
-            <p>In addition to 0–5 star ratings, each image can be marked with one of nine colour flags. Set a flag from the right-click context menu, or press ⌘1 through ⌘9; ⌘0 clears it. The nine flag colours can be customised in the Colours tab of Settings, and the flag is shown on the image in the gallery.</p>
+            <p>In addition to 0–5 star ratings, each image can be marked with one of nine colour flags: Red, Orange, Yellow, Green, Teal, Blue, Indigo, Violet and Magenta, on ⌘1 to ⌘9; ⌘0 clears it. Set a flag from Photo ▸ Set Color, the context menu or the keyboard. The nine colours can be changed in the Colors tab of Settings, and the flag is shown on the image in the gallery.</p>
             <img src="../../../images/manual/ColourFlags.png" alt="Gallery images marked with colour flags" class="loc-manual-img" />
             <h3>Selecting Multiple Images</h3>
-            <p>Several images can be selected at once for rating, flagging, renaming or comparison. Use ⌘-click to add or remove individual images, Shift-click to select a range, and Shift with the arrow keys to extend the selection from the keyboard.</p>
+            <p>Several images can be selected at once for rating, flagging, renaming, exporting or comparison. Use ⌘-click to add or remove individual images, Shift-click to select a range, Shift with the arrow keys to extend the selection from the keyboard, and ⌘A to select everything. Dragging any photograph in a selection drags the whole selection.</p>
+            <h3>Deleting</h3>
+            <p>Press ⌫ (Delete), or choose Delete from the context menu, to move the selected photographs to the Trash. Nothing is deleted outright. Above the number set under Settings ▸ General ▸ Ask before moving or deleting, FirstPass asks first, and Cancel is the safe answer.</p>
+            <h3>Image Viewer</h3>
+            <p>Double-click a photograph, or press ⌘E (View ▸ Show Image Viewer), to open the viewer: the photograph large, with a film strip of the folder beside it. ← and → move through the folder, and the rating, flag, Delete, Space and P keys work as they do in the gallery.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Zoom</strong> — double-click the image to switch between fitting the window and 100% (actual pixels), centred on the point you clicked. Drag to move around a zoomed image.</p></li>
+              <li><p class="m-0"><strong>Keep Zoom Between Images</strong> — a toggle in the toolbar while the viewer is open. On, the magnification and position stay put as you move to the next photograph, so you can check the same detail in every frame.</p></li>
+              <li><p class="m-0"><strong>Always Decode RAW</strong> — in Settings ▸ General. The viewer first shows the camera’s embedded preview; double-clicking always decodes the RAW file itself.</p></li>
+              <li><p class="m-0"><strong>Badges</strong> — a rating or flag you set shows briefly on the image. Settings ▸ General ▸ Viewer chooses how long, or turns them off.</p></li>
+            </ul>
+            <p>Press ⌘E again, or the viewer button in the toolbar, to return to the gallery.</p>
             <h3>Compare Similar Images</h3>
             <p class="loc-manual-note"><em>New in version 1.7.1.</em></p>
-            <p>When several frames are near-identical — for example a burst, or several attempts at the same shot — it helps to view them together to keep only the best. Select between two and six images and choose Compare Images (⌘U) from the View menu, or from the right-click context menu. The selected images are tiled side-by-side and zoom and pan in unison, so you are always looking at the same part of every frame at the same time — ideal for judging critical focus and sharpness.</p>
+            <p>When several frames are near-identical — for example a burst, or several attempts at the same shot — it helps to view them together to keep only the best. Select two or more images and choose View ▸ Compare Images (⌘U), or Compare Images from the context menu. Up to ten can be compared at once, and up to sixteen if you raise Compare up to in Settings ▸ General. The selected images are tiled side-by-side and zoom and pan in unison, so you are always looking at the same part of every frame at the same time — ideal for judging critical focus and sharpness.</p>
             <img src="../../../images/manual/Compare.png" alt="Comparing similar images side-by-side with synchronised zoom" class="loc-manual-img" />
-            <p>While comparing, you can rate an image, set a colour flag, or remove a frame from the comparison, all without leaving the view. Press Escape or Done to return to the gallery.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Choosing a frame</strong> — click it, or use the arrow keys: ← and ↑ for the previous frame, → and ↓ for the next.</p></li>
+              <li><p class="m-0"><strong>Zoom</strong> — Fit and 100% buttons, the zoom buttons, = and − on the keyboard, pinching on a trackpad (up to 4×), or double-clicking a frame at the point you want. Drag or scroll to pan.</p></li>
+              <li><p class="m-0"><strong>Lock</strong> — the lock button keeps the frames moving together. Unlock it to line one frame up by hand, then lock again.</p></li>
+              <li><p class="m-0"><strong>Mixed resolution</strong> — shown in the title bar when the frames differ in size, so you know 100% is not the same scale for all of them.</p></li>
+              <li><p class="m-0"><strong>Rate and flag</strong> — 0 to 5 rate the chosen frame, ⌘0 to ⌘9 flag it.</p></li>
+              <li><p class="m-0"><strong>Remove a frame</strong> — ⌫ takes the chosen frame out of the comparison without deleting it. Compare closes when fewer than two remain.</p></li>
+              <li><p class="m-0">Press Escape or Done to return to the gallery.</p></li>
+            </ul>
+            <h3>Bursts</h3>
+            <p class="loc-manual-note"><em>New in version 1.8.</em></p>
+            <p>Turn on Settings ▸ General ▸ Group bursts and frames shot close together fold into a single stack in the gallery, with a badge showing how many frames it holds. A folder of a thousand action frames then reads as a few dozen decisions. Click the badge, or press ⇧K or Space, to open a stack.</p>
+            <img src="../../../images/manual/BurstStacks.png" alt="A folder folded into burst stacks, one stack open with its frames ranked and the pick marked" class="loc-manual-img" />
+            <p>An open stack has a header: how many frames it holds and over how long they were shot, its pick, a Compare button, the suggested keeper with Use as pick to accept it, and how the frames were ranked.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Ranking.</strong> Every frame in a stack is ranked on sharpness, subject detail, motion and exposure — on the subject itself when one is found — and each shows its place, such as #1 of 6. The suggested keeper has a dashed outline. Click a frame’s place to see why: the scores behind the order, weighted, and compared within this burst.</p></li>
+              <li><p class="m-0"><strong>Set aside.</strong> A soft frame or a downsized copy is marked gated, and says why, rather than competing with the real candidates.</p></li>
+              <li><p class="m-0"><strong>The pick.</strong> A 👍 marks the stack’s pick, and a closed stack shows its pick in front. Press P, choose Stacks ▸ Make Pick, or click Make pick on a frame to change it.</p></li>
+              <li><p class="m-0"><strong>Moving between stacks.</strong> ⌘↓ and ⌘↑ select the next and previous stack’s pick; ⇧K opens or closes the selected stack; ⌥’ opens every stack and ⌥; closes them all. The same commands are in the Stacks menu, and a reminder of the keys sits in the bar at the bottom of the gallery.</p></li>
+            </ul>
+            <img src="../../../images/manual/BurstWhyRanked.png" alt="A burst stack open, with the scores that put its first frame ahead of the rest" class="loc-manual-img" />
+            <p class="loc-manual-note"><strong>Fine-tuning.</strong> <em>While bursts are grouped, the bar at the bottom of the gallery has a Bursts within slider for how close together frames must be, a min stepper for the smallest burst, and Detect subject to rank on the subject rather than the whole frame. Their defaults are in Settings ▸ General.</em></p>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Comparing a burst</p>
+            <p>The Compare button in a stack’s header shows its frames two at a time: the Champion, starting from the pick or the suggested keeper, and a Challenger. The better one stays, the next challenger steps up, until every frame has had its turn; the footer counts how many have been compared.</p>
+            <div class="loc-shortcut-table">
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">← / →</p>
+                <p class="loc-shortcut-action">Choose the Champion or the Challenger pane</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">↑ / ↓</p>
+                <p class="loc-shortcut-action">Previous or next frame as challenger</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">Return</p>
+                <p class="loc-shortcut-action">Promote the challenger to champion</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘Return</p>
+                <p class="loc-shortcut-action">Use the champion as the pick, and close</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">P</p>
+                <p class="loc-shortcut-action">Make the chosen pane’s frame the pick</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">Esc</p>
+                <p class="loc-shortcut-action">Close</p>
+              </div>
+            </div>
+            <p>Double-click a pane to switch between Fit and 100%, and drag to pan.</p>
+            <h3>Focus Mode</h3>
+            <p class="loc-manual-note"><em>New in version 1.8.</em></p>
+            <p>Press ⌘L (View ▸ Enter Focus Mode), or Space on a photograph, and the sidebar, toolbar, browser and title bar all fall away, leaving the picture. ← and → move through the folder, 0–5 rate and ⌘1–⌘9 flag, and a badge on the image confirms each one. Press ⌘L or Escape to come back.</p>
             <h3>Browsing Sub-folders</h3>
-            <p>By default a folder shows only the images it directly contains. Turn on Include Sub-folders in the Browser menu to browse a folder together with all of the images inside its sub-folders in a single gallery.</p>
+            <p>Browser ▸ Include Sub-folders shows a folder together with all of the images inside its sub-folders in a single gallery. It is on by default; turn it off to see only the images a folder directly contains.</p>
             <h3>Slideshow</h3>
-            <p>A full-screen slideshow of the current selection is available from the View menu, for reviewing images on a larger canvas.</p>
+            <p>View ▸ Play Slideshow (⌥⌘P) shows your selection, if two or more photographs are selected, or otherwise the whole folder from the selected photograph on. It opens paused: press Space or the play button to start it. ← and → step back and forward, as does clicking the left or right half of the picture, and Escape ends it. The controls hide while you watch and come back when you move the mouse. The transition and the time on each slide are set in Settings ▸ General.</p>
             <h3>Compact Image Browser</h3>
             <p>Compact image browser, enabled in the General tab of Settings, hides the filenames and rating stars and tightens the spacing so the photos themselves use more of the window — useful for a fast visual pass. The thumbnail size is still controlled by the gallery slider.</p>
             <img src="../../../images/manual/CompactMode.png" alt="Compact image browser" class="loc-manual-img" />
             <p>Turn on Show all images in landscape as well and portrait photos are rotated to landscape, so every cell in the grid shares the same orientation for a tidy, uniform layout.</p>
             <img src="../../../images/manual/CompactLandscape.png" alt="Compact image browser with all images in landscape" class="loc-manual-img" />
-            <h3>Camera Window</h3>
-            <img src="../../../images/manual/CameraWindow.png" alt="FirstPass camera window" class="loc-manual-img" />
-            <p>When a camera is selected in the sidebar its images are shown in the main browser window. On the bottom left there are two buttons to download selected or download all images.</p>
+            <h3>Cards and Cameras</h3>
+            <img src="../../../images/manual/CameraWindow.png" alt="A camera's photographs in the FirstPass window" class="loc-manual-img" />
+            <p>Select a card or camera in the sidebar and its photographs fill the main window. The bar at the bottom offers Download Selected, with the number selected, and Download All. With download history on and some photographs already copied, Download All becomes Download New, and its menu still holds Download all. While a copy runs the button becomes Cancel, and the same download button sits in the toolbar. When the copy finishes, a report says what was copied and verified, and why anything was not.</p>
+            <p class="loc-manual-note"><strong>Note:</strong> <em>A card or camera is browsed read-only, so it cannot be rated, flagged or renamed there. Download first, then cull.</em></p>
+            <h3>Moving and Copying by Dragging</h3>
+            <p>Drag photographs onto a folder in the sidebar to put them there. With nothing held they move within a disk and copy between disks, as in the Finder. Hold ⌥ to copy, ⌘ to move, or ⌃ to rename them by your download rules as they land; ⌃ combines with ⌥ or ⌘. A name already taken keeps both files, and ratings travel with the photographs. Moving more than the number set under Settings ▸ General asks first.</p>
+            <h3>Exporting</h3>
+            <p>File ▸ Export Images… (⇧⌘E), or Export in the context menu, writes copies of the selection to a folder of your choosing.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>Format</strong> — Original (an exact copy of the file), JPEG, PNG, HEIC, TIFF or PDF. JPEG and HEIC have a Quality slider, 85% by default.</p></li>
+              <li><p class="m-0"><strong>Write XMP sidecar</strong> — with Original, writes a .xmp beside each copy carrying its rating, colour label and camera details, read by Lightroom, Bridge and Capture One. An existing sidecar is updated rather than replaced.</p></li>
+              <li><p class="m-0"><strong>Embed rating, colour label and pick in metadata</strong> — with JPEG, HEIC, TIFF and PNG, as standard XMP inside the file.</p></li>
+              <li><p class="m-0"><strong>Rename exported files</strong> — the same tokens as File Renaming, with a starting sequence number and a preview.</p></li>
+              <li><p class="m-0"><strong>If a file already exists</strong> — Keep both, Skip or Replace.</p></li>
+              <li><p class="m-0">When it finishes, a summary offers Show in Finder.</p></li>
+            </ul>
             <h3>Settings</h3>
             <p>Settings are organised into four tabs — General, Download, Verification and Colors. It is worth configuring Download and Verification before your first import, because they decide where your files land and how thoroughly each copy is checked.</p>
             <p class="loc-manual-tab-heading" style="font-weight: 700">General</p>
             <img src="../../../images/manual/SettingsGeneral.png" alt="The General settings tab, upper half" class="loc-manual-img" />
             <img src="../../../images/manual/SettingsGeneralMore.png" alt="The General settings tab, lower half" class="loc-manual-img" />
             <ul class="loc-manual-list">
-              <li><p class="m-0"><strong>External editor</strong> — the application opened by “Open with external editor”. Use Browse to pick any app; Preview is a sensible default.</p></li>
-              <li><p class="m-0"><strong>Compact image browser</strong> — hides filenames and rating stars and tightens the spacing so images use more of the window. Thumbnail size is still controlled by the slider in the gallery.</p></li>
+              <li><p class="m-0"><strong>Browse folder</strong> — where the sidebar’s folder tree starts. Pictures by default and needs no permission; anywhere else is asked for once and remembered, and the section is renamed after the folder. A very large folder asks before it is used. <strong>Use Pictures</strong> puts it back.</p></li>
+              <li><p class="m-0"><strong>External editor</strong> — the application opened by Open with External Editor. Use Browse to pick any app; Preview is the default.</p></li>
+              <li><p class="m-0"><strong>Compact image browser</strong> — hides filenames and rating stars and tightens the spacing so images use more of the window.</p></li>
               <li><p class="m-0"><strong>Show all images in landscape</strong> — available while compact mode is on. Rotates portrait photos so every cell in the grid has the same orientation and the rows pack tightly.</p></li>
               <li><p class="m-0"><strong>Always Decode RAW</strong> — decodes RAW files fully in the background so the viewer shows a sharper image instead of the camera’s quick embedded preview. Double-clicking an image always decodes it. Uses more CPU and memory.</p></li>
+              <li><p class="m-0"><strong>Group bursts</strong> — folds frames shot close together into stacks. Off by default. Under it: <strong>Group frames within</strong> (1 second by default), <strong>Smallest burst</strong> (2 frames), <strong>Show at most</strong> (12 frames when a stack is open), and <strong>Rank the frames in each burst</strong> (on).</p></li>
+              <li><p class="m-0"><strong>Ask before moving or deleting</strong> — the number of photographs above which FirstPass asks first, 10 by default. One number covers both: moving takes originals out of where they were, and deleting sends them to the Trash. <strong>0 asks every time</strong>, and Cancel is the default answer. Copying is never interrupted, because nothing is removed.</p></li>
               <li><p class="m-0"><strong>Slideshow → Transition</strong> — None, Crossfade or Slide between images.</p></li>
-              <li><p class="m-0"><strong>Slideshow → Time on each slide</strong> — how long each image is shown while the slideshow auto-advances, from 0.5 to 60 seconds.</p></li>
-              <li><p class="m-0"><strong>Browse folder</strong> — where the sidebar’s folder tree starts. Pictures by default and needs no permission; anywhere else is asked for once and remembered, and the section is renamed after the folder. <strong>Use Pictures</strong> puts it back.</p></li>
+              <li><p class="m-0"><strong>Slideshow → Time on each slide</strong> — how long each image is shown while the slideshow plays, from 0.5 to 60 seconds.</p></li>
+              <li><p class="m-0"><strong>Viewer → Rating and Colour flag</strong> — how long the badge confirming a rating or flag stays on the image: not at all, for a number of seconds, or until it is replaced. <strong>Show them outside focus mode too</strong> shows them in the viewer as well.</p></li>
+              <li><p class="m-0"><strong>Warn above</strong> — the number of images above which FirstPass warns before opening a folder, 5,000 by default. 0 turns the warning off.</p></li>
               <li><p class="m-0"><strong>Compare up to</strong> — how many frames may be compared at once, from 2 to 16, ten by default. How many are worth seeing side by side depends on the size of your display, which is why it is yours to set.</p></li>
-              <li><p class="m-0"><strong>Thumbnail memory</strong> — how much memory thumbnails may use, sized to your Mac by default. More memory means less re-reading from disk when you scroll back through a large shoot. Changes take effect immediately.</p></li>
-              <li><p class="m-0"><strong>Warn about large folders</strong> — the number of images above which FirstPass warns before opening a folder.</p></li>
-              <li><p class="m-0"><strong>Ask before moving or deleting</strong> — the number of photographs above which FirstPass asks first. One number covers both: moving takes originals out of where they were, and deleting sends them to the Trash. <strong>0 asks every time</strong>, and Cancel is the default answer. Copying is never interrupted, because nothing is removed.</p></li>
-              <li><p class="m-0"><strong>While dragging</strong> — hold ⌥ to copy, ⌘ to move, or ⌃ to rename by your download rules as the files land. With nothing held, photographs move within a disk and copy between disks, the same as the Finder.</p></li>
+              <li><p class="m-0"><strong>Thumbnail memory</strong> — how much memory thumbnails may use. Automatic sizes it to your Mac. More memory means less re-reading from disk when you scroll back through a large shoot.</p></li>
+              <li><p class="m-0"><strong>Thumbnail disk cache</strong> — how much disk space thumbnails kept between launches may use, 6 GB by default, with the space in use shown beneath. <strong>Clear Now</strong> empties it.</p></li>
+              <li><p class="m-0"><strong>Prepare thumbnails ahead of time</strong> — makes thumbnails in the background and as photographs download, so a folder is ready before you open it.</p></li>
             </ul>
             <p class="loc-manual-tab-heading" style="font-weight: 700">Download</p>
             <img src="../../../images/manual/SettingsDownload.png" alt="The Download settings tab, upper half" class="loc-manual-img" />
@@ -156,43 +267,46 @@
             <p>This tab decides how files come off the card and where they go. The Sample line under each destination shows the exact folder your next import would use, so you can check a token pattern before committing to it.</p>
             <ul class="loc-manual-list">
               <li><p class="m-0"><strong>Mode → Automatic</strong> — drives the camera over PTP. Works with any camera, whether connected directly or through a card reader, and never asks for permission. Slower on a large card.</p></li>
-              <li><p class="m-0"><strong>Mode → Fast (card readers)</strong> — copies straight off a mounted card’s filesystem, which is considerably quicker. The first time you insert each card, macOS asks you to grant access to it once; after that the card is remembered. Direct-USB cameras fall back to Automatic on their own.</p></li>
-              <li><p class="m-0"><strong>Primary Destination → Tokens</strong> — the folder structure built for each import. Drag tokens (year, month, day, camera make, camera model) into the row and add your own literal text such as an underscore.</p></li>
-              <li><p class="m-0"><strong>Primary Destination → Use Exif date information for date tokens</strong> — resolves date tokens from each photo’s own capture time rather than the date of the import. Leave this on: a card imported a week after the shoot then still files under the day it was shot.</p></li>
+              <li><p class="m-0"><strong>Mode → Fast (card readers)</strong> — copies straight off a mounted card’s filesystem. The first time you insert each card, macOS asks you to grant access to it once; after that the card is remembered. Direct-USB cameras fall back to Automatic on their own.</p></li>
+              <li><p class="m-0"><strong>Primary Destination → Tokens</strong> — the folder structure built for each import. Drag tokens into the row and add your own literal text such as an underscore.</p></li>
+              <li><p class="m-0"><strong>Primary Destination → Use EXIF date for date tokens</strong> — resolves date tokens from each photo’s own capture time rather than the date of the import. Turn this on: a card imported a week after the shoot then still files under the day it was shot.</p></li>
               <li><p class="m-0"><strong>Primary Destination → Destination</strong> — the folder your images are copied into. Use Browse to choose it.</p></li>
               <li><p class="m-0"><strong>Secondary Destination → Use secondary destination</strong> — writes a second copy of every image in the same pass, so a backup exists before the card leaves the reader. It has its own tokens and location, and shares the primary’s filenames.</p></li>
               <li><p class="m-0"><strong>Filename</strong> — the token pattern used to rename images as they are copied. Sequence, date, camera and original-name tokens can be combined with literal text.</p></li>
               <li><p class="m-0"><strong>Sequence Number</strong> — the running number used by the sequence token. It advances one per image, persists between sessions, and can be reset here.</p></li>
-              <li><p class="m-0"><strong>Available Tokens</strong> — the palette of tokens to drag into the rows above.</p></li>
+              <li><p class="m-0"><strong>Available Tokens</strong> — Day, Day of the Week, Year (YY and YYYY), Month (number and name), Hour, Minute, Second, camera Model and Manufacturer, the original Filename, Sequence #, and the / and _ separators.</p></li>
             </ul>
-            <p class="loc-manual-note"><strong>Note:</strong> <em>Destination tokens build folders; the sequence-number token belongs in the filename, not in a folder name.</em></p>
+            <p class="loc-manual-note"><strong>Note:</strong> <em>Destination tokens build folders; the sequence-number token belongs in the filename, not in a folder name. The sequence number, the token patterns and the EXIF and secondary-destination switches follow you between Macs through iCloud; the destination folders do not, because each Mac has its own disks.</em></p>
             <p class="loc-manual-tab-heading" style="font-weight: 700">Verification</p>
-            <img src="../../../images/manual/SettingsVerification.png" alt="The Verification settings tab" class="loc-manual-img" />
-            <p>A plain file copy assumes it worked. This tab decides how thoroughly FirstPass checks each copy before releasing the card, what record it leaves behind, and what happens the moment a card is connected.</p>
+            <img src="../../../images/manual/SettingsVerification-1.8.png" alt="The Verification settings tab, with download history turned on" class="loc-manual-img" />
+            <p>A plain file copy assumes it worked. This tab decides how thoroughly FirstPass checks each copy before releasing the card, what record it leaves behind, what happens the moment a card is connected, and whether FirstPass remembers what it has already copied.</p>
             <ul class="loc-manual-list">
-              <li><p class="m-0"><strong>Verify copies by → Size</strong> — a fast sanity check that the bytes written match the bytes the camera reported.</p></li>
-              <li><p class="m-0"><strong>Verify copies by → Checksum</strong> — compares a content hash of the source against every copy written. Far stronger, and slower. The two modes are mutually exclusive.</p></li>
-              <li><p class="m-0"><strong>Generate transfer report</strong> — writes a record of the job to the destination disk when the copy finishes.</p></li>
+              <li><p class="m-0"><strong>Verify copies by → Size (fast)</strong> — a fast sanity check that the bytes written match the bytes on the card.</p></li>
+              <li><p class="m-0"><strong>Verify copies by → Checksum — SHA-256 (thorough)</strong> — compares a content hash of the source against every copy written. Far stronger, and slower. The two modes are mutually exclusive.</p></li>
+              <li><p class="m-0"><strong>Generate transfer report</strong> — writes a record of the job when the copy finishes. Off by default.</p></li>
               <li><p class="m-0"><strong>CSV manifest</strong> — one row per copy, with source, destination, size and verification result.</p></li>
               <li><p class="m-0"><strong>PDF report</strong> — the same information as a readable summary for a production or a client.</p></li>
               <li><p class="m-0"><strong>ASC MHL (Media Hash List)</strong> — the industry-standard hash manifest. It records a content hash, so it is only available in Checksum mode.</p></li>
               <li><p class="m-0"><strong>On Card Connect → Start downloading automatically</strong> — begins the import the moment a card is connected, with no further action from you.</p></li>
               <li><p class="m-0"><strong>On Card Connect → Eject card after download completes</strong> — unmounts the card once the import has finished and verified.</p></li>
+              <li><p class="m-0"><strong>Download History → Remember what has been downloaded from a card</strong> — see Cards you have seen before, below. Off by default.</p></li>
+              <li><p class="m-0"><strong>Download History → Remember for</strong> — how many days each day’s list is kept, 3 by default.</p></li>
+              <li><p class="m-0"><strong>Download History → Forget Download History…</strong> — clears every card’s history, after asking. Beside it, how many cards are remembered.</p></li>
             </ul>
             <p class="loc-manual-note"><strong>Note:</strong> <em>Starting automatically is unavailable in Fast mode, and the setting is shown greyed out with an explanation. A card’s one-time access grant cannot be given while nobody is watching. Your preference is remembered and applies again as soon as you return to Automatic mode.</em></p>
             <p class="loc-manual-note"><strong>Note:</strong> <em>Whatever you choose here, a file that fails verification is copied again automatically, and anything that still fails is reported rather than counted as a success.</em></p>
             <p class="loc-manual-tab-heading" style="font-weight: 700">Colors</p>
-            <img src="../../../images/manual/SettingsColors.png" alt="The Colors settings tab" class="loc-manual-img" />
+            <img src="../../../images/manual/SettingsColors-1.8.png" alt="The Colors settings tab" class="loc-manual-img" />
             <ul class="loc-manual-list">
-              <li><p class="m-0"><strong>Sidebar Colors</strong> — the icon colour for each kind of sidebar row: Camera, Pinned, Downloads and Folder. Tick Use system to follow the system accent instead of a fixed colour.</p></li>
+              <li><p class="m-0"><strong>Sidebar Colors</strong> — the icon colour for each kind of sidebar row: Camera, Pinned, Downloads, Folder and External Drive. Tick Use system to follow the system accent instead of a fixed colour.</p></li>
               <li><p class="m-0"><strong>Flag Colors</strong> — the nine colour flags assigned with ⌘1–⌘9 and removed with ⌘0. Click a swatch to change it. A flag is stored as a number alongside the star rating, so recolouring the palette re-colours every image already flagged with that slot.</p></li>
               <li><p class="m-0"><strong>Reset to Defaults</strong> — restores the shipped palette.</p></li>
             </ul>
             <h3>File Renaming</h3>
-            <p>Along with renaming files while they are being downloaded from a camera or a card, they can also be renamed while viewing them in gallery. This does not move the files to a different folder, just renames them in place. User can use all the same tokens as used for files while downloading from a camera or a card.</p>
-            <p>In the image gallery user can select a few images and right click to bring up the renaming panel. User can provide tokens, specify which date to use if the date tokens are used and provide a starting sequence number if renamed files result in name conflicts.</p>
+            <p>Along with renaming files while they are being downloaded from a camera or a card, photographs can be renamed in place in the gallery: select them and choose Edit ▸ Rename…, or Rename in the context menu. This does not move the files to a different folder. The same tokens are available as for downloads.</p>
+            <p>In the rename window, build the name from tokens, choose whether date tokens use each photograph’s EXIF date, and set the number the sequence starts at. The preview shows every new name before anything changes; a name that is already taken is stepped aside rather than skipped, and any photograph that could not be renamed is named afterwards.</p>
             <img src="../../../images/manual/RenamingWindow.png" alt="File renaming window" class="loc-manual-img" />
-            <p class="loc-manual-note"><strong>Note:</strong> <em>After entering each word user must press enter to tokenize it. All known tokens should be dragged from collection to the renaming field.</em></p>
+            <p class="loc-manual-note"><strong>Note:</strong> <em>After entering each word press Return to turn it into a token. Known tokens are dragged from Available tokens into the rename field.</em></p>
             <h2>Verifying copies</h2>
             <p>A plain file copy assumes it worked. FirstPass checks. Every file written is verified before the card is released, and anything that fails is re-copied automatically; whatever still fails is reported rather than quietly counted as a success.</p>
             <ul class="loc-manual-list">
@@ -200,6 +314,18 @@
               <li><p class="m-0">Checksum — a content hash of the source compared against every copy written. Slower, and far stronger.</p></li>
               <li><p class="m-0">The two are mutually exclusive; choose one under Settings → Verification.</p></li>
             </ul>
+            <h2>Cards you have seen before</h2>
+            <p class="loc-manual-note"><em>New in version 1.8.</em></p>
+            <p>Turn on Settings → Verification → Remember what has been downloaded from a card, and FirstPass keeps a record of what it has copied off each card. Put the card back in and the photographs already copied are marked, and the download button offers only the new ones.</p>
+            <ul class="loc-manual-list">
+              <li><p class="m-0">Download all still means all — nothing is skipped unless you ask for only the new photographs. The Download New button’s menu holds Download all.</p></li>
+              <li><p class="m-0">The bar under the card says how many were copied earlier, for example 8 of 129 copied earlier.</p></li>
+              <li><p class="m-0">An unattended download copies only what is new, and its report says how many it left on the card.</p></li>
+              <li><p class="m-0">A card is remembered by the days it was downloaded on, and each day’s list is forgotten once it is older than Remember for. A card taken in one sitting is forgotten all at once; one worked across several days loses its older days first, and those photographs are offered again.</p></li>
+              <li><p class="m-0">History starts from the next download after you turn it on, and Forget Download History… clears it.</p></li>
+              <li><p class="m-0">It needs a card that identifies itself. Cards formatted exFAT carry a unique identifier; FAT32 cards do not, and FirstPass explains this the first time you turn it on.</p></li>
+            </ul>
+            <img src="../../../images/manual/CopiedEarlier.png" alt="A card with eight photographs marked as copied earlier, and a button that downloads only the 121 new ones" class="loc-manual-img" />
             <h2>Transfer reports</h2>
             <p>For work that needs a paper trail, FirstPass writes a report of the job to the destination disk when the copy finishes. Enable the formats you need under Settings → Verification.</p>
             <ul class="loc-manual-list">
@@ -207,6 +333,7 @@
               <li><p class="m-0">PDF report — the same information as a readable summary for a production or client.</p></li>
               <li><p class="m-0">ASC MHL — the industry-standard media hash list sidecar. It records a content hash, so it needs Checksum verification.</p></li>
             </ul>
+            <p>The CSV and PDF reports are named after the card and the time of the transfer, for example Report_NIKON_Z6_3__2026-10-28_220823.pdf, and are saved beside the photographs, in the folder holding the first copy. They name each copy’s file on the card and the folder it went to. ASC MHL manifests go in an ascmhl folder at the root of the destination, together with the chain file that records every manifest written there.</p>
             <h2>Fast and Automatic downloads</h2>
             <p>FirstPass can take files off a card two ways, chosen under Settings → Download.</p>
             <ul class="loc-manual-list">
@@ -217,6 +344,225 @@
             <p class="loc-manual-note"><strong>Note:</strong> <em>Cards and cameras are browsed read-only: FirstPass never writes ratings or any other file back to a card, so nothing on the card is modified before it is copied.</em></p>
             <h2>Where your files land</h2>
             <p>Destination folders and filenames are built from tokens, and the date tokens resolve from each file’s own capture time — not from the day you happen to be importing. A card ingested a week after the shoot still files under the day it was shot. Where a file carries no capture date at all, the date the camera wrote the file is used instead.</p>
+            <h2>Help and About</h2>
+            <ul class="loc-manual-list">
+              <li><p class="m-0"><strong>FirstPass ▸ About FirstPass</strong> — the version, how to reach us, and the release-notes signup.</p></li>
+              <li><p class="m-0"><strong>Help ▸ Get Release Notes by Email…</strong> — sign up to hear about new releases. Nothing is sent until you type an address and press Sign Up; see the privacy policy.</p></li>
+              <li><p class="m-0"><strong>Help ▸ Write a Review…</strong> — opens FirstPass’s page in the App Store.</p></li>
+            </ul>
+            <h2>Keyboard shortcuts</h2>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Anywhere</p>
+            <div class="loc-shortcut-table">
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘N</p>
+                <p class="loc-shortcut-action">New window</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘O</p>
+                <p class="loc-shortcut-action">Open a folder</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⇧⌘E</p>
+                <p class="loc-shortcut-action">Export the selection</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘,</p>
+                <p class="loc-shortcut-action">Settings</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘E</p>
+                <p class="loc-shortcut-action">Show or hide the image viewer</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘I</p>
+                <p class="loc-shortcut-action">Show or hide the info pane</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘U</p>
+                <p class="loc-shortcut-action">Compare the selected images</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘L</p>
+                <p class="loc-shortcut-action">Enter or leave focus mode</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌥⌘P</p>
+                <p class="loc-shortcut-action">Play a slideshow</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘1 – ⌘9</p>
+                <p class="loc-shortcut-action">Set a colour flag</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘0</p>
+                <p class="loc-shortcut-action">Clear the colour flag</p>
+              </div>
+            </div>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Gallery and viewer</p>
+            <div class="loc-shortcut-table">
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">← → ↑ ↓</p>
+                <p class="loc-shortcut-action">Move the selection (← → only in the viewer’s film strip)</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⇧ + arrow</p>
+                <p class="loc-shortcut-action">Extend the selection</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘A</p>
+                <p class="loc-shortcut-action">Select all</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘-click / ⇧-click</p>
+                <p class="loc-shortcut-action">Add to the selection, or select a range</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">1 – 5</p>
+                <p class="loc-shortcut-action">Rate one to five stars</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">0</p>
+                <p class="loc-shortcut-action">Clear the rating</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">Space</p>
+                <p class="loc-shortcut-action">Focus mode, or open or close the selected burst stack</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌫</p>
+                <p class="loc-shortcut-action">Move the selection to the Trash</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">Double-click</p>
+                <p class="loc-shortcut-action">Open the viewer; in the viewer, switch between Fit and 100%</p>
+              </div>
+            </div>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Burst stacks</p>
+            <div class="loc-shortcut-table">
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘↓ / ⌘↑</p>
+                <p class="loc-shortcut-action">Select the next or previous stack</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⇧K</p>
+                <p class="loc-shortcut-action">Open or close the selected stack</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌥’</p>
+                <p class="loc-shortcut-action">Open all stacks</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌥;</p>
+                <p class="loc-shortcut-action">Close all stacks</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">P</p>
+                <p class="loc-shortcut-action">Make the selected frame the stack’s pick</p>
+              </div>
+            </div>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Compare</p>
+            <div class="loc-shortcut-table">
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">← ↑ / → ↓</p>
+                <p class="loc-shortcut-action">Previous or next frame</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">= / −</p>
+                <p class="loc-shortcut-action">Zoom in or out</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">0 – 5</p>
+                <p class="loc-shortcut-action">Rate the chosen frame</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘0 – ⌘9</p>
+                <p class="loc-shortcut-action">Flag the chosen frame</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌫</p>
+                <p class="loc-shortcut-action">Take the chosen frame out of the comparison</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">Esc</p>
+                <p class="loc-shortcut-action">Close</p>
+              </div>
+            </div>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Comparing a burst</p>
+            <div class="loc-shortcut-table">
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">← / →</p>
+                <p class="loc-shortcut-action">Choose the Champion or the Challenger</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">↑ / ↓</p>
+                <p class="loc-shortcut-action">Previous or next challenger</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">Return</p>
+                <p class="loc-shortcut-action">Promote the challenger</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘Return</p>
+                <p class="loc-shortcut-action">Use the champion as the pick, and close</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">P</p>
+                <p class="loc-shortcut-action">Make the chosen frame the pick</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">Esc</p>
+                <p class="loc-shortcut-action">Close</p>
+              </div>
+            </div>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Focus mode</p>
+            <div class="loc-shortcut-table">
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">← / →</p>
+                <p class="loc-shortcut-action">Previous or next photograph</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">0 – 5</p>
+                <p class="loc-shortcut-action">Rate</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘0 – ⌘9</p>
+                <p class="loc-shortcut-action">Flag</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">Esc or ⌘L</p>
+                <p class="loc-shortcut-action">Leave focus mode</p>
+              </div>
+            </div>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">Slideshow</p>
+            <div class="loc-shortcut-table">
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">Space</p>
+                <p class="loc-shortcut-action">Play or pause</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">← / →</p>
+                <p class="loc-shortcut-action">Previous or next slide</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">Esc</p>
+                <p class="loc-shortcut-action">End the slideshow</p>
+              </div>
+            </div>
+            <p class="loc-manual-tab-heading" style="font-weight: 700">While dragging photographs</p>
+            <div class="loc-shortcut-table">
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌥</p>
+                <p class="loc-shortcut-action">Copy</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌘</p>
+                <p class="loc-shortcut-action">Move</p>
+              </div>
+              <div class="loc-shortcut-row">
+                <p class="loc-shortcut-key">⌃</p>
+                <p class="loc-shortcut-action">Rename by your download rules as they land</p>
+              </div>
+            </div>
             <hr class="loc-manual-hr" />
             <div class="loc-manual-footer">
               <p><em><span>For further questions, clarification or feedback please </span><a href="mailto:firstpass@lightoncanvas.com?subject=Mail%20from%20manual%20link">email us</a><span>.</span></em></p>
